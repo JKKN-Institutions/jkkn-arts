@@ -34,17 +34,17 @@ export default function OffcanvasMenu() {
             <div className="hamburger-infos">
               <h5 className="hamburger-title">Contact Info</h5>
               <div className="contact-info">
-                <div className="contact-item">
-                  <span className="subtitle">Phone</span>
-                  <a className="contact-link" href="tel:10095447818">+1 (009) 544-7818</a>
+                <div className="contact-item" style={{marginBottom: '15px'}}>
+                  <span className="subtitle" style={{display: 'block', color: '#1e8a8a', fontWeight: '600', marginBottom: '5px'}}>Phone</span>
+                  <a className="contact-link" href="tel:04288234423" style={{color: '#364e52', textDecoration: 'none'}}>04288-234423</a>
                 </div>
-                <div className="contact-item">
-                  <span className="subtitle">Email</span>
-                  <a className="contact-link" href="mailto:info@bexon.com">info@bexon.com</a>
+                <div className="contact-item" style={{marginBottom: '15px'}}>
+                  <span className="subtitle" style={{display: 'block', color: '#1e8a8a', fontWeight: '600', marginBottom: '5px'}}>Email</span>
+                  <a className="contact-link" href="mailto:info@jkkn.ac.in" style={{color: '#364e52', textDecoration: 'none'}}>info@jkkn.ac.in</a>
                 </div>
-                <div className="contact-item">
-                  <span className="subtitle">Location</span>
-                  <span className="contact-link">993 Renner Burg, West Rond, MT 94251-030</span>
+                <div className="contact-item" style={{marginBottom: '15px'}}>
+                  <span className="subtitle" style={{display: 'block', color: '#1e8a8a', fontWeight: '600', marginBottom: '5px'}}>Location</span>
+                  <span className="contact-link" style={{color: '#364e52', lineHeight: '1.5'}}>Komarapalayam, Namakkal District, Tamil Nadu - 638183</span>
                 </div>
               </div>
             </div>
@@ -94,17 +94,17 @@ export default function OffcanvasMenu() {
             <div className="hamburger-infos">
               <h5 className="hamburger-title">Contact Info</h5>
               <div className="contact-info">
-                <div className="contact-item">
-                  <span className="subtitle">Phone</span>
-                  <a className="contact-link" href="tel:8089091313">808-909-1313</a>
+                <div className="contact-item" style={{marginBottom: '15px'}}>
+                  <span className="subtitle" style={{display: 'block', color: '#1e8a8a', fontWeight: '600', marginBottom: '5px'}}>Phone</span>
+                  <a className="contact-link" href="tel:04288234423" style={{color: '#364e52', textDecoration: 'none'}}>04288-234423</a>
                 </div>
-                <div className="contact-item">
-                  <span className="subtitle">Email</span>
-                  <a className="contact-link" href="mailto:info@bexon.com">info@bexon.com</a>
+                <div className="contact-item" style={{marginBottom: '15px'}}>
+                  <span className="subtitle" style={{display: 'block', color: '#1e8a8a', fontWeight: '600', marginBottom: '5px'}}>Email</span>
+                  <a className="contact-link" href="mailto:info@jkkn.ac.in" style={{color: '#364e52', textDecoration: 'none'}}>info@jkkn.ac.in</a>
                 </div>
-                <div className="contact-item">
-                  <span className="subtitle">Location</span>
-                  <span className="contact-link">993 Renner Burg, West Rond, MT 94251-030</span>
+                <div className="contact-item" style={{marginBottom: '15px'}}>
+                  <span className="subtitle" style={{display: 'block', color: '#1e8a8a', fontWeight: '600', marginBottom: '5px'}}>Location</span>
+                  <span className="contact-link" style={{color: '#364e52', lineHeight: '1.5'}}>Komarapalayam, Namakkal District, Tamil Nadu - 638183</span>
                 </div>
               </div>
             </div>

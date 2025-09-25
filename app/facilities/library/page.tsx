@@ -15,6 +15,8 @@ export default function LibraryPage() {
           <main id="primary" className="site-main">
             <br />
             <div className="space-for-header"></div>
+            {/* Mobile top padding */}
+            <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
             {/* start: Breadcrumb Section */}
             <section className="tj-page-header section-gap-x" data-bg-image="/assets/images/bg/pheader-bg.webp">
               <div className="container">
@@ -311,5 +313,6 @@ export default function LibraryPage() {
     </>
   );
 }
+
 
 

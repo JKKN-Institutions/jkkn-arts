@@ -14,6 +14,8 @@ export default function VisionMission() {
         <div id="smooth-content">
           <main id="primary" className="site-main">
             <div className="top-space-15"></div>
+            {/* Mobile top padding */}
+            <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
 
             {/* start: Banner Section */}
             <section className="tj-banner-section h6-hero section-gap-x">
@@ -103,3 +105,4 @@ export default function VisionMission() {
     </>
   );
 }
+

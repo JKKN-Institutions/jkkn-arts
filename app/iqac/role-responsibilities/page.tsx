@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -121,6 +121,8 @@ export default function RoleResponsibilitiesPage() {
                 <div id="smooth-content">
                     <main id="primary" className="site-main">
                         <div className="top-space-15"></div>
+            {/* Mobile top padding */}
+            <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
 
 
                         {/* start: Banner Section */}
@@ -445,4 +447,5 @@ export default function RoleResponsibilitiesPage() {
         </>
     );
 }
+
 

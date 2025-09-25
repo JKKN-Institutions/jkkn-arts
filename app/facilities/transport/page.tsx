@@ -69,6 +69,8 @@ export default function TransportPage() {
                 <div id="smooth-content">
                     <main id="primary" className="site-main">
                         <div className="top-space-15"></div>
+            {/* Mobile top padding */}
+            <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
 
 
                         {/* start: About Section */}
@@ -149,4 +151,5 @@ export default function TransportPage() {
         </>
     );
 }
+
 

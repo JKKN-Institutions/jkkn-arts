@@ -439,6 +439,8 @@ export default function BlogDetails() {
         <div id="smooth-content">
           <main id="primary" className="site-main">
             <div className="space-for-header"></div>
+            {/* Mobile top padding */}
+            <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
             
             <Suspense fallback={<div>Loading...</div>}>
               <BlogDetailsContent />
@@ -451,3 +453,4 @@ export default function BlogDetails() {
     </>
   );
 }
+

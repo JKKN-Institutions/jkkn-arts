@@ -13,6 +13,8 @@ export default function DepartmentOfTextileAndFashionDesigning() {
         <div id="smooth-content">
           <main id="primary" className="site-main">
             <div className="top-space-15"></div>
+            {/* Mobile top padding */}
+            <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
             
             {/* start: Banner Section */}
             <section className="tj-banner-section-2 h10-hero section-gap-x zoom-on-scroll-wrapper pb-5">
@@ -288,5 +290,6 @@ export default function DepartmentOfTextileAndFashionDesigning() {
     </>
   );
 }
+
 
 

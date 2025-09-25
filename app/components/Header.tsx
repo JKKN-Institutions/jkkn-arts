@@ -396,10 +396,10 @@ export default function Header() {
               </div> */}
 
               {/* menu bar */}
-              <div className="menu_bar mobile_menu_bar d-lg-none">
-                <span></span>
-                <span></span>
-                <span></span>
+              <div className="menu_bar mobile_menu_bar d-lg-none" style={{cursor: 'pointer', zIndex: 999}}>
+                <span style={{display: 'block', width: '25px', height: '3px', backgroundColor: '#1e8a8a', margin: '5px 0', transition: '0.3s'}}></span>
+                <span style={{display: 'block', width: '25px', height: '3px', backgroundColor: '#1e8a8a', margin: '5px 0', transition: '0.3s'}}></span>
+                <span style={{display: 'block', width: '25px', height: '3px', backgroundColor: '#1e8a8a', margin: '5px 0', transition: '0.3s'}}></span>
               </div>
             </div>
           </div>
