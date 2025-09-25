@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dashboard specific styles to override theme conflicts */
+.dashboard-container * {
+  box-sizing: border-box;
+}
+
+.dashboard-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Reset any Bootstrap/theme overrides for dashboard */
+.dashboard-container .btn {
+  all: unset;
+}
+
+.dashboard-container .card {
+  all: unset;
+}
+
+.dashboard-container .form-control {
+  all: unset;
+}
+
+/* Ensure Tailwind utilities work properly */
+.dashboard-container .bg-white {
+  background-color: #ffffff !important;
+}
+
+.dashboard-container .bg-gray-50 {
+  background-color: #f9fafb !important;
+}
+
+.dashboard-container .bg-blue-600 {
+  background-color: #2563eb !important;
+}
+
+.dashboard-container .text-gray-900 {
+  color: #111827 !important;
+}
+
+.dashboard-container .border {
+  border-width: 1px !important;
+}
+
+.dashboard-container .border-gray-200 {
+  border-color: #e5e7eb !important;
+}
+
+.dashboard-container .rounded-lg {
+  border-radius: 0.5rem !important;
+}
+
+.dashboard-container .shadow-sm {
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05) !important;
+}
+
+/* Global styles are handled by the CSS files loaded in layout.tsx */
