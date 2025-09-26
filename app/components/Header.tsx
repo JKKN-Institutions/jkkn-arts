@@ -1,7 +1,55 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { useEffect } from 'react';
 
 export default function Header() {
+  useEffect(() => {
+    // Handle offcanvas menu functionality
+    const menuBars = document.querySelectorAll('.menu_bar');
+    const offcanvasArea = document.querySelector('.tj-offcanvas-area');
+    const hamburgerArea = document.querySelector('.hamburger-area');
+    const closeBtns = document.querySelectorAll('.hamburger_close_btn');
+    const hamburgerBg = document.querySelector('.hamburger_bg');
+
+    const openOffcanvas = () => {
+      if (window.innerWidth >= 992) {
+        offcanvasArea?.classList.add('opened');
+      } else {
+        hamburgerArea?.classList.add('opened');
+      }
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeOffcanvas = () => {
+      offcanvasArea?.classList.remove('opened');
+      hamburgerArea?.classList.remove('opened');
+      document.body.style.overflow = '';
+    };
+
+    // Add click listeners to all menu bars
+    menuBars.forEach(menuBar => {
+      menuBar.addEventListener('click', openOffcanvas);
+    });
+
+    hamburgerBg?.addEventListener('click', closeOffcanvas);
+    
+    closeBtns.forEach(btn => {
+      btn.addEventListener('click', closeOffcanvas);
+    });
+
+    return () => {
+      menuBars.forEach(menuBar => {
+        menuBar.removeEventListener('click', openOffcanvas);
+      });
+      hamburgerBg?.removeEventListener('click', closeOffcanvas);
+      closeBtns.forEach(btn => {
+        btn.removeEventListener('click', closeOffcanvas);
+      });
+    };
+  }, []);
+
   return (
     <header className="header-area header-2 header-absolute section-gap-x" style={{ backgroundColor: 'white', color: 'black',borderRadius: '50px' }}>
       <div className="container-fluid">
@@ -356,18 +404,18 @@ export default function Header() {
                     <span className="btn-icon"><i className="fas fa-arrow-right"></i></span>
                   </Link>
                 </div> */}
-                <div className="menu_bar menu_offcanvas" style={{cursor: 'pointer'}}>
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                <div className="menu_bar menu_offcanvas" style={{cursor: 'pointer', gap: '4px'}}>
+                  <span style={{display: 'block', width: '25px', height: '2px', backgroundColor: '#000', borderRadius: '10px', marginBottom: '4px'}}></span>
+                  <span style={{display: 'block', width: '18px', height: '2px', backgroundColor: '#000', borderRadius: '10px', marginBottom: '4px'}}></span>
+                  <span style={{display: 'block', width: '25px', height: '2px', backgroundColor: '#000', borderRadius: '10px'}}></span>
                 </div>
               </div>
 
               {/* mobile menu bar */}
-              <div className="menu_bar mobile_menu_bar d-lg-none" style={{cursor: 'pointer'}}>
-                <span></span>
-                <span></span>
-                <span></span>
+              <div className="menu_bar mobile_menu_bar d-lg-none" style={{cursor: 'pointer', width: '50px', height: '50px', padding: '12px', backgroundColor: '#1e8a8a', borderRadius: '7px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '4px'}}>
+                <span style={{display: 'block', width: '25px', height: '2px', backgroundColor: '#fff', borderRadius: '10px'}}></span>
+                <span style={{display: 'block', width: '18px', height: '2px', backgroundColor: '#fff', borderRadius: '10px'}}></span>
+                <span style={{display: 'block', width: '25px', height: '2px', backgroundColor: '#fff', borderRadius: '10px'}}></span>
               </div>
             </div>
           </div>

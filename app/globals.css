@@ -58,3 +58,162 @@
 }
 
 /* Global styles are handled by the CSS files loaded in layout.tsx */
+
+/* Mobile responsive styles for OffcanvasMenu */
+@media (max-width: 575.98px) {
+  .hamburger-infos .contact-info {
+    padding: 0 10px;
+  }
+  
+  .hamburger-infos .contact-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .hamburger-infos .contact-item:last-child {
+    border-bottom: none;
+  }
+  
+  .hamburger-infos .contact-subtitle {
+    font-size: 13px !important;
+  }
+  
+  .hamburger-infos .contact-link {
+    font-size: 14px !important;
+    word-break: break-word;
+  }
+  
+  .hamburger-socials {
+    padding: 0 10px;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .hamburger-infos .contact-info {
+    padding: 0 15px;
+  }
+}
+
+/* Custom color for text-primary in offcanvas */
+.hamburger-infos .text-primary {
+  color: #1e8a8a !important;
+}
+
+.hamburger-infos .text-dark {
+  color: #364e52 !important;
+}
+
+/* Mobile menu navigation styles */
+.mobile-nav {
+  padding: 20px 0;
+}
+
+.mobile-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu-list li {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-menu-list li:last-child {
+  border-bottom: none;
+}
+
+.mobile-menu-list > li > a {
+  display: block;
+  padding: 15px 20px;
+  color: #364e52;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-list > li > a:hover {
+  color: #1e8a8a;
+  background-color: #f8f9fa;
+}
+
+.mobile-menu-list .sub-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  background-color: #f8f9fa;
+}
+
+.mobile-menu-list .sub-menu.show {
+  display: block;
+}
+
+.mobile-menu-list .sub-menu li a {
+  display: block;
+  padding: 12px 40px;
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-list .sub-menu li:last-child a {
+  border-bottom: none;
+}
+
+.mobile-menu-list .sub-menu li a:hover {
+  color: #1e8a8a;
+  background-color: #fff;
+}
+
+.mobile-menu-list .sub-menu .sub-menu li a {
+  padding-left: 60px;
+  font-size: 13px;
+}
+
+.mobile-menu-list .sub-menu .sub-menu .sub-menu li a {
+  padding-left: 80px;
+  font-size: 12px;
+}
+
+.mobile-menu-list .has-dropdown > a .fas {
+  float: right;
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu-list .has-dropdown.open > a .fas {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 575.98px) {
+  .mobile-nav {
+    padding: 10px 0;
+  }
+  
+  .mobile-menu-list > li > a {
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+  
+  .mobile-menu-list .sub-menu li a {
+    padding: 10px 30px;
+    font-size: 13px;
+  }
+  
+  .mobile-menu-list .sub-menu .sub-menu li a {
+    padding-left: 45px;
+    font-size: 12px;
+  }
+  
+  .mobile-menu-list .sub-menu .sub-menu .sub-menu li a {
+    padding-left: 60px;
+    font-size: 11px;
+  }
+}
