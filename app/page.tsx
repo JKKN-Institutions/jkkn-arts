@@ -710,10 +710,7 @@ export default function Home() {
                   cy="30"
                 />
               </svg>
-              <div className="progress-text">
-                <span className="progress-number">0</span>
-                <span className="progress-percent">%</span>
-              </div>
+              
             </div>
           </div>
 
