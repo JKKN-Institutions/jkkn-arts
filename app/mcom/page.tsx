@@ -1,16 +1,11 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import OffcanvasMenu from '../components/OffcanvasMenu';
 import Link from 'next/link';
 
 export default function MComPage() {
     return (
         <>
-            <OffcanvasMenu />
-
             <Header />
-
-
 
             <div id="smooth-wrapper">
                 <div id="smooth-content">
@@ -178,7 +173,6 @@ export default function MComPage() {
                         </section>
                         {/* end: Department Commerce Section */}
 
-
                     </main>
 
                     <Footer />
@@ -187,5 +181,4 @@ export default function MComPage() {
         </>
     );
 }
-
 

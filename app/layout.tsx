@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import ClientScripts from "./components/ClientScripts";
+import OffcanvasMenu from "./components/OffcanvasMenu";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -229,57 +230,7 @@ export default function RootLayout({
               color: white !important;
             }
 
-            .header-area .menu_bar span {
-              background-color: black !important;
-            }
-
-            .header-area .mobile_menu_bar span {
-              background-color: black !important;
-            }
-            
-            /* Menu toggle button styling */
-            .menu_bar span {
-              background-color: black !important;
-            }
-            
-            .mobile_menu_bar span {
-              background-color: black !important;
-            }
-            
-            /* Ensure toggle buttons are visible and black */
-            .menu_offcanvas span,
-            .menu_bar span {
-              background-color: black !important;
-              transition: all 0.3s ease;
-            }
-            
-            .menu_offcanvas:hover span,
-            .menu_bar:hover span {
-              background-color: var(--tj-color-theme-primary) !important;
-            }
-            
-            /* Additional menu bar styling for all variations */
-            .header-area .menu_bar span,
-            .header-area .mobile_menu_bar span,
-            .menu_bar span,
-            .mobile_menu_bar span,
-            .menu_offcanvas span {
-              background-color: black !important;
-              width: 25px !important;
-              height: 3px !important;
-              display: block !important;
-              margin: 3px 0 !important;
-              transition: all 0.3s ease !important;
-            }
-            
-            /* Menu bar hover effects */
-            .header-area .menu_bar:hover span,
-            .header-area .mobile_menu_bar:hover span,
-            .menu_bar:hover span,
-            .mobile_menu_bar:hover span,
-            .menu_offcanvas:hover span {
-              background-color: var(--tj-color-theme-primary) !important;
-            }
+            /* Hamburger menu styles moved to globals.css for better organization */
 
             /* Force custom icon font to apply on pseudo-elements */
             [class^="tji-"],
@@ -468,24 +419,7 @@ export default function RootLayout({
               transform: translateY(-50%) !important;
             }
             
-            /* Ensure menu bar spans display properly */
-            .menu_bar span {
-              display: block !important;
-              width: 18px !important;
-              height: 2px !important;
-              background-color: var(--tj-color-common-black) !important;
-              border-radius: 10px !important;
-              margin: 3px 0 !important;
-              transition: all 0.3s !important;
-            }
-            
-            .menu_bar.mobile_menu_bar span {
-              background-color: var(--tj-color-common-white) !important;
-            }
-            
-            .header-2.header-absolute .menu_bar span {
-              background-color: var(--tj-color-common-white) !important;
-            }
+            /* Menu bar styles consolidated in globals.css */
             
             /* Force correct service section background */
             .tj-service-section {
@@ -793,6 +727,9 @@ export default function RootLayout({
       </head>
       <body>
         <div className="body-overlay"></div>
+        
+        {/* Offcanvas Menu - Available globally */}
+        <OffcanvasMenu />
 
         {/* Preloader Start */}
         {/* <div className="tj-preloader is-loading">

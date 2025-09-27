@@ -1,13 +1,10 @@
 import Link from 'next/link';
 import Header from '../components/Header';
-import OffcanvasMenu from '../components/OffcanvasMenu';
 import Footer from '../components/Footer';
 
 export default function BComPage() {
   return (
-    <>
-      <OffcanvasMenu />
-      <Header />
+    <>      <Header />
       
       <div id="smooth-wrapper">
         <div id="smooth-content">
@@ -124,7 +121,6 @@ export default function BComPage() {
               
             </section>
             {/* end: About Section */}
-
 
             {/* start: Vision Mission Section */}
             <section className="h8-service overflow-hidden section-gap">
@@ -456,6 +452,4 @@ export default function BComPage() {
     </>
   );
 }
-
-
 

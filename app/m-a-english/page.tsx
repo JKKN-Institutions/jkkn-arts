@@ -1,6 +1,5 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import OffcanvasMenu from '../components/OffcanvasMenu';
 
 export default function MAEnglishPage() {
   return (
@@ -10,11 +9,6 @@ export default function MAEnglishPage() {
         <div id="ball"></div>
       </div>
       {/* end: magic cursor */}
-
-      {/* start: Hamburger Menu */}
-      <OffcanvasMenu />
-      {/* end: Hamburger Menu */}
-
       {/* start: Header Area */}
       <Header />
       {/* end: Header Area */}

@@ -1,13 +1,10 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import OffcanvasMenu from '../components/OffcanvasMenu';
 import Link from 'next/link';
 
 export default function BComCAAllied() {
   return (
     <>
-      <OffcanvasMenu />
-
       <Header />
 
       
@@ -292,5 +289,4 @@ export default function BComCAAllied() {
     </>
   );
 }
-
 

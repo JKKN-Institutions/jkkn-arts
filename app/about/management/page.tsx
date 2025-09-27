@@ -1,7 +1,6 @@
-﻿
+
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import OffcanvasMenu from '../../components/OffcanvasMenu';
 import { MarqueeSection, AboutSection, AboutSectionReversed } from './components';
 import { ProjectSection, TestimonialSection } from './more-components';
 import { PricingSection, ClientSection, BlogSection } from './final-components';
@@ -26,11 +25,6 @@ export default function ManagementPage() {
       {/* start: Search Popup */}
       <div className="search-popup-overlay"></div>
       {/* end: Search Popup */}
-
-      {/* start: Hamburger Menu */}
-      <OffcanvasMenu />
-      {/* end: Hamburger Menu */}
-
       {/* start: Header Area */}
       <Header />
       {/* end: Header Area */}

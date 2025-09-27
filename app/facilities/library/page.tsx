@@ -1,13 +1,10 @@
 import Link from 'next/link';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import OffcanvasMenu from '../../components/OffcanvasMenu';
 
 export default function LibraryPage() {
   return (
     <>
-      <OffcanvasMenu />
-
       <Header />
 
       <div id="smooth-wrapper">
@@ -313,6 +310,4 @@ export default function LibraryPage() {
     </>
   );
 }
-
-
 

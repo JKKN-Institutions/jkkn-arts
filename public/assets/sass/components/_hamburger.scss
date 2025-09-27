@@ -43,7 +43,7 @@
 		position: absolute;
 		top: 0;
 		inset-inline-start: 0;
-		z-index: -1;
+		z-index: 1;
 		border-start-start-radius: 12px;
 		border-end-start-radius: 12px;
 	}
@@ -55,6 +55,7 @@
 		padding: 40px;
 		overflow: auto;
 		height: 100%;
+		z-index: 2;
 		&::before {
 			content: "";
 			position: absolute;

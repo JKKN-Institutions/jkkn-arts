@@ -1,69 +1,11 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import OffcanvasMenu from '../../components/OffcanvasMenu';
 
 export default function AuditoriumPage() {
     return (
-        <>
-            {/* start: Offcanvas Menu */}
-            <OffcanvasMenu />
-            {/* end: Offcanvas Menu */}
-
-            {/* start: Hamburger Menu */}
-            <div className="hamburger-area d-lg-none">
-                <div className="hamburger_bg"></div>
-                <div className="hamburger_wrapper">
-                    <div className="hamburger_inner">
-                        <div className="hamburger_top d-flex align-items-center justify-content-between">
-                            <div className="hamburger_logo">
-                                <a href="/" className="mobile_logo">
-                                    <img src="/assets/images/logos/logo.png" alt="Logo" />
-                                </a>
-                            </div>
-                            <div className="hamburger_close">
-                                <button className="hamburger_close_btn"><i className="fa-thin fa-times"></i></button>
-                            </div>
-                        </div>
-                        <div className="hamburger_menu">
-                            <div className="mobile_menu"></div>
-                        </div>
-                        <div className="hamburger-infos">
-                            <h5 className="hamburger-title">Contact Info</h5>
-                            <div className="contact-info">
-                                <div className="contact-item">
-                                    <span className="subtitle">Phone</span>
-                                    <a className="contact-link" href="tel:8089091313">808-909-1313</a>
-                                </div>
-                                <div className="contact-item">
-                                    <span className="subtitle">Email</span>
-                                    <a className="contact-link" href="mailto:info@bexon.com">info@bexon.com</a>
-                                </div>
-                                <div className="contact-item">
-                                    <span className="subtitle">Location</span>
-                                    <span className="contact-link">993 Renner Burg, West Rond, MT 94251-030</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="hamburger-socials">
-                        <h5 className="hamburger-title">Follow Us</h5>
-                        <div className="social-links style-3">
-                            <ul>
-                                <li><a href="https://www.facebook.com/" target="_blank"><i className="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="https://www.instagram.com/" target="_blank"><i className="fa-brands fa-instagram"></i></a></li>
-                                <li><a href="https://x.com/" target="_blank"><i className="fa-brands fa-x-twitter"></i></a></li>
-                                <li><a href="https://www.linkedin.com/" target="_blank"><i className="fa-brands fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* end: Hamburger Menu */}
-
-            {/* start: Header Area */}
+        <>            {/* start: Header Area */}
             <Header />
             {/* end: Header Area */}
-
 
             <div id="smooth-wrapper">
                 <div id="smooth-content">
@@ -71,7 +13,6 @@ export default function AuditoriumPage() {
                         <div className="top-space-15"></div>
             {/* Mobile top padding */}
             <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
-
 
                         {/* start: About Section */}
                         <section className="tj-about-section h6-about section-gap section-gap-x" style={{ backgroundColor: '#d8e5e5' }}>
@@ -143,5 +84,4 @@ export default function AuditoriumPage() {
         </>
     );
 }
-
 

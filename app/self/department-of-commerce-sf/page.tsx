@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import OffcanvasMenu from '../../components/OffcanvasMenu';
 
 export default function DepartmentOfCommerce() {
   return (
@@ -11,11 +10,6 @@ export default function DepartmentOfCommerce() {
         <div id="ball"></div>
       </div>
       {/* end: magic cursor */}
-
-      {/* start: Hamburger Menu */}
-      <OffcanvasMenu />
-      {/* end: Hamburger Menu */}
-
       {/* start: Header Area */}
       <Header />
       {/* end: Header Area */}
@@ -959,5 +953,4 @@ export default function DepartmentOfCommerce() {
     </>
   );
 }
-
 

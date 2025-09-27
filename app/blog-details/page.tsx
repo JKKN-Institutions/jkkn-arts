@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 import Header from '../components/Header';
-import OffcanvasMenu from '../components/OffcanvasMenu';
 import Footer from '../components/Footer';
 
 // Event data
@@ -431,9 +430,7 @@ function BlogDetailsContent() {
 
 export default function BlogDetails() {
   return (
-    <>
-      <OffcanvasMenu />
-      <Header />
+    <>      <Header />
       
       <div id="smooth-wrapper">
         <div id="smooth-content">

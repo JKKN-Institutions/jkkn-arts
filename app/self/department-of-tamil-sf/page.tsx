@@ -1,6 +1,5 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import OffcanvasMenu from '../../components/OffcanvasMenu';
 import { Noto_Sans_Tamil } from 'next/font/google';
 
 const notoTamil = Noto_Sans_Tamil({ subsets: ['tamil'], weight: ['400','500','700'] });
@@ -13,11 +12,6 @@ export default function DepartmentOfTamilSF() {
         <div id="ball"></div>
       </div>
       {/* end: magic cursor */}
-
-      {/* start: Hamburger Menu */}
-      <OffcanvasMenu />
-      {/* end: Hamburger Menu */}
-
       {/* start: Header Area */}
       <Header />
       {/* end: Header Area */}
@@ -750,5 +744,4 @@ export default function DepartmentOfTamilSF() {
     </>
   );
 }
-
 

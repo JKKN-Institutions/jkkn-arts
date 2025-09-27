@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import OffcanvasMenu from '../../components/OffcanvasMenu';
 
 export default function DepartmentOfArtificialIntelligenceAndDataScience() {
     return (
@@ -11,16 +10,9 @@ export default function DepartmentOfArtificialIntelligenceAndDataScience() {
                 <div id="ball"></div>
             </div>
             {/* end: magic cursor */}
-
-            {/* start: Hamburger Menu */}
-            <OffcanvasMenu />
-            {/* end: Hamburger Menu */}
-
             {/* start: Header Area */}
             <Header />
             {/* end: Header Area */}
-
-
 
             <div id="smooth-wrapper">
                 <div id="smooth-content">
@@ -175,8 +167,6 @@ export default function DepartmentOfArtificialIntelligenceAndDataScience() {
                             </div>
                         </section>
                         {/* end: Service Section */}
-
-
 
                         {/* start: About Section */}
                         <section className="h10-about section-gap">
@@ -1041,5 +1031,4 @@ export default function DepartmentOfArtificialIntelligenceAndDataScience() {
         </>
     );
 }
-
 

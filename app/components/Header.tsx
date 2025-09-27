@@ -6,46 +6,48 @@ import { useEffect } from 'react';
 
 export default function Header() {
   useEffect(() => {
-    // Handle offcanvas menu functionality
+    // Handle hamburger menu functionality
     const menuBars = document.querySelectorAll('.menu_bar');
-    const offcanvasArea = document.querySelector('.tj-offcanvas-area');
     const hamburgerArea = document.querySelector('.hamburger-area');
     const closeBtns = document.querySelectorAll('.hamburger_close_btn');
     const hamburgerBg = document.querySelector('.hamburger_bg');
 
-    const openOffcanvas = () => {
-      if (window.innerWidth >= 992) {
-        offcanvasArea?.classList.add('opened');
-      } else {
-        hamburgerArea?.classList.add('opened');
-      }
+    const openMenu = () => {
+      hamburgerArea?.classList.add('opened');
       document.body.style.overflow = 'hidden';
+      // Add opened class to hamburger button for animation
+      menuBars.forEach(menuBar => {
+        menuBar.classList.add('opened');
+      });
     };
 
-    const closeOffcanvas = () => {
-      offcanvasArea?.classList.remove('opened');
+    const closeMenu = () => {
       hamburgerArea?.classList.remove('opened');
       document.body.style.overflow = '';
+      // Remove opened class from hamburger button
+      menuBars.forEach(menuBar => {
+        menuBar.classList.remove('opened');
+      });
     };
 
     // Add click listeners to all menu bars
     menuBars.forEach(menuBar => {
-      menuBar.addEventListener('click', openOffcanvas);
+      menuBar.addEventListener('click', openMenu);
     });
 
-    hamburgerBg?.addEventListener('click', closeOffcanvas);
+    hamburgerBg?.addEventListener('click', closeMenu);
     
     closeBtns.forEach(btn => {
-      btn.addEventListener('click', closeOffcanvas);
+      btn.addEventListener('click', closeMenu);
     });
 
     return () => {
       menuBars.forEach(menuBar => {
-        menuBar.removeEventListener('click', openOffcanvas);
+        menuBar.removeEventListener('click', openMenu);
       });
-      hamburgerBg?.removeEventListener('click', closeOffcanvas);
+      hamburgerBg?.removeEventListener('click', closeMenu);
       closeBtns.forEach(btn => {
-        btn.removeEventListener('click', closeOffcanvas);
+        btn.removeEventListener('click', closeMenu);
       });
     };
   }, []);
@@ -64,28 +66,26 @@ export default function Header() {
               </div>
 
               {/* navigation */}
-              <div className="menu-area d-none d-lg-flex align-items-center flex-grow-1 justify-content-center">
+              <div className="menu-area d-none d-md-flex align-items-center flex-grow-1 justify-content-center">
                 <nav id="mobile-menu" className="mainmenu">
                   <ul className="d-flex align-items-center mb-0 list-unstyled">
-                    {/* 1. Home */}
-                    {/* <li className="current-menu-ancestor me-3">
-                      <Link href="/">Home</Link>
-                    </li> */}
+                    
 
                     {/* 2. About */}
                     <li className="has-dropdown me-3">
-                    <Link href="#">About <i className="fas fa-chevron-down ms-1"></i></Link>
+                    <Link href="#">About</Link>
                       <ul className="sub-menu">
                         <li><Link href="/vision-mission">Our Vision and Mission</Link></li>
                         <li><Link href="/about/trust">Our Trust</Link></li>
                         <li><Link href="/about/management">Our Management</Link></li>
                         <li><Link href="/about/college">Our College</Link></li>
+                        <li><Link href="/nav">Our Nav</Link></li>
                       </ul>
                     </li>
 
                     {/* 3. Programmes Offered */}
                     <li className="has-dropdown me-3">
-                      <Link href="/programmes">Programmes Offered <i className="fas fa-chevron-down ms-1"></i></Link>
+                      <Link href="/programmes">Programmes Offered</Link>
                       <ul className="sub-menu">
                         <li className="has-dropdown">
                           <Link href="/programmes/aided">Aided <i className="fas fa-chevron-right ms-1"></i></Link>
@@ -156,7 +156,7 @@ export default function Header() {
 
                     {/* 4. Department */}
                     <li className="has-dropdown me-3">
-                      <Link href="/departments">Department <i className="fas fa-chevron-down ms-1"></i></Link>
+                      <Link href="/departments">Department</Link>
                       <ul className="sub-menu">
                         <li className="has-dropdown">
                           <Link href="/departments/aided">Aided <i className="fas fa-chevron-right ms-1"></i></Link>
@@ -201,7 +201,7 @@ export default function Header() {
 
                     {/* 7. Facilities */}
                     <li className="has-dropdown me-3">
-                      <Link href="/facilities">Facilities <i className="fas fa-chevron-down ms-1"></i></Link>
+                      <Link href="/facilities">Facilities</Link>
                       <ul className="sub-menu">
                         <li><Link href="/facilities/lab">Labs</Link></li>
                         <li><Link href="/facilities/library">Library</Link></li>
@@ -223,7 +223,7 @@ export default function Header() {
 
                     {/* 9. Others */}
                     <li className="has-dropdown me-3">
-                      <Link href="/others">Others <i className="fas fa-chevron-down ms-1"></i></Link>
+                      <Link href="/others">Others</Link>
                       <ul className="sub-menu">
                         <li className="has-dropdown">
                           <Link href="#">NIRF <i className="fas fa-chevron-right ms-1"></i></Link>
@@ -314,7 +314,8 @@ export default function Header() {
                                 <li><a href="/assets/pdf/Best-Practice/Best-practice-2018-2019.pdf" target="_blank" rel="noopener noreferrer">Best practice-2018-2019</a></li>
                               </ul>
                             </li>
-                            <li><Link href="/iqac/minutes">Minutes of IQAC</Link>
+                            <li className="has-dropdown">
+                              <Link href="/iqac/minutes">Minutes of IQAC <i className="fas fa-chevron-right ms-1"></i></Link>
                               <ul className="sub-menu">
                                 <li><a href="/assets/pdf/mints-of-iqac/Minutes-of-Meeting-2022-2023.pdf" target="_blank" rel="noopener noreferrer">Minutes of IQAC meeting - 2022-2023</a></li>
                                 <li><a href="/assets/pdf/mints-of-iqac/Minutes-of-Meeting-2021-2022.pdf" target="_blank" rel="noopener noreferrer">Minutes of IQAC meeting - 2021-2022</a></li>
@@ -397,25 +398,12 @@ export default function Header() {
               </div>
 
               {/* header right info */}
-              <div className="header-right-item d-none d-lg-flex align-items-center flex-shrink-0">
-                {/* <div className="header-button me-3">
-                <Link className="tj-primary-btn" href="#">
-                    <span className="btn-text"><span>Let's Talk</span></span>
-                    <span className="btn-icon"><i className="fas fa-arrow-right"></i></span>
-                  </Link>
-                </div> */}
-                <div className="menu_bar menu_offcanvas" style={{cursor: 'pointer', gap: '4px'}}>
-                  <span style={{display: 'block', width: '25px', height: '2px', backgroundColor: '#000', borderRadius: '10px', marginBottom: '4px'}}></span>
-                  <span style={{display: 'block', width: '18px', height: '2px', backgroundColor: '#000', borderRadius: '10px', marginBottom: '4px'}}></span>
-                  <span style={{display: 'block', width: '25px', height: '2px', backgroundColor: '#000', borderRadius: '10px'}}></span>
+              <div className="header-right-item d-flex align-items-center flex-shrink-0">
+                <div className="menu_bar">
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
-              </div>
-
-              {/* mobile menu bar */}
-              <div className="menu_bar mobile_menu_bar d-lg-none" style={{cursor: 'pointer', width: '50px', height: '50px', padding: '12px', backgroundColor: '#1e8a8a', borderRadius: '7px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '4px'}}>
-                <span style={{display: 'block', width: '25px', height: '2px', backgroundColor: '#fff', borderRadius: '10px'}}></span>
-                <span style={{display: 'block', width: '18px', height: '2px', backgroundColor: '#fff', borderRadius: '10px'}}></span>
-                <span style={{display: 'block', width: '25px', height: '2px', backgroundColor: '#fff', borderRadius: '10px'}}></span>
               </div>
             </div>
           </div>

@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Custom CSS for JKKN Arts College */
 
 /* Dashboard specific styles to override theme conflicts */
 .dashboard-container * {
@@ -101,11 +99,137 @@
 
 /* Custom color for text-primary in offcanvas */
 .hamburger-infos .text-primary {
-  color: #1e8a8a !important;
+  color:  #1e8a8a !important;
 }
 
 .hamburger-infos .text-dark {
   color: #364e52 !important;
+}
+
+/* ===== ENHANCED HAMBURGER MENU STYLES ===== */
+/* This section overrides all other hamburger menu styles */
+
+/* Enhanced Hamburger Button Container */
+.menu_bar {
+  position: relative !important;
+  z-index: 10000 !important;
+  cursor: pointer !important;
+  width: 50px !important;
+  height: 50px !important;
+  padding: 12px !important;
+  background: linear-gradient(135deg, #1e8a8a 0%, #16a085 100%) !important;
+  border-radius: 12px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 4px !important;
+  box-shadow: 0 4px 15px rgba(30, 138, 138, 0.3) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.menu_bar:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(30, 138, 138, 0.4) !important;
+  background: linear-gradient(135deg, #16a085 0%, #1e8a8a 100%) !important;
+}
+
+.menu_bar:active {
+  transform: translateY(0px) !important;
+  box-shadow: 0 2px 8px rgba(30, 138, 138, 0.3) !important;
+}
+
+/* Enhanced Hamburger Bars */
+.menu_bar span {
+  display: block !important;
+  width: 25px !important;
+  height: 3px !important;
+  background-color: #ffffff !important;
+  border-radius: 2px !important;
+  position: relative !important;
+  z-index: 10001 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transform-origin: center !important;
+}
+
+.menu_bar span:nth-child(1) {
+  width: 25px !important;
+}
+
+.menu_bar span:nth-child(2) {
+  width: 20px !important;
+  margin-left: auto !important;
+}
+
+.menu_bar span:nth-child(3) {
+  width: 25px !important;
+}
+
+/* Hover Animation for Bars */
+.menu_bar:hover span:nth-child(1) {
+  width: 28px !important;
+  background-color: #f8f9fa !important;
+}
+
+.menu_bar:hover span:nth-child(2) {
+  width: 25px !important;
+  background-color: #f8f9fa !important;
+  margin-left: 0 !important;
+}
+
+.menu_bar:hover span:nth-child(3) {
+  width: 28px !important;
+  background-color: #f8f9fa !important;
+}
+
+/* Active/Open State Animation */
+.menu_bar.opened span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px) !important;
+  width: 25px !important;
+}
+
+.menu_bar.opened span:nth-child(2) {
+  opacity: 0 !important;
+  transform: scale(0) !important;
+}
+
+.menu_bar.opened span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px) !important;
+  width: 25px !important;
+}
+
+/* Override all other menu bar styles */
+.header-area .menu_bar,
+.header-right-item .menu_bar,
+.mobile_menu_bar,
+.menu_offcanvas {
+  position: relative !important;
+  z-index: 10000 !important;
+  cursor: pointer !important;
+  background: linear-gradient(135deg, #1e8a8a 0%, #16a085 100%) !important;
+  border-radius: 12px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Override all span styles */
+.header-area .menu_bar span,
+.header-right-item .menu_bar span,
+.mobile_menu_bar span,
+.menu_offcanvas span,
+.menu_bar.mobile_menu_bar span,
+.header-2.header-absolute .menu_bar span {
+  display: block !important;
+  background-color: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative !important;
+  z-index: 10001 !important;
+  border-radius: 2px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
 /* Mobile menu navigation styles */
@@ -171,6 +295,64 @@
 .mobile-menu-list .sub-menu li a:hover {
   color: #1e8a8a;
   background-color: #fff;
+}
+
+/* ===== ENHANCED HAMBURGER MENU PANEL ===== */
+
+/* Enhanced Hamburger Menu Panel */
+.hamburger-area {
+  z-index: 9999 !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+.hamburger_bg {
+  z-index: 1 !important;
+  background: linear-gradient(135deg, #0c1e21 0%, #1a2f33 50%, #0c1e21 100%) !important;
+  box-shadow: inset 0 0 100px rgba(30, 138, 138, 0.1) !important;
+}
+
+.hamburger_wrapper {
+  z-index: 2 !important;
+  position: relative !important;
+}
+
+.hamburger_inner {
+  z-index: 3 !important;
+  position: relative !important;
+}
+
+/* Enhanced Close Button */
+.hamburger_close_btn {
+  z-index: 4 !important;
+  position: relative !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 50% !important;
+  width: 45px !important;
+  height: 45px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.hamburger_close_btn:hover {
+  background: rgba(30, 138, 138, 0.2) !important;
+  border-color: rgba(30, 138, 138, 0.4) !important;
+  transform: rotate(90deg) scale(1.1) !important;
+}
+
+/* Enhanced Menu Logo */
+.hamburger_logo .mobile_logo img {
+  filter: brightness(1.1) contrast(1.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.hamburger_logo .mobile_logo:hover img {
+  filter: brightness(1.2) contrast(1.2) !important;
+  transform: scale(1.05) !important;
 }
 
 .mobile-menu-list .sub-menu .sub-menu li a {

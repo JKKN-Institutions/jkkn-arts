@@ -1,14 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Header from '../components/Header';
-import OffcanvasMenu from '../components/OffcanvasMenu';
 import Footer from '../components/Footer';
 
 export default function VisionMission() {
   return (
-    <>
-      <OffcanvasMenu />
-      <Header />
+    <>      <Header />
 
       <div id="smooth-wrapper">
         <div id="smooth-content">

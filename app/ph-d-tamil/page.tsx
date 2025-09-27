@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Header from '../components/Header';
-import OffcanvasMenu from '../components/OffcanvasMenu';
 import Footer from '../components/Footer';
 import { Noto_Sans_Tamil } from 'next/font/google';
 
@@ -8,9 +7,7 @@ const notoTamil = Noto_Sans_Tamil({ subsets: ['tamil'], weight: ['400','500','70
 
 export default function PhDTamil() {
   return (
-    <>
-      <OffcanvasMenu />
-      <Header />
+    <>      <Header />
       
       <div id="smooth-wrapper" className={notoTamil.className}>
         <div id="smooth-content">
@@ -128,7 +125,6 @@ export default function PhDTamil() {
               
             </section>
             {/* end: About Section */}
-
 
             {/* start: Vision Mission Section */}
             <section className="h8-service overflow-hidden section-gap">
@@ -476,6 +472,4 @@ export default function PhDTamil() {
     </>
   );
 }
-
-
 

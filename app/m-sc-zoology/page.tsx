@@ -1,16 +1,11 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import OffcanvasMenu from '../components/OffcanvasMenu';
 import Link from 'next/link';
 
 export default function MScZoologyPage() {
     return (
         <>
-            <OffcanvasMenu />
-
             <Header />
-
-
 
             <div id="smooth-wrapper">
                 <div id="smooth-content">
@@ -256,5 +251,4 @@ export default function MScZoologyPage() {
         </>
     );
 }
-
 

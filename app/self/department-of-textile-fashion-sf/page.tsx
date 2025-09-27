@@ -1,6 +1,5 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import OffcanvasMenu from '../../components/OffcanvasMenu';
 
 export default function DepartmentOfTextileFashionDesigning() {
   return (
@@ -10,11 +9,6 @@ export default function DepartmentOfTextileFashionDesigning() {
         <div id="ball"></div>
       </div>
       {/* end: magic cursor */}
-
-      {/* start: Hamburger Menu */}
-      <OffcanvasMenu />
-      {/* end: Hamburger Menu */}
-
       {/* start: Header Area */}
       <Header />
       {/* end: Header Area */}
@@ -886,5 +880,4 @@ export default function DepartmentOfTextileFashionDesigning() {
     </>
   );
 }
-
 
