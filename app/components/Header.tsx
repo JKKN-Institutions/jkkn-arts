@@ -67,7 +67,7 @@ export default function Header() {
 
               {/* navigation */}
               <div className="menu-area d-none d-md-flex align-items-center flex-grow-1 justify-content-center">
-                <nav id="mobile-menu" className="mainmenu">
+                <nav id="desktop-menu" className="mainmenu">
                   <ul className="d-flex align-items-center mb-0 list-unstyled">
                     
 

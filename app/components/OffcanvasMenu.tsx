@@ -8,24 +8,25 @@ export default function OffcanvasMenu() {
   useEffect(() => {
     // Remove any duplicate mobile menu instances
     const removeDuplicateMenus = () => {
+      // Remove duplicate mobile menu lists (keep only primary)
       const allMobileMenus = document.querySelectorAll('.mobile-menu-list');
       const primaryMenu = document.getElementById('primary-mobile-menu');
       
-      // Hide all menus first
+      let duplicatesRemoved = 0;
       allMobileMenus.forEach((menu) => {
         if (menu !== primaryMenu && menu.id !== 'primary-mobile-menu') {
-          (menu as HTMLElement).remove(); // Remove completely instead of just hiding
-          console.log('Duplicate mobile menu removed:', menu);
+          (menu as HTMLElement).remove();
+          duplicatesRemoved++;
         }
       });
 
-      // Also remove any other duplicate mobile menu containers
+      // Remove duplicate mobile menu containers
       const allMobileMenuContainers = document.querySelectorAll('.mobile_menu');
       if (allMobileMenuContainers.length > 1) {
         allMobileMenuContainers.forEach((container, index) => {
           if (index > 0) { // Keep only the first one
             (container as HTMLElement).remove();
-            console.log('Duplicate mobile menu container removed:', container);
+            duplicatesRemoved++;
           }
         });
       }
@@ -36,9 +37,20 @@ export default function OffcanvasMenu() {
         allHamburgerAreas.forEach((area, index) => {
           if (index > 0) { // Keep only the first one
             (area as HTMLElement).remove();
-            console.log('Duplicate hamburger area removed:', area);
+            duplicatesRemoved++;
           }
         });
+      }
+
+      // Remove any stray mobile menus from other components
+      const strayMobileMenus = document.querySelectorAll('[id*="mobile-menu"]:not(#primary-mobile-menu):not(#desktop-menu)');
+      strayMobileMenus.forEach((menu) => {
+        (menu as HTMLElement).remove();
+        duplicatesRemoved++;
+      });
+
+      if (duplicatesRemoved > 0) {
+        console.log(`Mobile Menu Cleanup: Removed ${duplicatesRemoved} duplicate menu elements`);
       }
     };
 
@@ -224,20 +236,28 @@ export default function OffcanvasMenu() {
                       </ul>
                     </li>
 
-                    {/* 5. Others */}
+                    {/* 5. IQAC */}
                     <li className="has-dropdown">
-                      <Link href="#">Others <i className="fas fa-chevron-down ms-1"></i></Link>
+                      <Link href="#">IQAC <i className="fas fa-chevron-down ms-1"></i></Link>
                       <ul className="sub-menu">
-                        <li><Link href="/iqac">IQAC</Link></li>
-                        <li><Link href="/others/committees">Committees</Link></li>
-                        <li><Link href="/others/gallery">Gallery</Link></li>
-                        <li><Link href="/others/academic-calendar">Academic Calendar</Link></li>
-                        <li><Link href="/others/digital-campus">Digital Campus</Link></li>
-                        <li><Link href="/others/privacy-policy">Privacy Policy</Link></li>
+                        <li><Link href="/iqac/vision-mission"><i className="fas fa-eye me-2"></i>Vision & Mission</Link></li>
+                        <li><Link href="/iqac/objectives-functions"><i className="fas fa-bullseye me-2"></i>Objectives & Functions</Link></li>
+                        <li><Link href="/iqac/role-responsibilities"><i className="fas fa-users-cog me-2"></i>Role & Responsibilities</Link></li>
                       </ul>
                     </li>
 
-                    {/* 6. Contact */}
+                    {/* 6. Others */}
+                    <li className="has-dropdown">
+                      <Link href="#">Others <i className="fas fa-chevron-down ms-1"></i></Link>
+                      <ul className="sub-menu">
+                        <li><Link href="/others/committees"><i className="fas fa-users me-2"></i>Committees</Link></li>
+                        <li><Link href="/team"><i className="fas fa-user-tie me-2"></i>Our Team</Link></li>
+                        <li><Link href="/services"><i className="fas fa-cogs me-2"></i>Services</Link></li>
+                        <li><Link href="/portfolio"><i className="fas fa-briefcase me-2"></i>Portfolio</Link></li>
+                      </ul>
+                    </li>
+
+                    {/* 7. Contact */}
                     <li><Link href="/contact">Contact</Link></li>
                   </ul>
                 </nav>
