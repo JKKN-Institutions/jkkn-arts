@@ -1,5 +1,7 @@
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+﻿import Image from 'next/image';
+import PageLayout from '../../components/PageLayout';
+
+
 
 export default function FoodCourtPage() {
     return (
@@ -28,18 +30,18 @@ export default function FoodCourtPage() {
                                                 
                                                 <div className="desc wow fadeInUp" data-wow-delay=".8s" style={{ color: '#6b7474' }}>
                                                     <ul style={{ listStyle: 'none', padding: 0 }}>
-                                                        <li style={{ marginBottom: '8px' }}>â€¢ Diverse menu</li>
-                                                        <li style={{ marginBottom: '8px' }}>â€¢ Quality ingredients</li>
-                                                        <li style={{ marginBottom: '8px' }}>â€¢ Healthy options</li>
-                                                        <li style={{ marginBottom: '8px' }}>â€¢ Affordable prices</li>
-                                                        <li style={{ marginBottom: '8px' }}>â€¢ Hygiene and safety</li>
+                                                        <li style={{ marginBottom: '8px' }}>Ã¢â‚¬Â¢ Diverse menu</li>
+                                                        <li style={{ marginBottom: '8px' }}>Ã¢â‚¬Â¢ Quality ingredients</li>
+                                                        <li style={{ marginBottom: '8px' }}>Ã¢â‚¬Â¢ Healthy options</li>
+                                                        <li style={{ marginBottom: '8px' }}>Ã¢â‚¬Â¢ Affordable prices</li>
+                                                        <li style={{ marginBottom: '8px' }}>Ã¢â‚¬Â¢ Hygiene and safety</li>
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div className="h6-about-funfact-wrapper">
 
                                                 <div className="h6-about-funfact-shape">
-                                                    <img src="/assets/images/shape/about-counter-shape-blur.svg" alt="" />
+                                                    <Image src="/assets/images/shape/about-counter-shape-blur.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                                                 </div>
                                             </div>
 
@@ -54,7 +56,7 @@ export default function FoodCourtPage() {
                                     <div className="col-xl-6 col-lg-6">
                                         <div className="about-img-area h6-about-img wow fadeInLeft" data-wow-delay=".2s">
                                             <div className="about-img wow fadeInRight" data-wow-delay=".8s">
-                                                <img src="/assets/images/img/classroom.png" alt="" style={{ width: '100%', height: 'auto' }} />
+                                                <Image src="/assets/images/img/classroom.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }}   style={{ width: '100%', height: 'auto' }} />
                                             </div>
 
                                         </div>
@@ -62,10 +64,10 @@ export default function FoodCourtPage() {
                                 </div>
                             </div>
                             <div className="bg-shape-1">
-                                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                             </div>
                             <div className="bg-shape-2">
-                                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                             </div>
 
                         </section>
@@ -82,4 +84,6 @@ export default function FoodCourtPage() {
         </>
     );
 }
+
+
 

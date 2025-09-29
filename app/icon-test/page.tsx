@@ -1,3 +1,4 @@
+﻿import PageLayout from '../components/PageLayout';
 export default function IconTest() {
   return (
     <div className="container py-5">
@@ -7,7 +8,7 @@ export default function IconTest() {
       <div className="row mb-4">
         <div className="col-12">
           <div className="alert alert-success">
-            <h4>âœ… Icons Should Display as Visual Symbols</h4>
+            <h4>Ã¢Å“â€¦ Icons Should Display as Visual Symbols</h4>
             <p>If you see numbers, squares, or text instead of icons, the font files are not loading properly.</p>
           </div>
         </div>
@@ -664,8 +665,8 @@ export default function IconTest() {
           <h2 className="mb-3">Font Loading Test</h2>
           <div className="alert alert-info">
             <p><strong>Font Family Check:</strong></p>
-            <p>Font Awesome 6 Free: <span style={{fontFamily: '"Font Awesome 6 Free"', fontWeight: 900}}>âœ“</span></p>
-            <p>Font Awesome 6 Brands: <span style={{fontFamily: '"Font Awesome 6 Brands"', fontWeight: 400}}>âœ“</span></p>
+            <p>Font Awesome 6 Free: <span style={{fontFamily: '"Font Awesome 6 Free"', fontWeight: 900}}>Ã¢Å“â€œ</span></p>
+            <p>Font Awesome 6 Brands: <span style={{fontFamily: '"Font Awesome 6 Brands"', fontWeight: 400}}>Ã¢Å“â€œ</span></p>
           </div>
         </div>
       </div>
@@ -686,10 +687,10 @@ export default function IconTest() {
           <div className="alert alert-info">
             <h5>Expected Results:</h5>
             <ul>
-              <li>âœ… <strong>Home icon:</strong> Should show a house symbol</li>
-              <li>âœ… <strong>Search icon:</strong> Should show a magnifying glass</li>
-              <li>âœ… <strong>Facebook icon:</strong> Should show Facebook &quot;f" logo</li>
-              <li>âœ… <strong>Arrow icons:</strong> Should show directional arrows</li>
+              <li>Ã¢Å“â€¦ <strong>Home icon:</strong> Should show a house symbol</li>
+              <li>Ã¢Å“â€¦ <strong>Search icon:</strong> Should show a magnifying glass</li>
+              <li>Ã¢Å“â€¦ <strong>Facebook icon:</strong> Should show Facebook &quot;f" logo</li>
+              <li>Ã¢Å“â€¦ <strong>Arrow icons:</strong> Should show directional arrows</li>
             </ul>
           </div>
         </div>
@@ -697,3 +698,4 @@ export default function IconTest() {
     </div>
   );
 }
+

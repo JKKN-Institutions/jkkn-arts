@@ -1,4 +1,5 @@
-'use client';
+﻿'use client';
+import Image from 'next/image';
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -115,10 +116,12 @@ export default function NewBlogPage() {
     <div className="prose max-w-none">
       <h1 className="text-3xl font-bold text-gray-900 mb-4">{watchedTitle || 'Untitled Post'}</h1>
       {featuredImage && (
-        <img 
-          src={featuredImage} 
+        <Image src={featuredImage} 
           alt="Featured" 
+          width={400} 
+          height={300} 
           className="w-full h-64 object-cover rounded-lg mb-6"
+          style={{ width: "100%", height: "auto" }}
         />
       )}
       <p className="text-lg text-gray-600 mb-6">{watchedExcerpt}</p>
@@ -252,10 +255,12 @@ export default function NewBlogPage() {
                 
                 {featuredImage ? (
                   <div className="relative">
-                    <img 
-                      src={featuredImage} 
+                    <Image src={featuredImage} 
                       alt="Featured" 
+                      width={400} 
+                      height={300}
                       className="w-full h-48 object-cover rounded-lg"
+                      style={{ width: "100%", height: "auto" }}
                     />
                     <button
                       type="button"
@@ -418,3 +423,4 @@ export default function NewBlogPage() {
     </div>
   );
 }
+

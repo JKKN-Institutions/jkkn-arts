@@ -1,4 +1,5 @@
-'use client';
+﻿'use client';
+import Image from 'next/image';
 
 import { useState, useEffect } from 'react';
 import { 
@@ -487,10 +488,12 @@ export default function UsersPage() {
                   <td className="px-4 py-4">
                     <div className="flex items-center space-x-3">
                       {user.avatar ? (
-                        <img
-                          src={user.avatar}
+                        <Image src={user.avatar}
                           alt={user.name}
+                          width={400} 
+                          height={300}
                           className="w-10 h-10 rounded-full object-cover"
+                          style={{ width: "100%", height: "auto" }}
                         />
                       ) : (
                         <div className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
@@ -633,3 +636,4 @@ export default function UsersPage() {
     </div>
   );
 }
+

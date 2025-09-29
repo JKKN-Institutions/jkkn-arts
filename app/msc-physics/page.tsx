@@ -1,13 +1,12 @@
-import Link from 'next/link';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+﻿import Link from 'next/link';
+import Image from 'next/image';
+import PageLayout from '../components/PageLayout';
+
+
 
 export default function MScPhysics() {
   return (
-    <>      <Header />
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main id="primary" className="site-main">
+    <PageLayout>
             <div className="space-for-header"></div>
             {/* Mobile top padding */}
             <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
@@ -80,7 +79,7 @@ export default function MScPhysics() {
                   <div className="col-xl-6 col-lg-6 order-lg-1 order-2">
                     <div className="about-img-area style-2 wow fadeInLeft" data-wow-delay=".3s">
                       <div className="about-img overflow-hidden">
-                        <img data-speed=".8" src="/assets/images/img/Campus-Life.png" alt="MSc Physics Department" />
+                        <Image src="/assets/images/img/Campus-Life.png" alt="MSc Physics Department" width={400} height={300} style={{ width: "100%", height: "auto" }} data-speed=".8"   />
                       </div>
                       <div className="box-area style-2">
                         <div className="progress-box wow fadeInUp" data-wow-delay=".3s">
@@ -135,10 +134,10 @@ export default function MScPhysics() {
                 </div>
               </div>
               <div className="bg-shape-1">
-                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-2">
-                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </section>
             {/* end: Vision Mission Section */}
@@ -185,7 +184,7 @@ export default function MScPhysics() {
                   <div className="col-lg-6 order-lg-2">
                     <div className="testimonial-img-area wow fadeInUp" data-wow-delay=".3s">
                       <div className="testimonial-img">
-                        <img src="/assets/images/testimonial/testimonial-img.webp" alt="Career Opportunities" />
+                        <Image src="/assets/images/img/department-of-physics.png" alt="Career Opportunities" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         <div className="sec-heading style-2">
                           <h2 className="sec-title title-anim">Career <span>Opportunities</span></h2>
                         </div>
@@ -196,10 +195,10 @@ export default function MScPhysics() {
                           <div className="rating-area">
                             <div className="star-ratings">
                               <div className="fill-ratings" style={{width: '100%'}}>
-                                <span>â˜…â˜…â˜…â˜…â˜…</span>
+                                <span>Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦</span>
                               </div>
                               <div className="empty-ratings">
-                                <span>â˜…â˜…â˜…â˜…â˜…</span>
+                                <span>Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦</span>
                               </div>
                             </div>
                           </div>
@@ -281,10 +280,10 @@ export default function MScPhysics() {
                 </div>
               </div>
               <div className="bg-shape-1">
-                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-2">
-                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </section>
             {/* end: Program Outcomes Section */}
@@ -292,11 +291,8 @@ export default function MScPhysics() {
            
 
             
-          </main>
-
-          <Footer />
-        </div>
-      </div>
-    </>
+          </PageLayout>
   );
 }
+
+

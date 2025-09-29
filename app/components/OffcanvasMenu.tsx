@@ -11,12 +11,35 @@ export default function OffcanvasMenu() {
       const allMobileMenus = document.querySelectorAll('.mobile-menu-list');
       const primaryMenu = document.getElementById('primary-mobile-menu');
       
+      // Hide all menus first
       allMobileMenus.forEach((menu) => {
         if (menu !== primaryMenu && menu.id !== 'primary-mobile-menu') {
-          (menu as HTMLElement).style.display = 'none';
-          console.log('Duplicate mobile menu hidden:', menu);
+          (menu as HTMLElement).remove(); // Remove completely instead of just hiding
+          console.log('Duplicate mobile menu removed:', menu);
         }
       });
+
+      // Also remove any other duplicate mobile menu containers
+      const allMobileMenuContainers = document.querySelectorAll('.mobile_menu');
+      if (allMobileMenuContainers.length > 1) {
+        allMobileMenuContainers.forEach((container, index) => {
+          if (index > 0) { // Keep only the first one
+            (container as HTMLElement).remove();
+            console.log('Duplicate mobile menu container removed:', container);
+          }
+        });
+      }
+
+      // Remove duplicate hamburger areas
+      const allHamburgerAreas = document.querySelectorAll('.hamburger-area');
+      if (allHamburgerAreas.length > 1) {
+        allHamburgerAreas.forEach((area, index) => {
+          if (index > 0) { // Keep only the first one
+            (area as HTMLElement).remove();
+            console.log('Duplicate hamburger area removed:', area);
+          }
+        });
+      }
     };
 
     // Handle mobile menu dropdown functionality (including nested dropdowns)
@@ -56,25 +79,40 @@ export default function OffcanvasMenu() {
       }
     };
 
-    // Remove duplicates on load
+    // Remove duplicates on load with a slight delay to ensure DOM is ready
+    setTimeout(removeDuplicateMenus, 100);
+    
+    // Also run immediately
     removeDuplicateMenus();
 
     // Add click listeners to dropdown links (only for primary menu)
-    const dropdownLinks = document.querySelectorAll('#primary-mobile-menu .has-dropdown > a');
-    dropdownLinks.forEach(link => {
-      link.addEventListener('click', handleDropdownClick);
-    });
+    const addClickListeners = () => {
+      const dropdownLinks = document.querySelectorAll('#primary-mobile-menu .has-dropdown > a');
+      dropdownLinks.forEach(link => {
+        link.addEventListener('click', handleDropdownClick);
+      });
+    };
+    
+    addClickListeners();
 
     // Set up observer to remove duplicates if they're added dynamically
-    const observer = new MutationObserver(removeDuplicateMenus);
+    const observer = new MutationObserver(() => {
+      removeDuplicateMenus();
+      addClickListeners(); // Re-add listeners after DOM changes
+    });
     observer.observe(document.body, { childList: true, subtree: true });
+
+    // Run cleanup every 2 seconds as a safety measure
+    const cleanupInterval = setInterval(removeDuplicateMenus, 2000);
 
     // Cleanup
     return () => {
+      const dropdownLinks = document.querySelectorAll('#primary-mobile-menu .has-dropdown > a');
       dropdownLinks.forEach(link => {
         link.removeEventListener('click', handleDropdownClick);
       });
       observer.disconnect();
+      clearInterval(cleanupInterval);
     };
   }, []);
 

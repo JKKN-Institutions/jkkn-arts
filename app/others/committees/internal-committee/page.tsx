@@ -1,4 +1,5 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
+import PageLayout from '../../../components/PageLayout';
 
 export default function InternalCommittee() {
   return (
@@ -58,7 +59,7 @@ export default function InternalCommittee() {
               href="/others/committees" 
               className="text-blue-600 hover:text-blue-800 transition-colors"
             >
-              ← Back to Committees
+              â†Â Back to Committees
             </Link>
           </div>
         </div>
@@ -66,3 +67,4 @@ export default function InternalCommittee() {
     </div>
   );
 }
+

@@ -1,26 +1,14 @@
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+﻿import Image from 'next/image';
+import PageLayout from '../../components/PageLayout';
+
+
 
 export default function DepartmentOfCommerce() {
   return (
-    <>
-      {/* start: magic cursor */}
-      <div id="magic-cursor">
-        <div id="ball"></div>
-      </div>
-      {/* end: magic cursor */}
-      {/* start: Header Area */}
-      <Header />
-      {/* end: Header Area */}
-
-      
-
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main id="primary" className="site-main">
-            <div className="top-space-15"></div>
-            {/* Mobile top padding */}
-            <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
+    <PageLayout>
+      <div className="top-space-15"></div>
+      {/* Mobile top padding */}
+      <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
             {/* start: Banner Section */}
             <section className="tj-banner-section-2 h10-hero section-gap-x zoom-on-scroll-wrapper">
               <div className="container">
@@ -64,10 +52,10 @@ export default function DepartmentOfCommerce() {
                 </div>
               </div>
               <div className="bg-shape-1">
-                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-2">
-                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </section>
             {/* end: Banner Section */}
@@ -177,7 +165,7 @@ export default function DepartmentOfCommerce() {
                   <div className="col-12 col-lg-5 d-block d-md-none d-lg-block">
                     <div className="about-img-area h10-about-banner wow bounceInLeft" data-wow-delay=".3s">
                       <div className="about-img overflow-hidden" style={{ height: '400px' }}>
-                        <img data-speed=".8" src="/assets/images/img/department-of-computer-science.png" alt="" style={{ height: '100%', objectFit: 'cover' }} />
+                        <Image src="/assets/images/img/department-of-computer-science.png" alt="" width={400} height={300} data-speed=".8" style={{ width: "100%", height: '100%', objectFit: 'cover' }} />
                       </div>
                     </div>
                   </div>
@@ -192,7 +180,7 @@ export default function DepartmentOfCommerce() {
                         <div className="col-12 col-md-6 d-none d-md-block d-lg-none">
                           <div className="about-img-area h10-about-banner wow bounceInLeft" data-wow-delay=".3s">
                             <div className="about-img">
-                              <img src="/assets/images/img/department-of-computer-science.png" alt="" />
+                              <Image src="/assets/images/img/department-of-computer-science.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                             </div>
                           </div>
                         </div>
@@ -201,9 +189,9 @@ export default function DepartmentOfCommerce() {
                             <div className="customers-box style-3 h10-about-clients wow fadeInUp" data-wow-delay=".4s">
                               <div className="customers">
                                 <ul>
-                                  <li className="wow fadeInLeft" data-wow-delay=".2s"><img src="/assets/images/testimonial/client-1.webp" alt="" /></li>
-                                  <li className="wow fadeInLeft" data-wow-delay=".3s"><img src="/assets/images/testimonial/client-2.webp" alt="" /></li>
-                                  <li className="wow fadeInLeft" data-wow-delay=".4s"><img src="/assets/images/testimonial/client-3.webp" alt="" /></li>
+                                  <li className="wow fadeInLeft" data-wow-delay=".2s"><Image src="/assets/images/testimonial/client-1.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} /></li>
+                                  <li className="wow fadeInLeft" data-wow-delay=".3s"><Image src="/assets/images/testimonial/client-2.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} /></li>
+                                  <li className="wow fadeInLeft" data-wow-delay=".4s"><Image src="/assets/images/testimonial/client-3.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} /></li>
                                   <li className="wow fadeInLeft" data-wow-delay=".5s"><span><i className="fas fa-plus"></i></span></li>
                                 </ul>
                               </div>
@@ -294,13 +282,13 @@ export default function DepartmentOfCommerce() {
                 </div>
               </div>
               <div className="bg-shape-1">
-                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-2">
-                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-3">
-                <img src="/assets/images/shape/h7-testimonial-shape-blur.svg" alt="" />
+                <Image src="/assets/images/shape/h7-testimonial-shape-blur.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </section>
             {/* end: Curriculum Section */}
@@ -413,7 +401,7 @@ export default function DepartmentOfCommerce() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".2s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/bcom/Dr.-S.-Gokila.png" alt="" />
+                          <Image src="/assets/images/team/bcom/Dr.-S.-Gokila.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -432,7 +420,7 @@ export default function DepartmentOfCommerce() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".3s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/bcom/Dr.-V.-K.-Sasikala.png" alt="" />
+                          <Image src="/assets/images/team/bcom/Dr.-V.-K.-Sasikala.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -451,7 +439,7 @@ export default function DepartmentOfCommerce() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".4s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/bcom/Dr.-M.-Boovathi.png" alt="" />
+                          <Image src="/assets/images/team/bcom/Dr.-M.-Boovathi.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -470,7 +458,7 @@ export default function DepartmentOfCommerce() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".5s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/bcom/Dr.-S.-Thenmozhi.png" alt="" />
+                          <Image src="/assets/images/team/bcom/Dr.-S.-Thenmozhi.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -489,7 +477,7 @@ export default function DepartmentOfCommerce() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".6s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/bcom/Dr.-L.-Kavitha.png" alt="" />
+                          <Image src="/assets/images/team/bcom/Dr.-L.-Kavitha.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -508,7 +496,7 @@ export default function DepartmentOfCommerce() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".7s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/bcom/Dr.-S.-V.-Ramesh.png" alt="" />
+                          <Image src="/assets/images/team/bcom/Dr.-S.-V.-Ramesh.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -527,7 +515,7 @@ export default function DepartmentOfCommerce() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".8s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/bcom/Dr.-R.-Mubeen.png" alt="" />
+                          <Image src="/assets/images/team/bcom/Dr.-R.-Mubeen.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -546,7 +534,7 @@ export default function DepartmentOfCommerce() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".9s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/bcom/Dr.-S.-Pavithra.png" alt="" />
+                          <Image src="/assets/images/team/bcom/Dr.-S.-Pavithra.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -564,21 +552,16 @@ export default function DepartmentOfCommerce() {
                 </div>
               </div>
               <div className="bg-shape-1">
-                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-2">
-                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </section>
             {/* end: Faculty Section */}
-          </main>
-
-          {/* start: Footer Section */}
-          <Footer />
-          {/* end: Footer Section */}
-        </div>
-      </div>
-    </>
+    </PageLayout>
   );
 }
+
+
 

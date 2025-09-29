@@ -1,4 +1,5 @@
-﻿// Pricing Section Component
+﻿import Image from 'next/image';
+// Pricing Section Component
 export function PricingSection() {
   return (
     <section className="h10-pricing section-gap">
@@ -148,32 +149,32 @@ export function ClientSection() {
               <div className="swiper-wrapper">
                 <div className="swiper-slide client-item">
                   <div className="client-logo">
-                    <img src="/assets/images/brands/brand-1-light.webp" alt="" />
+                    <Image src="/assets/images/brands/brand-1-light.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                   </div>
                 </div>
                 <div className="swiper-slide client-item">
                   <div className="client-logo">
-                    <img src="/assets/images/brands/brand-2-light.webp" alt="" />
+                    <Image src="/assets/images/brands/brand-2-light.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                   </div>
                 </div>
                 <div className="swiper-slide client-item">
                   <div className="client-logo">
-                    <img src="/assets/images/brands/brand-3-light.webp" alt="" />
+                    <Image src="/assets/images/brands/brand-3-light.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                   </div>
                 </div>
                 <div className="swiper-slide client-item">
                   <div className="client-logo">
-                    <img src="/assets/images/brands/brand-4-light.webp" alt="" />
+                    <Image src="/assets/images/brands/brand-4-light.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                   </div>
                 </div>
                 <div className="swiper-slide client-item">
                   <div className="client-logo">
-                    <img src="/assets/images/brands/brand-5-light.webp" alt="" />
+                    <Image src="/assets/images/brands/brand-5-light.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                   </div>
                 </div>
                 <div className="swiper-slide client-item">
                   <div className="client-logo">
-                    <img src="/assets/images/brands/brand-6-light.webp" alt="" />
+                    <Image src="/assets/images/brands/brand-6-light.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                   </div>
                 </div>
               </div>
@@ -211,7 +212,7 @@ export function BlogSection() {
             <div className="blog-wrapper h8-blog-wrapper h10-blog-wrapper ">
               <div className="blog-item style-2 wow fadeInUp" data-wow-delay=".3s">
                 <div className="blog-thumb">
-                  <a href="/blog/digital-transform"><img src="/assets/images/blog/blog-1.webp" alt="" /></a>
+                  <a href="/blog/digital-transform"><Image src="/assets/images/blog/blog-1.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} /></a>
                 </div>
                 <div className="blog-content">
                   <div className="blog-meta">
@@ -232,7 +233,7 @@ export function BlogSection() {
               </div>
               <div className="blog-item style-2 wow fadeInUp" data-wow-delay=".4s">
                 <div className="blog-thumb">
-                  <a href="/blog/change-management"><img src="/assets/images/blog/blog-5.webp" alt="" /></a>
+                  <a href="/blog/change-management"><Image src="/assets/images/blog/blog-5.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} /></a>
                 </div>
                 <div className="blog-content">
                   <div className="blog-meta">
@@ -253,7 +254,7 @@ export function BlogSection() {
               </div>
               <div className="blog-item style-2 wow fadeInUp" data-wow-delay=".5s">
                 <div className="blog-thumb">
-                  <a href="/blog/leading-through-change"><img src="/assets/images/blog/blog-4.webp" alt="" /></a>
+                  <a href="/blog/leading-through-change"><Image src="/assets/images/blog/blog-4.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} /></a>
                 </div>
                 <div className="blog-content">
                   <div className="blog-meta">
@@ -279,4 +280,5 @@ export function BlogSection() {
     </section>
   );
 }
+
 

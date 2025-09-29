@@ -1,4 +1,5 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect } from 'react';
 
 export default function Navigation() {
@@ -13,7 +14,7 @@ export default function Navigation() {
             <div className="header-wrapper">
               {/* site logo */}
               <div className="site_logo">
-                <Link className="logo" href="/"><img src="/assets/images/logos/logo.png" alt="" /></Link>
+                <Link className="logo" href="/"><Image src="/assets/images/logos/logo.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} /></Link>
               </div>
 
               {/* navigation */}
@@ -297,3 +298,4 @@ export default function Navigation() {
     </header>
   );
 }
+

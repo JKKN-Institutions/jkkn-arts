@@ -1,7 +1,9 @@
-'use client';
+﻿'use client';
 
 import { useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import PageLayout from '../components/PageLayout';
 import Navigation from './components/Navigation';
 // import MainContent from './components/MainContent';
 
@@ -82,62 +84,7 @@ export default function NavPage() {
       {/* end: Search Popup */}
 
       {/* Hamburger menu is now handled globally by layout.tsx */}
-      {/* <div className="hamburger-area">
-        <div className="hamburger_bg"></div>
-        <div className="hamburger_wrapper">
-          <div className="hamburger_inner">
-            <div className="hamburger_top d-flex align-items-center justify-content-between">
-              <div className="hamburger_logo">
-                <Link href="/" className="mobile_logo">
-                  <img src="/assets/images/logos/logo.png" alt="Logo" />
-                </Link>
-              </div>
-              <div className="hamburger_close">
-                <button className="hamburger_close_btn"><i className="fa-thin fa-times"></i></button>
-              </div>
-            </div>
-            <div className="hamburger-search-area">
-              <h5 className="hamburger-title">Search Now!</h5>
-              <div className="hamburger_search">
-                <form method="get" action="#">
-                  <button type="submit"><i className="tji-search"></i></button>
-                  <input type="search" autoComplete="off" name="s" defaultValue="" placeholder="Search here..." />
-                </form>
-              </div>
-            </div>
-            {/* Hamburger menu content removed - using global OffcanvasMenu.tsx instead */}
-            <div className="hamburger-infos">
-              <h5 className="hamburger-title">Contact Info</h5>
-              <div className="contact-info">
-                <div className="contact-item">
-                  <span className="subtitle">Phone</span>
-                  <Link className="contact-link" href="tel:+914286288884">+91 4286 288884</Link>
-                </div>
-                <div className="contact-item">
-                  <span className="subtitle">Email</span>
-                  <Link className="contact-link" href="mailto:info@jkkn.ac.in">info@jkkn.ac.in</Link>
-                </div>
-                <div className="contact-item">
-                  <span className="subtitle">Location</span>
-                  <span className="contact-link">Komarapalayam, Namakkal District, Tamil Nadu - 638183</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="hamburger-socials">
-            <h5 className="hamburger-title">Follow Us</h5>
-            <div className="social-links style-3">
-              <ul>
-                <li><a href="https://www.facebook.com/" target="_blank"><i className="fa-brands fa-facebook-f"></i></a></li>
-                <li><a href="https://www.instagram.com/" target="_blank"><i className="fa-brands fa-instagram"></i></a></li>
-                <li><a href="https://x.com/" target="_blank"><i className="fa-brands fa-x-twitter"></i></a></li>
-                <li><a href="https://www.linkedin.com/" target="_blank"><i className="fa-brands fa-linkedin-in"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div> */}
-      {/* end: Hamburger Menu - Now handled globally */}
+      {/* Hamburger menu content removed - using global OffcanvasMenu.tsx instead */}
 
       <Navigation />
 
@@ -220,13 +167,13 @@ export default function NavPage() {
               <div className="swiper hero-thumb wow fadeIn" data-wow-delay="2s">
                 <div className="swiper-wrapper">
                   <div className="swiper-slide thumb-item">
-                    <img src="/assets/images/hero/slider-thumb-1.webp" alt="Thumbnail" />
+                    <Image src="/assets/images/hero/slider-thumb-1.webp" alt="Thumbnail" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                   </div>
                   <div className="swiper-slide thumb-item">
-                    <img src="/assets/images/hero/slider-thumb-2.webp" alt="Thumbnail" />
+                    <Image src="/assets/images/hero/slider-thumb-2.webp" alt="Thumbnail" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                   </div>
                   <div className="swiper-slide thumb-item">
-                    <img src="/assets/images/hero/slider-thumb-3.webp" alt="Thumbnail" />
+                    <Image src="/assets/images/hero/slider-thumb-3.webp" alt="Thumbnail" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                   </div>
                 </div>
               </div>
@@ -257,3 +204,5 @@ export default function NavPage() {
     </>
   );
 }
+
+

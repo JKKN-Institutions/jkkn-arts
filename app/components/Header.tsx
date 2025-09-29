@@ -79,7 +79,7 @@ export default function Header() {
                         <li><Link href="/about/trust">Our Trust</Link></li>
                         <li><Link href="/about/management">Our Management</Link></li>
                         <li><Link href="/about/college">Our College</Link></li>
-                        <li><Link href="/nav">Our Nav</Link></li>
+
                       </ul>
                     </li>
 

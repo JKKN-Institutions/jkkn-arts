@@ -1,17 +1,12 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+﻿
+
 import Link from 'next/link';
+import Image from 'next/image';
+import PageLayout from '../components/PageLayout';
 
 export default function BComCAAllied() {
   return (
-    <>
-      <Header />
-
-      
-
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main id="primary" className="site-main">
+    <PageLayout>
             <div className="space-for-header"></div>
             {/* Mobile top padding */}
             <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
@@ -35,25 +30,25 @@ export default function BComCAAllied() {
                     </div>
                   </div>
                   <div className="banner-shape">
-                    <img src="/assets/images/hero/h9-hero-bg.webp" alt="" />
+                    <Image src="/assets/images/hero/h9-hero-bg.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                   </div>
                 </div>
                 <div className="banner-right-box">
                   <div className="banner-img">
-                    <img data-speed="0.8" src="/assets/images/hero/h9-hero-img.webp" alt="" />
+                    <Image src="/assets/images/img/bcom.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} data-speed="0.8"   />
                   </div>
                   <div className="box-area">
                     <div className="customers-box">
                       <div className="customers">
                         <ul>
                           <li className="wow fadeInLeft" data-wow-delay=".5s">
-                            <img src="/assets/images/testimonial/client-1.webp" alt="" />
+                            <Image src="/assets/images/testimonial/client-1.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                           </li>
                           <li className="wow fadeInLeft" data-wow-delay=".6s">
-                            <img src="/assets/images/testimonial/client-2.webp" alt="" />
+                            <Image src="/assets/images/testimonial/client-2.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                           </li>
                           <li className="wow fadeInLeft" data-wow-delay=".7s">
-                            <img src="/assets/images/testimonial/client-3.webp" alt="" />
+                            <Image src="/assets/images/testimonial/client-3.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                           </li>
                           <li className="wow fadeInLeft" data-wow-delay=".8s">
                             <span><i className="fas fa-plus"></i></span>
@@ -171,7 +166,7 @@ export default function BComCAAllied() {
                   <div className="col-xl-6 col-lg-6 order-lg-1 order-2">
                     <div className="about-img-area style-2 wow fadeInLeft" data-wow-delay=".3s">
                       <div className="about-img overflow-hidden">
-                        <img data-speed=".8" src="/assets/images/img/Campus-Life.png" alt="BCom CA Program" />
+                        <Image src="/assets/images/img/Campus-Life.png" alt="BCom CA Program" width={400} height={300} style={{ width: "100%", height: "auto" }} data-speed=".8"   />
                       </div>
                       <div className="box-area style-2">
                         <div className="progress-box wow fadeInUp" data-wow-delay=".3s">
@@ -225,10 +220,10 @@ export default function BComCAAllied() {
                 </div>
               </div>
               <div className="bg-shape-1">
-                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-2">
-                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </section>
             {/* end: Eligibility & Requirements Section */}
@@ -240,7 +235,7 @@ export default function BComCAAllied() {
                   <div className="col-lg-6 order-lg-2">
                     <div className="testimonial-img-area wow fadeInUp" data-wow-delay=".3s">
                       <div className="testimonial-img">
-                        <img src="/assets/images/testimonial/testimonial-img.webp" alt="Career Opportunities" />
+                        <Image src="/assets/images/img/bcom-ca.png" alt="Career Opportunities" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         <div className="sec-heading style-2">
                           <h2 className="sec-title title-anim">Career <span>Opportunities</span></h2>
                         </div>
@@ -251,10 +246,10 @@ export default function BComCAAllied() {
                           <div className="rating-area">
                             <div className="star-ratings">
                               <div className="fill-ratings" style={{width: '100%'}}>
-                                <span>â˜…â˜…â˜…â˜…â˜…</span>
+                                <span>Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦</span>
                               </div>
                               <div className="empty-ratings">
-                                <span>â˜…â˜…â˜…â˜…â˜…</span>
+                                <span>Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦</span>
                               </div>
                             </div>
                           </div>
@@ -281,12 +276,9 @@ export default function BComCAAllied() {
             </section>
             {/* end: Career Opportunities Section */}
             
-          </main>
-
-          <Footer />
-        </div>
-      </div>
-    </>
+          </PageLayout>
   );
 }
+
+
 

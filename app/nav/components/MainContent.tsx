@@ -1,3 +1,4 @@
+﻿import Image from 'next/image';
 import React from 'react';
 
 const MainContent: React.FC = () => {
@@ -17,32 +18,32 @@ const MainContent: React.FC = () => {
                 <div className="swiper-wrapper">
                   <div className="swiper-slide client-item">
                     <div className="client-logo">
-                      <img src="/assets/images/brands/brand-1.webp" alt="" />
+                      <Image src="/assets/images/brands/brand-1.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                     </div>
                   </div>
                   <div className="swiper-slide client-item">
                     <div className="client-logo">
-                      <img src="/assets/images/brands/brand-2.webp" alt="" />
+                      <Image src="/assets/images/brands/brand-2.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                     </div>
                   </div>
                   <div className="swiper-slide client-item">
                     <div className="client-logo">
-                      <img src="/assets/images/brands/brand-3.webp" alt="" />
+                      <Image src="/assets/images/brands/brand-3.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                     </div>
                   </div>
                   <div className="swiper-slide client-item">
                     <div className="client-logo">
-                      <img src="/assets/images/brands/brand-4.webp" alt="" />
+                      <Image src="/assets/images/brands/brand-4.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                     </div>
                   </div>
                   <div className="swiper-slide client-item">
                     <div className="client-logo">
-                      <img src="/assets/images/brands/brand-5.webp" alt="" />
+                      <Image src="/assets/images/brands/brand-5.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                     </div>
                   </div>
                   <div className="swiper-slide client-item">
                     <div className="client-logo">
-                      <img src="/assets/images/brands/brand-6.webp" alt="" />
+                      <Image src="/assets/images/brands/brand-6.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                     </div>
                   </div>
                 </div>
@@ -85,10 +86,7 @@ const MainContent: React.FC = () => {
                   </div>
                 </div>
                 <div className="video-img wow fadeInRight" data-wow-delay=".7s">
-                  <img src="/assets/images/about/about-3.webp" alt="Image" />
-                  <a className="video-btn video-popup" data-autoplay="true" data-vbtype="video" data-maxwidth="1200px" href="https://www.youtube.com/watch?v=MLpWrANjFbI&amp;ab_channel=eidelchteinadvogados">
-                    <span><i className="tji-play"></i></span>
-                  </a>
+                  <Image src="/assets/images/about/about-3.webp" alt="Image" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                 </div>
               </div>
             </div>
@@ -97,14 +95,14 @@ const MainContent: React.FC = () => {
                 <div className="customers-bg" data-bg-image="/assets/images/about/about-4.webp"></div>
                 <div className="customers">
                   <ul>
-                    <li className="wow fadeInLeft" data-wow-delay=".3s"><img src="/assets/images/testimonial/client-1.webp" alt="" /></li>
-                    <li className="wow fadeInLeft" data-wow-delay=".4s"><img src="/assets/images/testimonial/client-2.webp" alt="" /></li>
-                    <li className="wow fadeInLeft" data-wow-delay=".5s"><img src="/assets/images/testimonial/client-3.webp" alt="" /></li>
+                    <li className="wow fadeInLeft" data-wow-delay=".3s"><Image src="/assets/images/testimonial/client-1.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} /></li>
+                    <li className="wow fadeInLeft" data-wow-delay=".4s"><Image src="/assets/images/testimonial/client-2.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} /></li>
+                    <li className="wow fadeInLeft" data-wow-delay=".5s"><Image src="/assets/images/testimonial/client-3.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} /></li>
                     <li className="wow fadeInLeft" data-wow-delay=".6s"><span><i className="tji-plus"></i></span></li>
                   </ul>
                 </div>
                 <h6 className="customers-text wow fadeInLeft" data-wow-delay=".6s">We have 1000+ happy students.</h6>
-                <div className="star-icon zoomInOut"><img src="/assets/images/shape/star.svg" alt="" /></div>
+                <div className="star-icon zoomInOut"><Image src="/assets/images/shape/star.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} /></div>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 order-lg-4 order-4">
@@ -238,13 +236,13 @@ const MainContent: React.FC = () => {
           </div>
         </div>
         <div className="bg-shape-1">
-          <img src="/assets/images/shape/pattern-2.svg" alt="" />
+          <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
         </div>
         <div className="bg-shape-2">
-          <img src="/assets/images/shape/pattern-3.svg" alt="" />
+          <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
         </div>
         <div className="bg-shape-3">
-          <img src="/assets/images/shape/shape-blur.svg" alt="" />
+          <Image src="/assets/images/shape/shape-blur.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
         </div>
       </section>
       {/* end: Service Section */}
@@ -253,6 +251,7 @@ const MainContent: React.FC = () => {
 };
 
 export default MainContent;
+
 
 
 

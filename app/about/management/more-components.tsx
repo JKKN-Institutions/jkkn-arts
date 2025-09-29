@@ -1,3 +1,4 @@
+﻿import Image from 'next/image';
 // Project Section Component
 export function ProjectSection() {
   return (
@@ -27,7 +28,7 @@ export function ProjectSection() {
               <div className="project-item h4-project-item portfolio-filter-item impact innovate">
                 <div className="project-img " data-cursor-text="View Project">
                   <a href="/portfolio/event-management">
-                    <img src="/assets/images/project/h10-project-1.webp" alt="Image" />
+                    <Image src="/assets/images/project/h10-project-1.webp" alt="Image" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                   </a>
                 </div>
                 <div className="project-content">
@@ -42,7 +43,7 @@ export function ProjectSection() {
               <div className="project-item h4-project-item portfolio-filter-item success lead impact">
                 <div className="project-img " data-cursor-text="View Project">
                   <a href="/portfolio/digital-marketing">
-                    <img src="/assets/images/project/h10-project-2.webp" alt="Image" />
+                    <Image src="/assets/images/project/h10-project-2.webp" alt="Image" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                   </a>
                 </div>
                 <div className="project-content">
@@ -57,7 +58,7 @@ export function ProjectSection() {
               <div className="project-item h4-project-item portfolio-filter-item lead innovate">
                 <div className="project-img " data-cursor-text="View Project">
                   <a href="/portfolio/learning-platform">
-                    <img src="/assets/images/project/h10-project-3.webp" alt="Image" />
+                    <Image src="/assets/images/project/h10-project-3.webp" alt="Image" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                   </a>
                 </div>
                 <div className="project-content">
@@ -72,7 +73,7 @@ export function ProjectSection() {
               <div className="project-item h4-project-item portfolio-filter-item success innovate">
                 <div className="project-img " data-cursor-text="View Project">
                   <a href="/portfolio/environmental-dashboard">
-                    <img src="/assets/images/project/h10-project-4.webp" alt="Image" />
+                    <Image src="/assets/images/project/h10-project-4.webp" alt="Image" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                   </a>
                 </div>
                 <div className="project-content">
@@ -135,7 +136,7 @@ export function TestimonialSection() {
                       <div className="testimonial-author">
                         <div className="author-inner">
                           <div className="author-img">
-                            <img src="/assets/images/testimonial/client-1.webp" alt="" />
+                            <Image src="/assets/images/testimonial/client-1.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                           </div>
                           <div className="author-header">
                             <h5 className="title">Guy Hawkins</h5>
@@ -148,10 +149,10 @@ export function TestimonialSection() {
                       </div>
                       <div className="star-ratings">
                         <div className="fill-ratings" style={{width: '100%'}}>
-                          <span>â˜…â˜…â˜…â˜…â˜…</span>
+                          <span>Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦</span>
                         </div>
                         <div className="empty-ratings">
-                          <span>â˜…â˜…â˜…â˜…â˜…</span>
+                          <span>Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦</span>
                         </div>
                       </div>
                     </div>
@@ -161,7 +162,7 @@ export function TestimonialSection() {
                       <div className="testimonial-author">
                         <div className="author-inner">
                           <div className="author-img">
-                            <img src="/assets/images/testimonial/client-2.webp" alt="" />
+                            <Image src="/assets/images/testimonial/client-2.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                           </div>
                           <div className="author-header">
                             <h5 className="title">Ralph Edwards</h5>
@@ -174,10 +175,10 @@ export function TestimonialSection() {
                       </div>
                       <div className="star-ratings">
                         <div className="fill-ratings" style={{width: '100%'}}>
-                          <span>â˜…â˜…â˜…â˜…â˜…</span>
+                          <span>Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦</span>
                         </div>
                         <div className="empty-ratings">
-                          <span>â˜…â˜…â˜…â˜…â˜…</span>
+                          <span>Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦</span>
                         </div>
                       </div>
                     </div>
@@ -187,7 +188,7 @@ export function TestimonialSection() {
                       <div className="testimonial-author">
                         <div className="author-inner">
                           <div className="author-img">
-                            <img src="/assets/images/testimonial/client-3.webp" alt="" />
+                            <Image src="/assets/images/testimonial/client-3.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                           </div>
                           <div className="author-header">
                             <h5 className="title">Devon Lane</h5>
@@ -200,10 +201,10 @@ export function TestimonialSection() {
                       </div>
                       <div className="star-ratings">
                         <div className="fill-ratings" style={{width: '100%'}}>
-                          <span>â˜…â˜…â˜…â˜…â˜…</span>
+                          <span>Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦</span>
                         </div>
                         <div className="empty-ratings">
-                          <span>â˜…â˜…â˜…â˜…â˜…</span>
+                          <span>Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦</span>
                         </div>
                       </div>
                     </div>
@@ -216,11 +217,12 @@ export function TestimonialSection() {
         </div>
       </div>
       <div className="bg-shape-1">
-        <img src="/assets/images/shape/pattern-2.svg" alt="" />
+        <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
       </div>
       <div className="bg-shape-2">
-        <img src="/assets/images/shape/pattern-3.svg" alt="" />
+        <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
       </div>
     </section>
   );
 }
+

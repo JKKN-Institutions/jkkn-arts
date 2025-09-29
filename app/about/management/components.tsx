@@ -1,3 +1,4 @@
+﻿import Image from 'next/image';
 // Marquee Section Component
 export function MarqueeSection() {
   return (
@@ -16,7 +17,7 @@ export function AboutSection() {
           <div className="col-12 col-lg-5 d-block d-md-none d-lg-block">
             <div className="about-img-area h10-about-banner wow bounceInLeft" data-wow-delay=".3s">
               <div className="about-img overflow-hidden">
-                <img data-speed=".8" src="/assets/images/management/SMT.N.SENDAMARAAI.webp" alt="Smt. N. Sendamaraai - Management Team" />
+                <Image src="/assets/images/management/SMT.N.SENDAMARAAI.webp" alt="Smt. N. Sendamaraai - Management Team" width={400} height={300} style={{ width: "100%", height: "auto" }} data-speed=".8"   />
               </div>
             </div>
           </div>
@@ -30,7 +31,7 @@ export function AboutSection() {
                 <div className="col-12 col-md-6 d-none d-md-block d-lg-none">
                   <div className="about-img-area h10-about-banner wow bounceInLeft" data-wow-delay=".3s">
                     <div className="about-img">
-                      <img src="/assets/images/management/SMT.N.SENDAMARAAI.webp" alt="Smt. N. Sendamaraai - Management Team" />
+                      <Image src="/assets/images/management/SMT.N.SENDAMARAAI.webp" alt="Smt. N. Sendamaraai - Management Team" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                     </div>
                   </div>
                 </div>
@@ -75,7 +76,7 @@ export function AboutSectionReversed() {
                 <div className="col-12 col-md-6 d-none d-md-block d-lg-none">
                   <div className="about-img-area h10-about-banner wow bounceInRight" data-wow-delay=".3s">
                     <div className="about-img">
-                      <img src="/assets/images/management/SHRI.S.OMMSHARRAVANA.webp" alt="Shri. S. Ommsharravana - Management Team" />
+                      <Image src="/assets/images/management/SHRI.S.OMMSHARRAVANA.webp" alt="Shri. S. Ommsharravana - Management Team" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                     </div>
                   </div>
                 </div>
@@ -101,7 +102,7 @@ export function AboutSectionReversed() {
           <div className="col-12 col-lg-5 order-2 order-md-2 d-block d-md-none d-lg-block">
             <div className="about-img-area h10-about-banner wow bounceInRight" data-wow-delay=".3s">
               <div className="about-img overflow-hidden">
-                <img src="/assets/images/management/SHRI.S.OMMSHARRAVANA.webp" alt="Shri. S. Ommsharravana - Management Team" />
+                <Image src="/assets/images/management/SHRI.S.OMMSHARRAVANA.webp" alt="Shri. S. Ommsharravana - Management Team" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </div>
           </div>
@@ -110,4 +111,5 @@ export function AboutSectionReversed() {
     </section>
   );
 }
+
 

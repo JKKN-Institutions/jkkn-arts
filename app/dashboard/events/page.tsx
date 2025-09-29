@@ -1,7 +1,8 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   Search, 
   Filter, 
@@ -459,10 +460,12 @@ export default function EventsPage() {
             {/* Event Image */}
             {event.image && (
               <div className="relative h-48">
-                <img 
-                  src={event.image} 
+                <Image src={event.image} 
                   alt={event.name}
+                  width={400} 
+                  height={300}
                   className="w-full h-full object-cover"
+                  style={{ width: "100%", height: "auto" }}
                 />
                 {event.isFeature && (
                   <div className="absolute top-3 left-3">
@@ -605,3 +608,4 @@ export default function EventsPage() {
     </div>
   );
 }
+

@@ -1,14 +1,12 @@
-import Link from 'next/link';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+﻿import Link from 'next/link';
+import Image from 'next/image';
+import PageLayout from '../../components/PageLayout';
+
+
 
 export default function OurTrust() {
   return (
-    <>      <Header />
-      
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main id="primary" className="site-main">
+    <PageLayout>
             <div className="top-space-65"></div>
             {/* Mobile top padding */}
             <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
@@ -29,7 +27,7 @@ export default function OurTrust() {
                   <div className="col-lg-6">
                     <div className="about-img-area wow fadeInLeft" data-wow-delay=".3s">
                       <div className="about-img overflow-hidden">
-                        <img data-speed=".8" src="/assets/images/hero/slider-thumb-1.jpg" alt="Founder" />
+                        <Image src="/assets/images/hero/slider-thumb-1.jpg" alt="Founder" width={400} height={300} style={{ width: "100%", height: "auto" }} data-speed=".8"   />
                       </div>
                     </div>
                   </div>
@@ -56,12 +54,9 @@ export default function OurTrust() {
               </div>
             </section>
             {/* end: Faq Section */}
-          </main>
-
-          <Footer />
-        </div>
-      </div>
-    </>
+          </PageLayout>
   );
 }
+
+
 

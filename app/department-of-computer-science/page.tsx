@@ -1,14 +1,12 @@
-import Link from 'next/link';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+﻿import Link from 'next/link';
+import Image from 'next/image';
+import PageLayout from '../components/PageLayout';
+
+
 
 export default function DepartmentOfComputerScience() {
   return (
-    <>      <Header />
-      
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main id="primary" className="site-main">
+    <PageLayout>
             <div className="top-space-15"></div>
             {/* Mobile top padding */}
             <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
@@ -43,10 +41,10 @@ export default function DepartmentOfComputerScience() {
                 </div>
               </div>
               <div className="bg-shape-1">
-                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-2">
-                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </section>
             {/* end: Banner Section */}
@@ -79,8 +77,8 @@ export default function DepartmentOfComputerScience() {
                         <div className="row align-items-center">
                           <div className="col-12 col-lg-4">
                             <div className="h8-about-video">
-                              <img src="/assets/images/img/department-of-english.png" alt="" />
-                              <a className="h8-about-video-btn video-popup" href="https://youtu.be/gXFATcwrO-U" data-autoplay="true" data-vbtype="video">
+                              <Image src="/assets/images/img/department-of-english.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
+                              <a className="h8-about-video-btn video-popup" href="#" data-autoplay="true" data-vbtype="video">
                                 <i className="fas fa-play"></i>
                               </a>
                             </div>
@@ -200,78 +198,7 @@ export default function DepartmentOfComputerScience() {
             </section>
             {/* end: Vision Mission Section */}
 
-            {/* start: Achievements Section */}
-            <section className="h8-funfact section-gap">
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-12">
-                    <div className="sec-heading style-3 sec-heading-centered">
-                      <span className="sub-title wow fadeInUp" data-wow-delay=".3s">
-                        <i className="fas fa-box"></i>DEPARTMENT ACHIEVEMENTS
-                      </span>
-                      <h2 className="sec-title title-anim">Academic Excellence and Research Contributions.</h2>
-                    </div>
-                  </div>
-                </div>
-                <div className="row justify-content-between">
-                  <div className="col-12 col-lg-6">
-                    <div className="h8-funfact-banner wow fadeInLeft" data-wow-delay=".3s">
-                      <div className="h8-funfact-banner-img">
-                        <img src="/assets/images/funfact/h8-funfact-banner.webp" alt="" />
-                      </div>
-                      <div className="box-area">
-                        <div className="call-box wow fadeInUp" data-wow-delay=".5s">
-                          <h4 className="title">Faculty Achievements</h4>
-                          <span className="call-icon"><i className="fas fa-award"></i></span>
-                          <p className="achievement-text">Social Activist Award, Best Teacher Award and PUTHUMAI PEN Award</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-12 col-lg-6 pl-0">
-                    <div className="h8-funfact-wrapper">
-                      <div className="countup-item style-2 h8-funfact-item">
-                        <div className="count-inner">
-                          <div className="inline-content">
-                            <span className="odometer countup-number" data-count="100"></span>
-                            <span className="count-plus">+</span>
-                          </div>
-                          <div className="counter-desc">
-                            <h4 className="counter-title">Research Papers</h4>
-                            <p className="count-text">Published in renowned national and international journals.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="countup-item style-2 h8-funfact-item">
-                        <div className="count-inner">
-                          <div className="inline-content">
-                            <span className="odometer countup-number" data-count="188"></span>
-                            <span className="count-plus">+</span>
-                          </div>
-                          <div className="counter-desc">
-                            <h4 className="counter-title">Conference Papers</h4>
-                            <p className="count-text">Presented at national seminars and conferences.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="countup-item style-2 h8-funfact-item">
-                        <div className="count-inner">
-                          <div className="inline-content">
-                            <span className="odometer countup-number" data-count="2"></span>
-                            <span className="count-plus">+</span>
-                          </div>
-                          <div className="counter-desc">
-                            <h4 className="counter-title">Textbooks Authored</h4>
-                            <p className="count-text">Comprehensive textbooks authored by faculty members.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            {/* end: Achievements Section */}
+            
 
             {/* start: Faculty Section */}
             <section className="h8-team section-gap section-gap-x">
@@ -287,7 +214,7 @@ export default function DepartmentOfComputerScience() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".2s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/bcom/Dr.-S.-Gokila.png" alt="" />
+                          <Image src="/assets/images/team/bcom/Dr.-S.-Gokila.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -306,7 +233,7 @@ export default function DepartmentOfComputerScience() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".3s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/bcom/Dr.-V.-K.-Sasikala.png" alt="" />
+                          <Image src="/assets/images/team/bcom/Dr.-V.-K.-Sasikala.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -325,7 +252,7 @@ export default function DepartmentOfComputerScience() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".4s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/bcom/Dr.-M.-Boovathi.png" alt="" />
+                          <Image src="/assets/images/team/bcom/Dr.-M.-Boovathi.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -344,7 +271,7 @@ export default function DepartmentOfComputerScience() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".5s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/bcom/Dr.-S.-Thenmozhi.png" alt="" />
+                          <Image src="/assets/images/team/bcom/Dr.-S.-Thenmozhi.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -363,7 +290,7 @@ export default function DepartmentOfComputerScience() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".6s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/bcom/Dr.-L.-Kavitha.png" alt="" />
+                          <Image src="/assets/images/team/bcom/Dr.-L.-Kavitha.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -382,7 +309,7 @@ export default function DepartmentOfComputerScience() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".7s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/bcom/Dr.-S.-V.-Ramesh.png" alt="" />
+                          <Image src="/assets/images/team/bcom/Dr.-S.-V.-Ramesh.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -401,7 +328,7 @@ export default function DepartmentOfComputerScience() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".8s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/bcom/Dr.-R.-Mubeen.png" alt="" />
+                          <Image src="/assets/images/team/bcom/Dr.-R.-Mubeen.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -420,7 +347,7 @@ export default function DepartmentOfComputerScience() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".9s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                            <img src="/assets/images/team/bcom/Dr.-S.-Pavithra.png" alt="" />
+                            <Image src="/assets/images/team/bcom/Dr.-S.-Pavithra.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -438,19 +365,17 @@ export default function DepartmentOfComputerScience() {
                 </div>
               </div>
               <div className="bg-shape-1">
-                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-2">
-                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </section>
             {/* end: Faculty Section */}
 
-            <Footer />
-          </main>
-        </div>
-      </div>
-    </>
+          </PageLayout>
   );
 }
+
+
 

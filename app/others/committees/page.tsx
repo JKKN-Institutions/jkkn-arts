@@ -1,4 +1,5 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
+import PageLayout from '../../components/PageLayout';
 
 export default function Committees() {
   const committees = [
@@ -99,3 +100,4 @@ export default function Committees() {
     </div>
   );
 }
+

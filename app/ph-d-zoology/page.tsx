@@ -1,17 +1,12 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+﻿
+
 import Link from 'next/link';
+import Image from 'next/image';
+import PageLayout from '../components/PageLayout';
 
 export default function PhDZoology() {
   return (
-    <>
-      <Header />
-
-      
-
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main id="primary" className="site-main">
+    <PageLayout>
             <div className="space-for-header"></div>
             {/* Mobile top padding */}
             <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
@@ -35,25 +30,25 @@ export default function PhDZoology() {
                     </div>
                   </div>
                   <div className="banner-shape">
-                    <img src="/assets/images/hero/h9-hero-bg.webp" alt="" />
+                    <Image src="/assets/images/hero/h9-hero-bg.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                   </div>
                 </div>
                 <div className="banner-right-box">
                   <div className="banner-img">
-                    <img data-speed="0.8" src="/assets/images/hero/h9-hero-img.webp" alt="" />
+                    <Image src="/assets/images/img/zoology.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} data-speed="0.8"   />
                   </div>
                   <div className="box-area">
                     <div className="customers-box">
                       <div className="customers">
                         <ul>
                           <li className="wow fadeInLeft" data-wow-delay=".5s">
-                            <img src="/assets/images/testimonial/client-1.webp" alt="" />
+                            <Image src="/assets/images/testimonial/client-1.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                           </li>
                           <li className="wow fadeInLeft" data-wow-delay=".6s">
-                            <img src="/assets/images/testimonial/client-2.webp" alt="" />
+                            <Image src="/assets/images/testimonial/client-2.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                           </li>
                           <li className="wow fadeInLeft" data-wow-delay=".7s">
-                            <img src="/assets/images/testimonial/client-3.webp" alt="" />
+                            <Image src="/assets/images/testimonial/client-3.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                           </li>
                           <li className="wow fadeInLeft" data-wow-delay=".8s">
                             <span><i className="fas fa-plus"></i></span>
@@ -176,7 +171,7 @@ export default function PhDZoology() {
                   <div className="col-xl-6 col-lg-6 order-lg-1 order-2">
                     <div className="about-img-area style-2 wow fadeInLeft" data-wow-delay=".3s">
                       <div className="about-img overflow-hidden">
-                        <img data-speed=".8" src="/assets/images/img/Campus-Life.png" alt="Zoology Research" />
+                        <Image src="/assets/images/img/Campus-Life.png" alt="Zoology Research" width={400} height={300} style={{ width: "100%", height: "auto" }} data-speed=".8"   />
                       </div>
                       <div className="box-area style-2">
                         <div className="progress-box wow fadeInUp" data-wow-delay=".3s">
@@ -230,93 +225,19 @@ export default function PhDZoology() {
                 </div>
               </div>
               <div className="bg-shape-1">
-                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-2">
-                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </section>
             {/* end: Research & Conference Section */}
 
-            {/* start: Achievements Section */}
-            <section className="h8-funfact section-gap">
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-12">
-                    <div className="sec-heading style-3 sec-heading-centered">
-                      <span className="sub-title wow fadeInUp" data-wow-delay=".3s">
-                        <i className="fas fa-box"></i>DEPARTMENT ACHIEVEMENTS
-                      </span>
-                      <h2 className="sec-title title-anim">Academic Excellence and Research Contributions.</h2>
-                    </div>
-                  </div>
-                </div>
-                <div className="row justify-content-between">
-                  <div className="col-12 col-lg-6">
-                    <div className="h8-funfact-banner wow fadeInLeft" data-wow-delay=".3s">
-                      <div className="h8-funfact-banner-img">
-                        <img src="/assets/images/funfact/h8-funfact-banner.webp" alt="" />
-                      </div>
-                      <div className="box-area">
-                        <div className="call-box wow fadeInUp" data-wow-delay=".5s">
-                          <h4 className="title">Faculty Leadership</h4>
-                          <span className="call-icon"><i className="fas fa-award"></i></span>
-                          <p className="achievement-text">Chairpersons and members of Board of Studies in Periyar University and Sri Sarada College for Women, Salem</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-12 col-lg-6 pl-0">
-                    <div className="h8-funfact-wrapper">
-                      <div className="countup-item style-2 h8-funfact-item">
-                        <div className="count-inner">
-                          <div className="inline-content">
-                            <span className="odometer countup-number" data-count="100"></span>
-                            <span className="count-plus">+</span>
-                          </div>
-                          <div className="counter-desc">
-                            <h4 className="counter-title">M.Phil Scholars</h4>
-                            <p className="count-text">Produced by the Department of Zoology.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="countup-item style-2 h8-funfact-item">
-                        <div className="count-inner">
-                          <div className="inline-content">
-                            <span className="odometer countup-number" data-count="3"></span>
-                            <span className="count-plus">+</span>
-                          </div>
-                          <div className="counter-desc">
-                            <h4 className="counter-title">Ph.D Scholars</h4>
-                            <p className="count-text">Successfully completed doctoral research.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="countup-item style-2 h8-funfact-item">
-                        <div className="count-inner">
-                          <div className="inline-content">
-                            <span className="odometer countup-number" data-count="39"></span>
-                            <span className="count-plus">+</span>
-                          </div>
-                          <div className="counter-desc">
-                            <h4 className="counter-title">University Ranks</h4>
-                            <p className="count-text">Achieved by our outstanding students.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            {/* end: Achievements Section */}
             
-          </main>
-
-          <Footer />
-        </div>
-      </div>
-    </>
+            
+          </PageLayout>
   );
 }
+
+
 

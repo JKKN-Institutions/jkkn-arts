@@ -1,15 +1,12 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
+import PageLayout from '../components/PageLayout';
 import Image from 'next/image';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+
+
 
 export default function Team() {
   return (
-    <>      <Header />
-      
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main id="primary" className="site-main">
+    <PageLayout>
             <div className="space-for-header"></div>
             {/* Mobile top padding */}
             <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
@@ -117,12 +114,8 @@ export default function Team() {
               </div>
             </section>
             {/* end: Team Section */}
-          </main>
-
-          <Footer />
-        </div>
-      </div>
-    </>
+          </PageLayout>
   );
 }
+
 

@@ -1,59 +1,27 @@
+﻿import Image from 'next/image';
+import PageLayout from '../../components/PageLayout';
 
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+
+
 import { MarqueeSection, AboutSection, AboutSectionReversed } from './components';
 import { ProjectSection, TestimonialSection } from './more-components';
 import { PricingSection, ClientSection, BlogSection } from './final-components';
 
 export default function ManagementPage() {
   return (
-    <>
-      <div className="body-overlay"></div>
-
+    <PageLayout>
+      <div className="top-space-15"></div>
+      {/* Mobile top padding */}
+      <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
       
+      {/* start: About Section */}
+      <AboutSection />
+      {/* end: About Section */}
 
-      {/* back to top start */}
-      <div id="tj-back-to-top"><span id="tj-back-to-top-percentage"></span></div>
-      {/* back to top end */}
-
-      {/* start: magic cursor */}
-      <div id="magic-cursor">
-        <div id="ball"></div>
-      </div>
-      {/* end: magic cursor */}
-
-      {/* start: Search Popup */}
-      <div className="search-popup-overlay"></div>
-      {/* end: Search Popup */}
-      {/* start: Header Area */}
-      <Header />
-      {/* end: Header Area */}
-
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main id="primary" className="site-main">
-            <div className="top-space-15"></div>
-            {/* Mobile top padding */}
-            <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
-            
-            
-
-            {/* start: About Section */}
-            <AboutSection />
-            {/* end: About Section */}
-
-            {/* start: About Section - Reversed Layout */}
-            <AboutSectionReversed />
-            {/* end: About Section - Reversed Layout */}
-
-          </main>
-
-          {/* start: Footer Section */}
-          <Footer />
-          {/* end: Footer Section */}
-        </div>
-      </div>
-    </>
+      {/* start: About Section - Reversed Layout */}
+      <AboutSectionReversed />
+      {/* end: About Section - Reversed Layout */}
+    </PageLayout>
   );
 }
 
@@ -207,12 +175,14 @@ function BannerSection() {
         </div>
       </div>
       <div className="bg-shape-1">
-        <img src="/assets/images/shape/pattern-2.svg" alt="" />
+        <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
       </div>
       <div className="bg-shape-2">
-        <img src="/assets/images/shape/pattern-3.svg" alt="" />
+        <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
       </div>
     </section>
   );
 }
+
+
 

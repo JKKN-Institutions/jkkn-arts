@@ -1,18 +1,17 @@
-import Link from 'next/link';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+﻿import Link from 'next/link';
+import Image from 'next/image';
+import PageLayout from '../components/PageLayout';
+
+
 import { Noto_Sans_Tamil } from 'next/font/google';
 
 const notoTamil = Noto_Sans_Tamil({ subsets: ['tamil'], weight: ['400','500','700'] });
 
 export default function PhDTamil() {
   return (
-    <>      <Header />
-      
-      <div id="smooth-wrapper" className={notoTamil.className}>
-        <div id="smooth-content">
-          <main id="primary" className="site-main">
-            <div className="top-space-15"></div>
+    <PageLayout>
+      <div className={notoTamil.className}>
+        <div className="top-space-15"></div>
             {/* Mobile top padding */}
             <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
             
@@ -46,10 +45,10 @@ export default function PhDTamil() {
                 </div>
               </div>
               <div className="bg-shape-1">
-                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-2">
-                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </section>
             {/* end: Banner Section */}
@@ -82,10 +81,7 @@ export default function PhDTamil() {
                         <div className="row align-items-center">
                           <div className="col-12 col-lg-4">
                             <div className="h8-about-video">
-                              <img src="/assets/images/img/department-of-english.png" alt="" />
-                              <a className="h8-about-video-btn video-popup" href="https://youtu.be/gXFATcwrO-U" data-autoplay="true" data-vbtype="video">
-                                <i className="fas fa-play"></i>
-                              </a>
+                              <Image src="/assets/images/img/department-of-english.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                             </div>
                           </div>
                           <div className="col-12 col-lg-8">
@@ -203,78 +199,7 @@ export default function PhDTamil() {
             </section>
             {/* end: Vision Mission Section */}
 
-            {/* start: Achievements Section */}
-            <section className="h8-funfact section-gap">
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-12">
-                    <div className="sec-heading style-3 sec-heading-centered">
-                      <span className="sub-title wow fadeInUp" data-wow-delay=".3s">
-                        <i className="fas fa-box"></i>DEPARTMENT ACHIEVEMENTS
-                      </span>
-                      <h2 className="sec-title title-anim">Academic Excellence and Tamil Language Contributions.</h2>
-                    </div>
-                  </div>
-                </div>
-                <div className="row justify-content-between">
-                  <div className="col-12 col-lg-6">
-                    <div className="h8-funfact-banner wow fadeInLeft" data-wow-delay=".3s">
-                      <div className="h8-funfact-banner-img">
-                        <img src="/assets/images/funfact/h8-funfact-banner.webp" alt="" />
-                      </div>
-                      <div className="box-area">
-                        <div className="call-box wow fadeInUp" data-wow-delay=".5s">
-                          <h4 className="title">Faculty Achievements</h4>
-                          <span className="call-icon"><i className="fas fa-award"></i></span>
-                          <p className="achievement-text">Best Paper Presenter Awards, UGC Research Grants, and Tamil Language Excellence Awards</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-12 col-lg-6 pl-0">
-                    <div className="h8-funfact-wrapper">
-                      <div className="countup-item style-2 h8-funfact-item">
-                        <div className="count-inner">
-                          <div className="inline-content">
-                            <span className="odometer countup-number" data-count="100"></span>
-                            <span className="count-plus">+</span>
-                          </div>
-                          <div className="counter-desc">
-                            <h4 className="counter-title">Competition Awards</h4>
-                            <p className="count-text">Students won cash prizes and trophies in Tamil competitions.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="countup-item style-2 h8-funfact-item">
-                        <div className="count-inner">
-                          <div className="inline-content">
-                            <span className="odometer countup-number" data-count="188"></span>
-                            <span className="count-plus">+</span>
-                          </div>
-                          <div className="counter-desc">
-                            <h4 className="counter-title">Cash Prizes Won</h4>
-                            <p className="count-text">Students won Rs.13,000+ in various Tamil competitions.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="countup-item style-2 h8-funfact-item">
-                        <div className="count-inner">
-                          <div className="inline-content">
-                            <span className="odometer countup-number" data-count="2"></span>
-                            <span className="count-plus">+</span>
-                          </div>
-                          <div className="counter-desc">
-                            <h4 className="counter-title">Research Grants</h4>
-                            <p className="count-text">UGC Minor Research Project grants received by faculty.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            {/* end: Achievements Section */}
+            
 
             {/* start: Faculty Section */}
             <section className="h8-team section-gap section-gap-x">
@@ -290,7 +215,7 @@ export default function PhDTamil() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".2s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/tamil/placeholder.png" alt="" />
+                          <Image src="/assets/images/team/tamil/placeholder.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -309,7 +234,7 @@ export default function PhDTamil() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".3s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/tamil/placeholder.png" alt="" />
+                          <Image src="/assets/images/team/tamil/placeholder.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -328,7 +253,7 @@ export default function PhDTamil() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".4s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/tamil/placeholder.png" alt="" />
+                          <Image src="/assets/images/team/tamil/placeholder.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -347,7 +272,7 @@ export default function PhDTamil() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".5s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/tamil/placeholder.png" alt="" />
+                          <Image src="/assets/images/team/tamil/placeholder.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -365,10 +290,10 @@ export default function PhDTamil() {
                 </div>
               </div>
               <div className="bg-shape-1">
-                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-2">
-                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </section>
             {/* end: Faculty Section */}
@@ -387,33 +312,33 @@ export default function PhDTamil() {
                 <div className="row">
                   <div className="col-lg-6">
                     <div className="content-area wow fadeInLeft" data-wow-delay=".3s">
-                      <h4 className="title" style={{color: '#1e8a8a', marginBottom: '20px'}}>திட்டத்தின் குறிப்பிட்ட முடிவுகள் (PSOs)</h4>
+                      <h4 className="title" style={{color: '#1e8a8a', marginBottom: '20px'}}>à®¤à®¿à®Ÿà¯à®Ÿà®¤à¯à®¤à®¿à®©à¯ à®•à¯à®±à®¿à®ªà¯à®ªà®¿à®Ÿà¯à®Ÿ à®®à¯à®Ÿà®¿à®µà¯à®•à®³à¯ (PSOs)</h4>
                       <ul className="list-items" style={{marginBottom: '25px'}}>
-                        <li><i className="fas fa-check"></i>தமிழ் மொழி மற்றும் இலக்கியத்தின் கோட்பாடுகள், வரலாறு, சமகால ஆய்வுகளில் ஆழ்ந்த அறிவு.</li>
-                        <li><i className="fas fa-check"></i>மொழியியல், உரைநடை/பாடல் விமர்சனம், ஆய்வுமுறை ஆகியவற்றில் நடைமுறை திறன்.</li>
-                        <li><i className="fas fa-check"></i>ஆராய்ச்சி முன்வைப்புகள் தயாரித்தல், தரவுச் சேகரிப்பு, அகாடமிக் எழுதுதல் திறன்.</li>
+                        <li><i className="fas fa-check"></i>à®¤à®®à®¿à®´à¯ à®®à¯Šà®´à®¿ à®®à®±à¯à®±à¯à®®à¯ à®‡à®²à®•à¯à®•à®¿à®¯à®¤à¯à®¤à®¿à®©à¯ à®•à¯‹à®Ÿà¯à®ªà®¾à®Ÿà¯à®•à®³à¯, à®µà®°à®²à®¾à®±à¯, à®šà®®à®•à®¾à®² à®†à®¯à¯à®µà¯à®•à®³à®¿à®²à¯ à®†à®´à¯à®¨à¯à®¤ à®…à®±à®¿à®µà¯.</li>
+                        <li><i className="fas fa-check"></i>à®®à¯Šà®´à®¿à®¯à®¿à®¯à®²à¯, à®‰à®°à¯ˆà®¨à®Ÿà¯ˆ/à®ªà®¾à®Ÿà®²à¯ à®µà®¿à®®à®°à¯à®šà®©à®®à¯, à®†à®¯à¯à®µà¯à®®à¯à®±à¯ˆ à®†à®•à®¿à®¯à®µà®±à¯à®±à®¿à®²à¯ à®¨à®Ÿà¯ˆà®®à¯à®±à¯ˆ à®¤à®¿à®±à®©à¯.</li>
+                        <li><i className="fas fa-check"></i>à®†à®°à®¾à®¯à¯à®šà¯à®šà®¿ à®®à¯à®©à¯à®µà¯ˆà®ªà¯à®ªà¯à®•à®³à¯ à®¤à®¯à®¾à®°à®¿à®¤à¯à®¤à®²à¯, à®¤à®°à®µà¯à®šà¯ à®šà¯‡à®•à®°à®¿à®ªà¯à®ªà¯, à®…à®•à®¾à®Ÿà®®à®¿à®•à¯ à®Žà®´à¯à®¤à¯à®¤à®²à¯ à®¤à®¿à®±à®©à¯.</li>
                       </ul>
                     </div>
                   </div>
                   <div className="col-lg-6">
                     <div className="content-area wow fadeInRight" data-wow-delay=".3s">
-                      <h4 className="title" style={{color: '#1e8a8a', marginBottom: '20px'}}>திட்ட முடிவுகள் (POs)</h4>
+                      <h4 className="title" style={{color: '#1e8a8a', marginBottom: '20px'}}>à®¤à®¿à®Ÿà¯à®Ÿ à®®à¯à®Ÿà®¿à®µà¯à®•à®³à¯ (POs)</h4>
                       <ul className="list-items">
-                        <li><i className="fas fa-check"></i>தமிழ் இலக்கியம், மொழியியல் துறைகளில் முன்னேற்றமான அறிவு மற்றும் திறன்.</li>
-                        <li><i className="fas fa-check"></i>மூலப்பதிப்புகள், மீள்பதிப்புகள், ஊடக உரைகள் ஆகியவற்றின் விமர்சனப் பகுப்பாய்வு.</li>
-                        <li><i className="fas fa-check"></i>தொழில்முறை ஒழுக்கம், குழுப்பணி, தொடர்புத்திறன் ஆகியவற்றில் நிபுணத்துவம்.</li>
-                        <li><i className="fas fa-check"></i>தகவல் சேகரிப்பு/முகாமைப்பு மற்றும் மேற்கோள்காட்டல் நடைமுறைகள் மீது பிழையற்ற பின்​பற்றல்.</li>
-                        <li><i className="fas fa-check"></i>ஆய்வு, மொழிபெயர்ப்பு, பதிப்பியல், ஊடகம் போன்ற துறைகளில் தொழில் தயார்ச்சி.</li>
+                        <li><i className="fas fa-check"></i>à®¤à®®à®¿à®´à¯ à®‡à®²à®•à¯à®•à®¿à®¯à®®à¯, à®®à¯Šà®´à®¿à®¯à®¿à®¯à®²à¯ à®¤à¯à®±à¯ˆà®•à®³à®¿à®²à¯ à®®à¯à®©à¯à®©à¯‡à®±à¯à®±à®®à®¾à®© à®…à®±à®¿à®µà¯ à®®à®±à¯à®±à¯à®®à¯ à®¤à®¿à®±à®©à¯.</li>
+                        <li><i className="fas fa-check"></i>à®®à¯‚à®²à®ªà¯à®ªà®¤à®¿à®ªà¯à®ªà¯à®•à®³à¯, à®®à¯€à®³à¯à®ªà®¤à®¿à®ªà¯à®ªà¯à®•à®³à¯, à®Šà®Ÿà®• à®‰à®°à¯ˆà®•à®³à¯ à®†à®•à®¿à®¯à®µà®±à¯à®±à®¿à®©à¯ à®µà®¿à®®à®°à¯à®šà®©à®ªà¯ à®ªà®•à¯à®ªà¯à®ªà®¾à®¯à¯à®µà¯.</li>
+                        <li><i className="fas fa-check"></i>à®¤à¯Šà®´à®¿à®²à¯à®®à¯à®±à¯ˆ à®’à®´à¯à®•à¯à®•à®®à¯, à®•à¯à®´à¯à®ªà¯à®ªà®£à®¿, à®¤à¯Šà®Ÿà®°à¯à®ªà¯à®¤à¯à®¤à®¿à®±à®©à¯ à®†à®•à®¿à®¯à®µà®±à¯à®±à®¿à®²à¯ à®¨à®¿à®ªà¯à®£à®¤à¯à®¤à¯à®µà®®à¯.</li>
+                        <li><i className="fas fa-check"></i>à®¤à®•à®µà®²à¯ à®šà¯‡à®•à®°à®¿à®ªà¯à®ªà¯/à®®à¯à®•à®¾à®®à¯ˆà®ªà¯à®ªà¯ à®®à®±à¯à®±à¯à®®à¯ à®®à¯‡à®±à¯à®•à¯‹à®³à¯à®•à®¾à®Ÿà¯à®Ÿà®²à¯ à®¨à®Ÿà¯ˆà®®à¯à®±à¯ˆà®•à®³à¯ à®®à¯€à®¤à¯ à®ªà®¿à®´à¯ˆà®¯à®±à¯à®± à®ªà®¿à®©à¯â€‹à®ªà®±à¯à®±à®²à¯.</li>
+                        <li><i className="fas fa-check"></i>à®†à®¯à¯à®µà¯, à®®à¯Šà®´à®¿à®ªà¯†à®¯à®°à¯à®ªà¯à®ªà¯, à®ªà®¤à®¿à®ªà¯à®ªà®¿à®¯à®²à¯, à®Šà®Ÿà®•à®®à¯ à®ªà¯‹à®©à¯à®± à®¤à¯à®±à¯ˆà®•à®³à®¿à®²à¯ à®¤à¯Šà®´à®¿à®²à¯ à®¤à®¯à®¾à®°à¯à®šà¯à®šà®¿.</li>
                       </ul>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="bg-shape-1">
-                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-2">
-                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </section>
             {/* end: Programme Outcomes Section */}
@@ -464,12 +389,10 @@ export default function PhDTamil() {
               </div>
             </section>
             {/* end: Achievements Details Section */}
-
-            <Footer />
-          </main>
-        </div>
       </div>
-    </>
+    </PageLayout>
   );
 }
+
+
 

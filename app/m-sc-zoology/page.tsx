@@ -1,18 +1,15 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+﻿
+
 import Link from 'next/link';
+import Image from 'next/image';
+import PageLayout from '../components/PageLayout';
 
 export default function MScZoologyPage() {
     return (
-        <>
-            <Header />
-
-            <div id="smooth-wrapper">
-                <div id="smooth-content">
-                    <main id="primary" className="site-main">
+        <PageLayout>
                         <div className="space-for-header"></div>
-            {/* Mobile top padding */}
-            <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
+                        {/* Mobile top padding */}
+                        <div className="d-lg-none" style={{ paddingTop: '60px' }}></div>
                         <br />
                         {/* start: Banner Section */}
                         <section className="tj-banner-section section-gap-x">
@@ -33,25 +30,25 @@ export default function MScZoologyPage() {
                                         </div>
                                     </div>
                                     <div className="banner-shape">
-                                        <img src="/assets/images/hero/h9-hero-bg.webp" alt="" />
+                                        <Image src="/assets/images/hero/h9-hero-bg.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                                     </div>
                                 </div>
                                 <div className="banner-right-box">
                                     <div className="banner-img">
-                                        <img data-speed="0.8" src="/assets/images/hero/h9-hero-img.webp" alt="" />
+                                        <Image src="/assets/images/img/zoology.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} data-speed="0.8"   />
                                     </div>
                                     <div className="box-area">
                                         <div className="customers-box">
                                             <div className="customers">
                                                 <ul>
                                                     <li className="wow fadeInLeft" data-wow-delay=".5s">
-                                                        <img src="/assets/images/testimonial/client-1.webp" alt="" />
+                                                        <Image src="/assets/images/testimonial/client-1.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                                                     </li>
                                                     <li className="wow fadeInLeft" data-wow-delay=".6s">
-                                                        <img src="/assets/images/testimonial/client-2.webp" alt="" />
+                                                        <Image src="/assets/images/testimonial/client-2.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                                                     </li>
                                                     <li className="wow fadeInLeft" data-wow-delay=".7s">
-                                                        <img src="/assets/images/testimonial/client-3.webp" alt="" />
+                                                        <Image src="/assets/images/testimonial/client-3.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                                                     </li>
                                                     <li className="wow fadeInLeft" data-wow-delay=".8s">
                                                         <span><i className="fas fa-plus"></i></span>
@@ -64,7 +61,7 @@ export default function MScZoologyPage() {
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </section>
                         {/* end: Banner Section */}
 
@@ -75,7 +72,7 @@ export default function MScZoologyPage() {
                                     <div className="col-xl-6 col-lg-6">
                                         <div className="about-img-area wow fadeInLeft" data-wow-delay=".3s">
                                             <div className="about-img overflow-hidden">
-                                                <img data-speed=".8" src="/assets/images/img/Campus-Life.png" alt="M.Sc Zoology Program" />
+                                                <Image src="/assets/images/img/Campus-Life.png" alt="M.Sc Zoology Program" width={400} height={300} style={{ width: "100%", height: "auto" }} data-speed=".8"   />
                                             </div>
                                             <div className="box-area">
                                                 <div className="progress-box wow fadeInUp" data-wow-delay=".5s">
@@ -133,10 +130,10 @@ export default function MScZoologyPage() {
                                 </div>
                             </div>
                             <div className="bg-shape-1">
-                                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                             </div>
                             <div className="bg-shape-2">
-                                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                             </div>
                         </section>
                         {/* end: Department Zoology Section */}
@@ -214,7 +211,7 @@ export default function MScZoologyPage() {
                         {/* start: Department Commerce Section */}
                         <section id="department-commerce" className="tj-choose-section section-gap">
                             <div className="container">
-                            
+
                                 <div className="row row-gap-4 rightSwipeWrap">
                                     <div className="col-lg-6">
                                         <div className="choose-box right-swipe">
@@ -243,12 +240,9 @@ export default function MScZoologyPage() {
                         </section>
                         {/* end: Department Commerce Section */}
 
-                    </main>
-
-                    <Footer />
-                </div>
-            </div>
-        </>
+                    </PageLayout>
     );
 }
+
+
 

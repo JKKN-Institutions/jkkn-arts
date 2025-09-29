@@ -1,7 +1,8 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   Search, 
   Filter, 
@@ -453,10 +454,12 @@ export default function BlogPage() {
                   <td className="px-4 py-4">
                     <div className="flex items-start space-x-3">
                       {post.featuredImage && (
-                        <img
-                          src={post.featuredImage}
+                        <Image src={post.featuredImage}
                           alt={post.title}
+                          width={400} 
+                          height={300}
                           className="w-12 h-12 rounded-lg object-cover"
+                          style={{ width: "100%", height: "auto" }}
                         />
                       )}
                       <div>
@@ -585,3 +588,4 @@ export default function BlogPage() {
     </div>
   );
 }
+

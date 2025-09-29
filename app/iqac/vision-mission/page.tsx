@@ -1,14 +1,12 @@
-import Link from 'next/link';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+﻿import Link from 'next/link';
+import Image from 'next/image';
+import PageLayout from '../../components/PageLayout';
+
+
 
 export default function VisionMission() {
   return (
-    <>      <Header />
-
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main id="primary" className="site-main">
+    <PageLayout>
             <div className="top-space-15"></div>
             {/* Mobile top padding */}
             <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
@@ -29,13 +27,13 @@ export default function VisionMission() {
 
                     
                     <div className="bg-shape-2">
-                      <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                      <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                     </div>
                   </div>
                 </div>
                 <div className="banner-right-box">
                   <div className="banner-img wow fadeInUp" data-wow-delay=".3s">
-                    <img data-speed=".8" src="/assets/images/hero/h6-hero-banner.webp" alt="" />
+                    <Image src="/assets/images/hero/h6-hero-banner.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} data-speed=".8"   />
                   </div>
                 </div>
               </div>
@@ -90,12 +88,9 @@ export default function VisionMission() {
               </div>
             </section>
             {/* end: Choose Section */}
-          </main>
-
-          <Footer />
-        </div>
-      </div>
-    </>
+          </PageLayout>
   );
 }
+
+
 

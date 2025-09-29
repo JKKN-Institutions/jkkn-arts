@@ -1,14 +1,12 @@
-import Link from 'next/link';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+﻿import Link from 'next/link';
+import Image from 'next/image';
+import PageLayout from '../components/PageLayout';
+
+
 
 export default function DepartmentOfTextileAndFashionDesigning() {
   return (
-    <>      <Header />
-      
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main id="primary" className="site-main">
+    <PageLayout>
             <div className="top-space-15"></div>
             {/* Mobile top padding */}
             <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
@@ -23,10 +21,7 @@ export default function DepartmentOfTextileAndFashionDesigning() {
                         <div className="h6-hero-history-title">Est. 2015</div>
                         <p className="h6-hero-history-desc">Excellence in Textile and Fashion Designing Education with passionate faculty members and active student participation in national-level seminars and conferences.</p>
                       </div>
-                      <div className="circle-text-wrap wow bounceInLeft" data-wow-delay=".5s">
-                        <span className="circle-text" data-bg-image="/assets/images/icons/award-rounded-text.svg"></span>
-                        <div className="circle-icon"><i className="fas fa-w-dot"></i></div>
-                      </div>
+                      
                     </div>
                   </div>
                   <div className="col-lg-8 col-xl-9">
@@ -46,10 +41,10 @@ export default function DepartmentOfTextileAndFashionDesigning() {
                 </div>
               </div>
               <div className="bg-shape-1">
-                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-2">
-                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </section>
             {/* end: Banner Section */}
@@ -82,8 +77,8 @@ export default function DepartmentOfTextileAndFashionDesigning() {
                         <div className="row align-items-center">
                           <div className="col-12 col-lg-4">
                             <div className="h8-about-video">
-                              <img src="/assets/images/img/department-of-english.png" alt="" />
-                              <a className="h8-about-video-btn video-popup" href="https://youtu.be/gXFATcwrO-U" data-autoplay="true" data-vbtype="video">
+                              <Image src="/assets/images/img/department-of-english.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
+                              <a className="h8-about-video-btn video-popup" href="#" data-autoplay="true" data-vbtype="video">
                                 <i className="fas fa-play"></i>
                               </a>
                             </div>
@@ -147,9 +142,7 @@ export default function DepartmentOfTextileAndFashionDesigning() {
                       <div className="row">
                         <div className="col-12 col-md-6 col-xl-4">
                           <div className="service-item h8-service-item">
-                            <div className="service-icon">
-                              <i className="fas fa-service-5"></i>
-                            </div>
+                            
                             <h4 className="title">VISION</h4>
                             <div className="service-content">
                               <p className="desc">
@@ -160,9 +153,7 @@ export default function DepartmentOfTextileAndFashionDesigning() {
                         </div>
                         <div className="col-12 col-md-6 col-xl-4">
                           <div className="service-item h8-service-item">
-                            <div className="service-icon">
-                              <i className="fas fa-service-1"></i>
-                            </div>
+                            
                             <h4 className="title">MISSION</h4>
                             <div className="service-content">
                               <p className="desc">To provide comprehensive education in textile and fashion designing that combines theoretical knowledge with practical skills, encouraging active participation in academic conferences and seminars to enhance learning and professional development.</p>
@@ -171,9 +162,7 @@ export default function DepartmentOfTextileAndFashionDesigning() {
                         </div>
                         <div className="col-12 col-md-6 col-xl-4">
                           <div className="service-item h8-service-item">
-                            <div className="service-icon">
-                              <i className="fas fa-service-3"></i>
-                            </div>
+                            
                             <h4 className="title">ACADEMIC PROGRAMS</h4>
                             <div className="service-content">
                               <p className="desc">Comprehensive programs designed to provide students with practical knowledge and skills required in the textile and fashion designing industry.</p>
@@ -203,87 +192,14 @@ export default function DepartmentOfTextileAndFashionDesigning() {
             </section>
             {/* end: Vision Mission Section */}
 
-            {/* start: Achievements Section */}
-            <section className="h8-funfact section-gap">
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-12">
-                    <div className="sec-heading style-3 sec-heading-centered">
-                      <span className="sub-title wow fadeInUp" data-wow-delay=".3s">
-                        <i className="fas fa-box"></i>DEPARTMENT ACHIEVEMENTS
-                      </span>
-                      <h2 className="sec-title title-anim">Faculty Excellence and Student Participation in Academic Events.</h2>
-                    </div>
-                  </div>
-                </div>
-                <div className="row justify-content-between">
-                  <div className="col-12 col-lg-6">
-                    <div className="h8-funfact-banner wow fadeInLeft" data-wow-delay=".3s">
-                      <div className="h8-funfact-banner-img">
-                        <img src="/assets/images/funfact/h8-funfact-banner.webp" alt="" />
-                      </div>
-                      <div className="box-area">
-                        <div className="call-box wow fadeInUp" data-wow-delay=".5s">
-                          <h4 className="title">Faculty Achievements</h4>
-                          <span className="call-icon"><i className="fas fa-award"></i></span>
-                          <p className="achievement-text">Passionate faculty members presenting papers and serving as guest lecturers at esteemed institutions</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-12 col-lg-6 pl-0">
-                    <div className="h8-funfact-wrapper">
-                      <div className="countup-item style-2 h8-funfact-item">
-                        <div className="count-inner">
-                          <div className="inline-content">
-                            <span className="odometer countup-number" data-count="100"></span>
-                            <span className="count-plus">+</span>
-                          </div>
-                          <div className="counter-desc">
-                            <h4 className="counter-title">Faculty Presentations</h4>
-                            <p className="count-text">Papers presented and guest lectures delivered at esteemed institutions.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="countup-item style-2 h8-funfact-item">
-                        <div className="count-inner">
-                          <div className="inline-content">
-                            <span className="odometer countup-number" data-count="188"></span>
-                            <span className="count-plus">+</span>
-                          </div>
-                          <div className="counter-desc">
-                            <h4 className="counter-title">Student Participation</h4>
-                            <p className="count-text">Active participation in national-level seminars and conferences at Periyar University in 2018.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="countup-item style-2 h8-funfact-item">
-                        <div className="count-inner">
-                          <div className="inline-content">
-                            <span className="odometer countup-number" data-count="2"></span>
-                            <span className="count-plus">+</span>
-                          </div>
-                          <div className="counter-desc">
-                            <h4 className="counter-title">Academic Growth</h4>
-                            <p className="count-text">Continuous cycle of learning and improvement benefiting students and department reputation.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            {/* end: Achievements Section */}
+           
 
             
 
             <br/>
-            <Footer />
-          </main>
-        </div>
-      </div>
-    </>
+          </PageLayout>
   );
 }
+
+
 

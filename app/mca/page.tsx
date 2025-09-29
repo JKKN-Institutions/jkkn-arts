@@ -1,14 +1,12 @@
-import Link from 'next/link';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+﻿import Link from 'next/link';
+import Image from 'next/image';
+import PageLayout from '../components/PageLayout';
+
+
 
 export default function MCAPage() {
   return (
-    <>      <Header />
-      
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main id="primary" className="site-main">
+    <PageLayout>
             <div className="top-space-15"></div>
             {/* Mobile top padding */}
             <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
@@ -43,10 +41,10 @@ export default function MCAPage() {
                 </div>
               </div>
               <div className="bg-shape-1">
-                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-2">
-                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </section>
             {/* end: Banner Section */}
@@ -79,10 +77,7 @@ export default function MCAPage() {
                         <div className="row align-items-center">
                           <div className="col-12 col-lg-4">
                             <div className="h8-about-video">
-                              <img src="/assets/images/img/department-of-english.png" alt="" />
-                              <a className="h8-about-video-btn video-popup" href="https://youtu.be/gXFATcwrO-U" data-autoplay="true" data-vbtype="video">
-                                <i className="fas fa-play"></i>
-                              </a>
+                              <Image src="/assets/images/img/department-of-english.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                             </div>
                           </div>
                           <div className="col-12 col-lg-8">
@@ -202,86 +197,13 @@ export default function MCAPage() {
             </section>
             {/* end: Vision Mission Section */}
 
-            {/* start: Achievements Section */}
-            <section className="h8-funfact section-gap">
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-12">
-                    <div className="sec-heading style-3 sec-heading-centered">
-                      <span className="sub-title wow fadeInUp" data-wow-delay=".3s">
-                        <i className="fas fa-box"></i>MCA PROGRAM ACHIEVEMENTS
-                      </span>
-                      <h2 className="sec-title title-anim">Student Excellence and University Rankings.</h2>
-                    </div>
-                  </div>
-                </div>
-                <div className="row justify-content-between">
-                  <div className="col-12 col-lg-6">
-                    <div className="h8-funfact-banner wow fadeInLeft" data-wow-delay=".3s">
-                      <div className="h8-funfact-banner-img">
-                        <img src="/assets/images/funfact/h8-funfact-banner.webp" alt="" />
-                      </div>
-                      <div className="box-area">
-                        <div className="call-box wow fadeInUp" data-wow-delay=".5s">
-                          <h4 className="title">University Rankings</h4>
-                          <span className="call-icon"><i className="fas fa-award"></i></span>
-                          <p className="achievement-text">MCA students have achieved multiple university ranks and brought fame to the Department and College</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-12 col-lg-6 pl-0">
-                    <div className="h8-funfact-wrapper">
-                      <div className="countup-item style-2 h8-funfact-item">
-                        <div className="count-inner">
-                          <div className="inline-content">
-                            <span className="odometer countup-number" data-count="5"></span>
-                            <span className="count-plus">+</span>
-                          </div>
-                          <div className="counter-desc">
-                            <h4 className="counter-title">University Ranks</h4>
-                            <p className="count-text">Students achieved university ranks from 1st to 10th position.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="countup-item style-2 h8-funfact-item">
-                        <div className="count-inner">
-                          <div className="inline-content">
-                            <span className="odometer countup-number" data-count="15"></span>
-                            <span className="count-plus"></span>
-                          </div>
-                          <div className="counter-desc">
-                            <h4 className="counter-title">Sanctioned Intake</h4>
-                            <p className="count-text">Approved intake capacity for MCA program.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="countup-item style-2 h8-funfact-item">
-                        <div className="count-inner">
-                          <div className="inline-content">
-                            <span className="odometer countup-number" data-count="1987"></span>
-                            <span className="count-plus"></span>
-                          </div>
-                          <div className="counter-desc">
-                            <h4 className="counter-title">Program Started</h4>
-                            <p className="count-text">MCA program introduced in the academic year 1987-1988.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            {/* end: Achievements Section */}
+            
 
             
 
-            <Footer />
-          </main>
-        </div>
-      </div>
-    </>
+          </PageLayout>
   );
 }
+
+
 

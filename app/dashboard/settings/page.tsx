@@ -1,4 +1,5 @@
-'use client';
+﻿'use client';
+import Image from 'next/image';
 
 import { useState } from 'react';
 import { 
@@ -152,10 +153,12 @@ export default function SettingsPage() {
                   </label>
                   {logoImage ? (
                     <div className="relative inline-block">
-                      <img 
-                        src={logoImage} 
+                      <Image src={logoImage} 
                         alt="Logo" 
+                        width={400} 
+                        height={300}
                         className="w-32 h-32 object-contain border border-gray-300 rounded-lg"
+                        style={{ width: "100%", height: "auto" }}
                       />
                       <button
                         onClick={() => setLogoImage('')}
@@ -357,14 +360,14 @@ export default function SettingsPage() {
                         <div className="flex justify-between items-center p-3 border border-gray-200 rounded-lg">
                           <div>
                             <p className="font-medium">Current session</p>
-                            <p className="text-sm text-gray-500">Chrome on Windows • 192.168.1.1</p>
+                            <p className="text-sm text-gray-500">Chrome on Windows â€¢ 192.168.1.1</p>
                           </div>
                           <span className="text-sm text-green-600">Active</span>
                         </div>
                         <div className="flex justify-between items-center p-3 border border-gray-200 rounded-lg">
                           <div>
                             <p className="font-medium">Yesterday, 3:42 PM</p>
-                            <p className="text-sm text-gray-500">Safari on macOS • 192.168.1.5</p>
+                            <p className="text-sm text-gray-500">Safari on macOS â€¢ 192.168.1.5</p>
                           </div>
                           <span className="text-sm text-gray-500">Ended</span>
                         </div>
@@ -504,3 +507,4 @@ export default function SettingsPage() {
     </div>
   );
 }
+

@@ -1,14 +1,12 @@
-import Link from 'next/link';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+﻿import Link from 'next/link';
+import Image from 'next/image';
+import PageLayout from '../../components/PageLayout';
+
+
 
 export default function DepartmentOfMathematics() {
   return (
-    <>      <Header />
-      
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main id="primary" className="site-main">
+    <PageLayout>
             <div className="top-space-15"></div>
             {/* Mobile top padding */}
             <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
@@ -42,10 +40,10 @@ export default function DepartmentOfMathematics() {
                 </div>
               </div>
               <div className="bg-shape-1">
-                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-2">
-                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </section>
             {/* end: Banner Section */}
@@ -78,10 +76,7 @@ export default function DepartmentOfMathematics() {
                         <div className="row align-items-center">
                           <div className="col-12 col-lg-4">
                             <div className="h8-about-video">
-                              <img src="/assets/images/img/department-of-english.png" alt="" style={{width: '100%', height: 'auto', maxHeight: '320px', objectFit: 'cover'}} />
-                              <a className="h8-about-video-btn video-popup" href="https://youtu.be/gXFATcwrO-U" data-autoplay="true" data-vbtype="video">
-                                <i className="fas fa-play"></i>
-                              </a>
+                              <Image src="/assets/images/img/department-of-english.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }}   style={{width: '100%', height: 'auto', maxHeight: '320px', objectFit: 'cover'}} />
                             </div>
                           </div>
                           <div className="col-12 col-lg-8">
@@ -214,7 +209,7 @@ export default function DepartmentOfMathematics() {
                   <div className="col-12 col-lg-6">
                     <div className="h8-funfact-banner wow fadeInLeft" data-wow-delay=".3s">
                       <div className="h8-funfact-banner-img">
-                        <img src="/assets/images/funfact/h8-funfact-banner.webp" alt="" />
+                        <Image src="/assets/images/img/maths.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                       </div>
                       <div className="box-area">
                         <div className="call-box wow fadeInUp" data-wow-delay=".5s">
@@ -367,7 +362,7 @@ export default function DepartmentOfMathematics() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".2s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/maths-sf/Mrs.R.Poongodi.png" alt="" />
+                          <Image src="/assets/images/team/maths-sf/Mrs.R.Poongodi.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -386,7 +381,7 @@ export default function DepartmentOfMathematics() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".3s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/maths-sf/Mr.K.Murugan.png" alt="" />
+                          <Image src="/assets/images/team/maths-sf/Mr.K.Murugan.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -405,7 +400,7 @@ export default function DepartmentOfMathematics() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".4s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/maths-sf/Mrs.N.Sathya.png" alt="" />
+                          <Image src="/assets/images/team/maths-sf/Mrs.N.Sathya.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -423,19 +418,17 @@ export default function DepartmentOfMathematics() {
                 </div>
               </div>
               <div className="bg-shape-1">
-                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-2">
-                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </section>
             {/* end: Faculty Section */}
 
-            <Footer />
-          </main>
-        </div>
-      </div>
-    </>
+          </PageLayout>
   );
 }
+
+
 

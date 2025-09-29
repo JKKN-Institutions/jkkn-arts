@@ -1,14 +1,12 @@
-import Link from 'next/link';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+﻿import Link from 'next/link';
+import Image from 'next/image';
+import PageLayout from '../components/PageLayout';
+
+
 
 export default function Portfolio() {
   return (
-    <>      <Header />
-      
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main id="primary" className="site-main">
+    <PageLayout>
             <div className="space-for-header"></div>
             {/* Mobile top padding */}
             <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
@@ -51,7 +49,7 @@ export default function Portfolio() {
                   <div className="col-lg-4 col-md-6">
                     <div className="project-item">
                       <div className="project-img" data-bg-image="/assets/images/img/department-of-computer-science.png">
-                        <img src="/assets/images/img/department-of-computer-science.png" alt="Event Management Platform" />
+                        <Image src="/assets/images/img/department-of-computer-science.png" alt="Event Management Platform" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                       </div>
                       <div className="project-content">
                         <span className="categories"><Link href="/portfolio-details">Business</Link></span>
@@ -68,7 +66,7 @@ export default function Portfolio() {
                   <div className="col-lg-4 col-md-6">
                     <div className="project-item">
                       <div className="project-img" data-bg-image="/assets/images/img/department-of-chemistry.png">
-                        <img src="/assets/images/img/department-of-chemistry.png" alt="Environmental Impact Dashboard" />
+                        <Image src="/assets/images/img/department-of-chemistry.png" alt="Environmental Impact Dashboard" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                       </div>
                       <div className="project-content">
                         <span className="categories"><Link href="/portfolio-details">Sustainability</Link></span>
@@ -85,7 +83,7 @@ export default function Portfolio() {
                   <div className="col-lg-4 col-md-6">
                     <div className="project-item">
                       <div className="project-img" data-bg-image="/assets/images/img/department-of-physics.png">
-                        <img src="/assets/images/img/department-of-physics.png" alt="Digital Transformation" />
+                        <Image src="/assets/images/img/department-of-physics.png" alt="Digital Transformation" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                       </div>
                       <div className="project-content">
                         <span className="categories"><Link href="/portfolio-details">Technology</Link></span>
@@ -102,7 +100,7 @@ export default function Portfolio() {
                   <div className="col-lg-4 col-md-6">
                     <div className="project-item">
                       <div className="project-img" data-bg-image="/assets/images/img/department-of-mathematics.png">
-                        <img src="/assets/images/img/department-of-mathematics.png" alt="Customer Analytics Platform" />
+                        <Image src="/assets/images/img/department-of-mathematics.png" alt="Customer Analytics Platform" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                       </div>
                       <div className="project-content">
                         <span className="categories"><Link href="/portfolio-details">Analytics</Link></span>
@@ -119,7 +117,7 @@ export default function Portfolio() {
                   <div className="col-lg-4 col-md-6">
                     <div className="project-item">
                       <div className="project-img" data-bg-image="/assets/images/img/department-of-economics.png">
-                        <img src="/assets/images/img/department-of-economics.png" alt="Supply Chain Optimization" />
+                        <Image src="/assets/images/img/department-of-economics.png" alt="Supply Chain Optimization" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                       </div>
                       <div className="project-content">
                         <span className="categories"><Link href="/portfolio-details">Operations</Link></span>
@@ -136,7 +134,7 @@ export default function Portfolio() {
                   <div className="col-lg-4 col-md-6">
                     <div className="project-item">
                       <div className="project-img" data-bg-image="/assets/images/img/department-of-english.png">
-                        <img src="/assets/images/img/department-of-english.png" alt="Employee Training System" />
+                        <Image src="/assets/images/img/department-of-english.png" alt="Employee Training System" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                       </div>
                       <div className="project-content">
                         <span className="categories"><Link href="/portfolio-details">HR Tech</Link></span>
@@ -175,12 +173,9 @@ export default function Portfolio() {
               </div>
             </section>
             {/* end: CTA Section */}
-          </main>
-
-          <Footer />
-        </div>
-      </div>
-    </>
+          </PageLayout>
   );
 }
+
+
 

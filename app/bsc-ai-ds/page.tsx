@@ -1,13 +1,12 @@
-import Link from 'next/link';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+﻿import Link from 'next/link';
+import Image from 'next/image';
+import PageLayout from '../components/PageLayout';
+
+
 
 export default function BSCAIDataScience() {
   return (
-    <>      <Header />
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main id="primary" className="site-main">
+    <PageLayout>
             <div className="space-for-header"></div>
             {/* Mobile top padding */}
             <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
@@ -72,7 +71,7 @@ export default function BSCAIDataScience() {
                   <div className="col-xl-6 col-lg-6 order-lg-1 order-2">
                     <div className="about-img-area style-2 wow fadeInLeft" data-wow-delay=".3s">
                       <div className="about-img overflow-hidden">
-                        <img data-speed=".8" src="/assets/images/img/Campus-Life.png" alt="BSC AI & DS Department" />
+                        <Image src="/assets/images/img/Campus-Life.png" alt="BSC AI & DS Department" width={400} height={300} style={{ width: "100%", height: "auto" }} data-speed=".8"   />
                       </div>
                       <div className="box-area style-2">
                         <div className="progress-box wow fadeInUp" data-wow-delay=".3s">
@@ -126,10 +125,10 @@ export default function BSCAIDataScience() {
                 </div>
               </div>
               <div className="bg-shape-1">
-                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-2">
-                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </section>
             {/* end: Vision Mission Section */}
@@ -176,7 +175,7 @@ export default function BSCAIDataScience() {
                   <div className="col-lg-6 order-lg-2">
                     <div className="testimonial-img-area wow fadeInUp" data-wow-delay=".3s">
                       <div className="testimonial-img">
-                        <img src="/assets/images/testimonial/testimonial-img.webp" alt="Alumni Success" />
+                        <Image src="/assets/images/img/bsc-ai-ds-2.png" alt="Alumni Success" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         <div className="sec-heading style-2">
                           <h2 className="sec-title title-anim">Alumni <span>Success Stories</span></h2>
                         </div>
@@ -187,10 +186,10 @@ export default function BSCAIDataScience() {
                           <div className="rating-area">
                             <div className="star-ratings">
                               <div className="fill-ratings" style={{width: '100%'}}>
-                                <span>â˜…â˜…â˜…â˜…â˜…</span>
+                                <span>Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦</span>
                               </div>
                               <div className="empty-ratings">
-                                <span>â˜…â˜…â˜…â˜…â˜…</span>
+                                <span>Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦</span>
                               </div>
                             </div>
                           </div>
@@ -272,10 +271,10 @@ export default function BSCAIDataScience() {
                 </div>
               </div>
               <div className="bg-shape-1">
-                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-2">
-                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </section>
             {/* end: Program Outcomes Section */}
@@ -283,11 +282,8 @@ export default function BSCAIDataScience() {
            
 
             
-          </main>
-
-          <Footer />
-        </div>
-      </div>
-    </>
+          </PageLayout>
   );
 }
+
+

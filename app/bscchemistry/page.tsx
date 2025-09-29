@@ -1,5 +1,7 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+﻿import Image from 'next/image';
+import PageLayout from '../components/PageLayout';
+
+
 
 export default function BscChemistryPage() {
   return (
@@ -54,7 +56,7 @@ export default function BscChemistryPage() {
                   <div className="col-12">
                     <div className="h10-hero-banner zoom-on-scroll">
                       <div className="h10-hero-banner-img h10-hero-banner-video">
-                        <video autoPlay loop muted playsInline data-wf-ignore="true" data-object-fit="cover" poster="/assets/images/hero/h10-hero-banner.webp">
+                        <video autoPlay loop muted playsInline data-wf-ignore="true" data-object-fit="cover" poster="/assets/images/img/department-of-chemistry.png">
                           <source src="/assets/video/h10-banner-videio.webp" data-wf-ignore="true" />
                           <source src="/assets/video/h10-banner-videio.webp" data-wf-ignore="true" />
                         </video>
@@ -64,10 +66,10 @@ export default function BscChemistryPage() {
                 </div>
               </div>
               <div className="bg-shape-1">
-                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-2">
-                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </section>
             {/* end: Banner Section */}
@@ -176,7 +178,7 @@ export default function BscChemistryPage() {
                   <div className="col-12 col-lg-5 d-block d-md-none d-lg-block">
                     <div className="about-img-area h10-about-banner wow bounceInLeft" data-wow-delay=".3s">
                       <div className="about-img overflow-hidden">
-                        <img data-speed=".8" src="/assets/images/img/department-of-computer-science.png" alt="" />
+                        <Image src="/assets/images/img/department-of-computer-science.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} data-speed=".8"   />
                       </div>
                     </div>
                   </div>
@@ -191,7 +193,7 @@ export default function BscChemistryPage() {
                         <div className="col-12 col-md-6 d-none d-md-block d-lg-none">
                           <div className="about-img-area h10-about-banner wow bounceInLeft" data-wow-delay=".3s">
                             <div className="about-img">
-                              <img src="/assets/images/img/department-of-computer-science.png" alt="" />
+                              <Image src="/assets/images/img/department-of-computer-science.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                             </div>
                           </div>
                         </div>
@@ -200,9 +202,9 @@ export default function BscChemistryPage() {
                             <div className="customers-box style-3 h10-about-clients wow fadeInUp" data-wow-delay=".4s">
                               <div className="customers">
                                 <ul>
-                                  <li className="wow fadeInLeft" data-wow-delay=".2s"><img src="/assets/images/testimonial/client-1.webp" alt="" /></li>
-                                  <li className="wow fadeInLeft" data-wow-delay=".3s"><img src="/assets/images/testimonial/client-2.webp" alt="" /></li>
-                                  <li className="wow fadeInLeft" data-wow-delay=".4s"><img src="/assets/images/testimonial/client-3.webp" alt="" /></li>
+                                  <li className="wow fadeInLeft" data-wow-delay=".2s"><Image src="/assets/images/testimonial/client-1.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} /></li>
+                                  <li className="wow fadeInLeft" data-wow-delay=".3s"><Image src="/assets/images/testimonial/client-2.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} /></li>
+                                  <li className="wow fadeInLeft" data-wow-delay=".4s"><Image src="/assets/images/testimonial/client-3.webp" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} /></li>
                                   <li className="wow fadeInLeft" data-wow-delay=".5s"><span><i className="fas fa-plus"></i></span></li>
                                 </ul>
                               </div>
@@ -293,13 +295,13 @@ export default function BscChemistryPage() {
                 </div>
               </div>
               <div className="bg-shape-1">
-                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-2">
-                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-3">
-                <img src="/assets/images/shape/h7-testimonial-shape-blur.svg" alt="" />
+                <Image src="/assets/images/shape/h7-testimonial-shape-blur.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </section>
             {/* end: Curriculum Section */}
@@ -356,4 +358,6 @@ export default function BscChemistryPage() {
     </>
   );
 }
+
+
 

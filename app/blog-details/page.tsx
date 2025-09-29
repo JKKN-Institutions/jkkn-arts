@@ -1,10 +1,12 @@
-'use client';
+﻿'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
+import PageLayout from '../components/PageLayout';
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+
+
 
 // Event data
 const eventData = {
@@ -130,9 +132,10 @@ function BlogDetailsContent() {
                 marginBottom: '2rem'
               }}>
                 <div className="blog-image" style={{ marginBottom: '2rem' }}>
-                  <img 
-                    src={event.image} 
+                  <Image src={event.image} 
                     alt={event.title} 
+                    width={400} 
+                    height={300} 
                     style={{ 
                       width: '100%', 
                       height: 'auto', 
@@ -256,9 +259,8 @@ function BlogDetailsContent() {
                       borderBottom: '1px solid #eee'
                     }}>
                       <div className="post-thumb" style={{ flexShrink: 0 }}>
-                        <img 
-                          src="/assets/images/events/blood-donet.png" 
-                          alt="Blood Donation" 
+                        <Image src="/assets/images/events/blood-donet.png" alt="Blood Donation" width={400} height={300} style={{ width: "100%", height: "auto" }}  
+                           
                           style={{ 
                             width: '80px', 
                             height: '60px', 
@@ -294,9 +296,8 @@ function BlogDetailsContent() {
                       marginBottom: '1rem'
                     }}>
                       <div className="post-thumb" style={{ flexShrink: 0 }}>
-                        <img 
-                          src="/assets/images/events/field-trip.png" 
-                          alt="Field Trip" 
+                        <Image src="/assets/images/events/field-trip.png" alt="Field Trip" width={400} height={300} style={{ width: "100%", height: "auto" }}  
+                           
                           style={{ 
                             width: '80px', 
                             height: '60px', 
@@ -430,11 +431,7 @@ function BlogDetailsContent() {
 
 export default function BlogDetails() {
   return (
-    <>      <Header />
-      
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main id="primary" className="site-main">
+    <PageLayout>
             <div className="space-for-header"></div>
             {/* Mobile top padding */}
             <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
@@ -442,12 +439,9 @@ export default function BlogDetails() {
             <Suspense fallback={<div>Loading...</div>}>
               <BlogDetailsContent />
             </Suspense>
-          </main>
-
-          <Footer />
-        </div>
-      </div>
-    </>
+          </PageLayout>
   );
 }
+
+
 

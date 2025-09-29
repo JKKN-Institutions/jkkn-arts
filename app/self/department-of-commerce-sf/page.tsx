@@ -1,6 +1,7 @@
+﻿import PageLayout from '../../components/PageLayout';
 import Image from 'next/image';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+
+
 
 export default function DepartmentOfCommerce() {
   return (
@@ -56,7 +57,7 @@ export default function DepartmentOfCommerce() {
                   <div className="col-12">
                     <div className="h10-hero-banner zoom-on-scroll">
                       <div className="h10-hero-banner-img h10-hero-banner-video">
-                        <video autoPlay loop muted playsInline data-wf-ignore="true" data-object-fit="cover" poster="/assets/images/hero/h10-hero-banner.webp">
+                        <video autoPlay loop muted playsInline data-wf-ignore="true" data-object-fit="cover" poster="/assets/images/img/department-of-commerce.png">
                           <source src="/assets/video/h10-banner-videio.webp" data-wf-ignore="true" />
                           <source src="/assets/video/h10-banner-videio.webp" data-wf-ignore="true" />
                         </video>
@@ -953,4 +954,5 @@ export default function DepartmentOfCommerce() {
     </>
   );
 }
+
 

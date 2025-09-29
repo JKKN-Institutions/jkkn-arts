@@ -1,15 +1,12 @@
-import Link from 'next/link';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+﻿import Link from 'next/link';
+import Image from 'next/image';
+import PageLayout from '../../components/PageLayout';
+
+
 
 export default function LibraryPage() {
   return (
-    <>
-      <Header />
-
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main id="primary" className="site-main">
+    <PageLayout>
             <br />
             <div className="space-for-header"></div>
             {/* Mobile top padding */}
@@ -111,7 +108,7 @@ export default function LibraryPage() {
                   <div className="col-xl-6 col-lg-6 order-lg-1 order-2">
                     <div className="about-img-area style-2 wow fadeInLeft" data-wow-delay=".3s">
                       <div className="about-img overflow-hidden">
-                        <img data-speed=".8" src="/assets/images/img/Campus-Life.png" alt="" style={{ width: '100%', height: 'auto', maxHeight: '320px', objectFit: 'cover' }} />
+                        <Image src="/assets/images/img/Campus-Life.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} data-speed=".8"   style={{ width: '100%', height: 'auto', maxHeight: '320px', objectFit: 'cover' }} />
                       </div>
 
                     </div>
@@ -158,10 +155,10 @@ export default function LibraryPage() {
                 </div>
               </div>
               <div className="bg-shape-1">
-                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-2">
-                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </section>
             {/* end: About Section */}
@@ -275,7 +272,7 @@ export default function LibraryPage() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".2s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <img src="/assets/images/team/library-aided/sasikala.png" alt="" />
+                          <Image src="/assets/images/team/library-aided/sasikala.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
                         </div>
                         <div className="social-links">
                           <ul>
@@ -293,21 +290,18 @@ export default function LibraryPage() {
                 </div>
               </div>
               <div className="bg-shape-1">
-                <img src="/assets/images/shape/pattern-2.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-2.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="bg-shape-2">
-                <img src="/assets/images/shape/pattern-3.svg" alt="" />
+                <Image src="/assets/images/shape/pattern-3.svg" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} />
               </div>
             </section>
             {/* end: Faculty Section */}
 
             <br /><br />
-          </main>
-
-          <Footer />
-        </div>
-      </div>
-    </>
+          </PageLayout>
   );
 }
+
+
 

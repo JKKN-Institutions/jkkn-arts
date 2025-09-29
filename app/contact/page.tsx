@@ -1,13 +1,11 @@
-import Link from 'next/link';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+﻿import Link from 'next/link';
+import PageLayout from '../components/PageLayout';
+
+
 
 export default function Contact() {
   return (
-    <>      <Header />
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main id="primary" className="site-main">
+    <PageLayout>
             <div className="space-for-header"></div>
             {/* Mobile top padding */}
             <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
@@ -53,7 +51,7 @@ export default function Contact() {
                         <i className="fas fa-location-3"></i>
                       </div>
                       <h3 className="contact-title">Our Location</h3>
-                      <p>Natarajapuram, NH-544 (Salem to Coimbatore), Kumarapalayam â€“ 638183, Namakkal (DT)</p>
+                      <p>Natarajapuram, NH-544 (Salem to Coimbatore), Kumarapalayam Ã¢â‚¬â€œ 638183, Namakkal (DT)</p>
                     </div>
                   </div>
                   <div className="col-xl-3 col-lg-6 col-sm-6">
@@ -117,12 +115,8 @@ export default function Contact() {
             {/* end: Contact Section */}
 
             
-          </main>
-
-          <Footer />
-        </div>
-      </div>
-    </>
+          </PageLayout>
   );
 }
+
 

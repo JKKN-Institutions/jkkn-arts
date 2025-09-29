@@ -1,4 +1,5 @@
-'use client';
+﻿'use client';
+import Image from 'next/image';
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -97,10 +98,12 @@ export default function NewEventPage() {
         {/* Event Image */}
         {featuredImage && (
           <div className="relative h-64">
-            <img 
-              src={featuredImage} 
+            <Image src={featuredImage} 
               alt="Event" 
+              width={400} 
+              height={300}
               className="w-full h-full object-cover"
+              style={{ width: "100%", height: "auto" }}
             />
             {watchedIsFeature && (
               <div className="absolute top-4 left-4">
@@ -317,10 +320,12 @@ export default function NewEventPage() {
                 
                 {featuredImage ? (
                   <div className="relative">
-                    <img 
-                      src={featuredImage} 
+                    <Image src={featuredImage} 
                       alt="Event" 
+                      width={400} 
+                      height={300}
                       className="w-full h-48 object-cover rounded-lg"
+                      style={{ width: "100%", height: "auto" }}
                     />
                     <button
                       type="button"
@@ -470,3 +475,4 @@ export default function NewEventPage() {
     </div>
   );
 }
+

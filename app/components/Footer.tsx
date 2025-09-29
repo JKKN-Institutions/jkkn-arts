@@ -116,7 +116,6 @@ export default function Footer() {
                     <li><a href="https://www.instagram.com/jkknarts" target="_blank"><i className="fa-brands fa-instagram"></i></a></li>
                     <li><a href="https://www.linkedin.com/school/jkknarts" target="_blank"><i className="fa-brands fa-linkedin-in"></i></a></li>
                     <li><a href="https://www.twitter.com/jkknarts" target="_blank"><i className="fa-brands fa-x-twitter"></i></a></li>
-                    <li><a href="https://www.youtube.com/jkkninstitutions/" target="_blank"><i className="fab fa-youtube" style={{fontSize: '18px'}}> </i></a></li>
                   </ul>
                 </div>
                 <div className="copyright-menu">

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -138,9 +138,6 @@ export default function Home() {
                       </div>
                       <div className="video-img wow fadeInRight" data-wow-delay=".7s">
                         <img src="/assets/images/img/classroom.png" alt="Image" />
-                        <a className="video-btn video-popup" data-autoplay="true" data-vbtype="video" data-maxwidth="1200px" href="https://www.youtube.com/watch?v=MLpWrANjFbI&ab_channel=eidelchteinadvogados">
-                          <span><i className="fas fa-play"></i></span>
-                        </a>
                       </div>
                     </div>
                   </div>

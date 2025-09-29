@@ -1,15 +1,12 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
+import PageLayout from '../components/PageLayout';
 import Image from 'next/image';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+
+
 
 export default function VisionMission() {
   return (
-    <>      <Header />
-
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main id="primary" className="site-main">
+    <PageLayout>
             <div className="top-space-15"></div>
             {/* Mobile top padding */}
             <div className="d-lg-none" style={{paddingTop: '60px'}}></div>
@@ -94,12 +91,8 @@ export default function VisionMission() {
               </div>
             </section>
             {/* end: Choose Section */}
-          </main>
-
-          <Footer />
-        </div>
-      </div>
-    </>
+          </PageLayout>
   );
 }
+
 
