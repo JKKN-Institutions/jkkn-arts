@@ -8,25 +8,24 @@ export default function OffcanvasMenu() {
   useEffect(() => {
     // Remove any duplicate mobile menu instances
     const removeDuplicateMenus = () => {
-      // Remove duplicate mobile menu lists (keep only primary)
       const allMobileMenus = document.querySelectorAll('.mobile-menu-list');
       const primaryMenu = document.getElementById('primary-mobile-menu');
       
-      let duplicatesRemoved = 0;
+      // Hide all menus first
       allMobileMenus.forEach((menu) => {
         if (menu !== primaryMenu && menu.id !== 'primary-mobile-menu') {
-          (menu as HTMLElement).remove();
-          duplicatesRemoved++;
+          (menu as HTMLElement).remove(); // Remove completely instead of just hiding
+          console.log('Duplicate mobile menu removed:', menu);
         }
       });
 
-      // Remove duplicate mobile menu containers
+      // Also remove any other duplicate mobile menu containers
       const allMobileMenuContainers = document.querySelectorAll('.mobile_menu');
       if (allMobileMenuContainers.length > 1) {
         allMobileMenuContainers.forEach((container, index) => {
           if (index > 0) { // Keep only the first one
             (container as HTMLElement).remove();
-            duplicatesRemoved++;
+            console.log('Duplicate mobile menu container removed:', container);
           }
         });
       }
@@ -37,20 +36,9 @@ export default function OffcanvasMenu() {
         allHamburgerAreas.forEach((area, index) => {
           if (index > 0) { // Keep only the first one
             (area as HTMLElement).remove();
-            duplicatesRemoved++;
+            console.log('Duplicate hamburger area removed:', area);
           }
         });
-      }
-
-      // Remove any stray mobile menus from other components
-      const strayMobileMenus = document.querySelectorAll('[id*="mobile-menu"]:not(#primary-mobile-menu):not(#desktop-menu)');
-      strayMobileMenus.forEach((menu) => {
-        (menu as HTMLElement).remove();
-        duplicatesRemoved++;
-      });
-
-      if (duplicatesRemoved > 0) {
-        console.log(`Mobile Menu Cleanup: Removed ${duplicatesRemoved} duplicate menu elements`);
       }
     };
 
@@ -164,11 +152,82 @@ export default function OffcanvasMenu() {
                     </li>
 
                     {/* 2. Programmes Offered */}
-                    <li className="has-dropdown">
+                    {/* <li className="has-dropdown">
                       <Link href="#">Programmes Offered <i className="fas fa-chevron-down ms-1"></i></Link>
                       <ul className="sub-menu">
                         <li><Link href="/aided">Aided Courses</Link></li>
                         <li><Link href="/self">Self Finance Courses</Link></li>
+                      </ul>
+                    </li> */}
+
+                    {/* 2. Programmes Offered */}
+                    <li className="has-dropdown me-3">
+                      <Link href="/programmes">Programmes Offered</Link>
+                      <ul className="sub-menu">
+                        <li className="has-dropdown">
+                          <Link href="/programmes/aided">Aided <i className="fas fa-chevron-right ms-1"></i></Link>
+                          <ul className="sub-menu">
+                            <li className="has-dropdown">
+                              <Link href="/programmes/aided/ug">UG Courses <i className="fas fa-chevron-right ms-1"></i></Link>
+                              <ul className="sub-menu">
+                                <li><Link href="/baenglish">BA English</Link></li>
+                                <li><Link href="/bahistory">BA History</Link></li>
+                                <li><Link href="/bscchemistry">B.Sc Chemistry</Link></li>
+                                <li><Link href="/bscmaths">B.Sc Maths</Link></li>
+                                <li><Link href="/bsc-zoology">B.Sc Zoology</Link></li>
+                                <li><Link href="/bcom">B.Com</Link></li>
+                              </ul>
+                            </li>
+                            <li className="has-dropdown">
+                              <Link href="/programmes/aided/pg">PG Courses <i className="fas fa-chevron-right ms-1"></i></Link>
+                              <ul className="sub-menu">
+                                <li><Link href="/mca">M.C.A</Link></li>
+                                <li><Link href="/mcom">M.Com</Link></li>
+                                <li><Link href="/m-sc-zoology">M.Sc Zoology</Link></li>
+                                <li><Link href="/msc-chemistry">MSc Chemistry</Link></li>
+                                <li><Link href="/msc-physics">M.Sc Physics</Link></li>
+                                <li><Link href="/m-a-english">M.A English</Link></li>
+                              </ul>
+                            </li>
+                            <li className="has-dropdown">
+                              <Link href="/programmes/aided/phd">Ph.D. <i className="fas fa-chevron-right ms-1"></i></Link>
+                              <ul className="sub-menu">
+                                <li><Link href="/ph-d-tamil">Ph.D Tamil</Link></li>
+                                <li><Link href="/ph-d-chemistry">Ph.D Chemistry</Link></li>
+                                <li><Link href="/ph-d-zoology">Ph.D Zoology</Link></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li className="has-dropdown">
+                          <Link href="/programmes/self-finance">Self Finance <i className="fas fa-chevron-right ms-1"></i></Link>
+                          <ul className="sub-menu">
+                            <li className="has-dropdown">
+                              <Link href="/programmes/self-finance/ug">UG Courses <i className="fas fa-chevron-right ms-1"></i></Link>
+                              <ul className="sub-menu">
+                                <li><Link href="/bsc-physics-self">B.Sc. Physics</Link></li>
+                                <li><Link href="/bcom-ca-self">B.Com. CA</Link></li>
+                                <li><Link href="/b-c-a-self">B.C.A</Link></li>
+                                <li><Link href="/bba-self">B.B.A</Link></li>
+                                <li><Link href="/b-com-banking-and-insurance">B.Com Banking and Insurance</Link></li>
+                                <li><Link href="/b-com-accounting-and-finance">B.Com Accounting and Finance</Link></li>
+                                <li><Link href="/department-of-computer-science">B.SC Computer Science</Link></li>
+                                <li><Link href="/bsc-ai-ds">B.SC AI & DS</Link></li>
+                                <li><Link href="/department-cyber-security">B.Sc. CS Cyber Security</Link></li>
+                                <li><Link href="/department-of-textile-and-fashion-designing">B.Sc Textile and Fashion Designing</Link></li>
+                                <li><Link href="/department-bsc-visual-communication">B.Sc Visual Communication</Link></li>
+                              </ul>
+                            </li>
+                            <li className="has-dropdown">
+                              <Link href="/programmes/self-finance/pg">PG Courses <i className="fas fa-chevron-right ms-1"></i></Link>
+                              <ul className="sub-menu">
+                                <li><Link href="/msc-Computer-Science">M.Sc Computer Science</Link></li>
+                                <li><Link href="/msc-mathematics">M.Sc Mathematics</Link></li>
+                                <li><Link href="/msc-computer-science-data-analytics">MSc Computer Science Data Analytics</Link></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
                       </ul>
                     </li>
 
@@ -236,28 +295,20 @@ export default function OffcanvasMenu() {
                       </ul>
                     </li>
 
-                    {/* 5. IQAC */}
-                    <li className="has-dropdown">
-                      <Link href="#">IQAC <i className="fas fa-chevron-down ms-1"></i></Link>
-                      <ul className="sub-menu">
-                        <li><Link href="/iqac/vision-mission"><i className="fas fa-eye me-2"></i>Vision & Mission</Link></li>
-                        <li><Link href="/iqac/objectives-functions"><i className="fas fa-bullseye me-2"></i>Objectives & Functions</Link></li>
-                        <li><Link href="/iqac/role-responsibilities"><i className="fas fa-users-cog me-2"></i>Role & Responsibilities</Link></li>
-                      </ul>
-                    </li>
-
-                    {/* 6. Others */}
+                    {/* 5. Others */}
                     <li className="has-dropdown">
                       <Link href="#">Others <i className="fas fa-chevron-down ms-1"></i></Link>
                       <ul className="sub-menu">
-                        <li><Link href="/others/committees"><i className="fas fa-users me-2"></i>Committees</Link></li>
-                        <li><Link href="/team"><i className="fas fa-user-tie me-2"></i>Our Team</Link></li>
-                        <li><Link href="/services"><i className="fas fa-cogs me-2"></i>Services</Link></li>
-                        <li><Link href="/portfolio"><i className="fas fa-briefcase me-2"></i>Portfolio</Link></li>
+                        <li><Link href="/iqac">IQAC</Link></li>
+                        <li><Link href="/others/committees">Committees</Link></li>
+                        <li><Link href="/others/gallery">Gallery</Link></li>
+                        <li><Link href="/others/academic-calendar">Academic Calendar</Link></li>
+                        <li><Link href="/others/digital-campus">Digital Campus</Link></li>
+                        <li><Link href="/others/privacy-policy">Privacy Policy</Link></li>
                       </ul>
                     </li>
 
-                    {/* 7. Contact */}
+                    {/* 6. Contact */}
                     <li><Link href="/contact">Contact</Link></li>
                   </ul>
                 </nav>

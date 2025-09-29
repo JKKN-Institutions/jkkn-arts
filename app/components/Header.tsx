@@ -66,7 +66,7 @@ export default function Header() {
               </div>
 
               {/* navigation */}
-              <div className="menu-area d-none d-md-flex align-items-center flex-grow-1 justify-content-center">
+              <div className="menu-area d-none d-lg-flex align-items-center flex-grow-1 justify-content-center">
                 <nav id="desktop-menu" className="mainmenu">
                   <ul className="d-flex align-items-center mb-0 list-unstyled">
                     
@@ -385,21 +385,14 @@ export default function Header() {
                     <li className="me-3">
                       <Link href="/contact">Contact</Link>
                     </li>
-
-                    {/* 11. RTI */}
-                    {/* <li className="has-dropdown">
-                      <Link href="/rti">RTI</Link>
-                      <ul className="sub-menu">
-                        <li><Link href="/rti/2024">RTI 2024</Link></li>
-                      </ul>
-                    </li> */}
                   </ul>
                 </nav>
               </div>
 
               {/* header right info */}
               <div className="header-right-item d-flex align-items-center flex-shrink-0">
-                <div className="menu_bar">
+                {/* Mobile menu button - visible on mobile/tablet, hidden on desktop */}
+                <div className="menu_bar d-lg-none">
                   <span></span>
                   <span></span>
                   <span></span>
