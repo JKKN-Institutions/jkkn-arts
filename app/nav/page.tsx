@@ -66,12 +66,7 @@ export default function NavPage() {
 
     loadAllScripts();
 
-    // Cleanup function
-    return () => {
-      if (style.parentNode) {
-        document.head.removeChild(style);
-      }
-    };
+    // No cleanup needed since we removed dynamic CSS injection
   }, []);
 
   return (
@@ -110,41 +105,7 @@ export default function NavPage() {
                 </form>
               </div>
             </div>
-            <div className="hamburger_menu">
-              <div className="mobile_menu">
-                <nav className="mainmenu">
-                  <ul>
-                    <li><Link href="/">Home</Link></li>
-                    <li className="has-dropdown">
-                      <Link href="#">About</Link>
-                      <ul className="sub-menu">
-                        <li><Link href="/vision-mission">Our Vision and Mission</Link></li>
-                        <li><Link href="/about/trust">Our Trust</Link></li>
-                        <li><Link href="/about/management">Our Management</Link></li>
-                        <li><Link href="/about/college">Our College</Link></li>
-                      </ul>
-                    </li>
-                    <li className="has-dropdown">
-                      <Link href="/programmes">Programmes Offered</Link>
-                      <ul className="sub-menu">
-                        <li><Link href="/programmes/aided">Aided Courses</Link></li>
-                        <li><Link href="/programmes/self-finance">Self Finance Courses</Link></li>
-                      </ul>
-                    </li>
-                    <li className="has-dropdown">
-                      <Link href="/departments">Department</Link>
-                      <ul className="sub-menu">
-                        <li><Link href="/departments/aided">Aided Departments</Link></li>
-                        <li><Link href="/departments/self-finance">Self Finance Departments</Link></li>
-                      </ul>
-                    </li>
-                    <li><Link href="/facilities">Facilities</Link></li>
-                    <li><Link href="/others">Others</Link></li>
-                    <li><Link href="/contact">Contact</Link></li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
+            {/* Hamburger menu content removed - using global OffcanvasMenu.tsx instead */}
             <div className="hamburger-infos">
               <h5 className="hamburger-title">Contact Info</h5>
               <div className="contact-info">

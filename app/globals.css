@@ -109,7 +109,57 @@
 /* ===== ENHANCED HAMBURGER MENU STYLES ===== */
 /* This section overrides all other hamburger menu styles */
 
-/* Enhanced Hamburger Button Container */
+/* Ensure only one mobile menu instance is displayed */
+#primary-mobile-menu {
+  display: block !important;
+}
+
+/* Hide any duplicate mobile menu instances */
+.mobile-menu-list:not(#primary-mobile-menu) {
+  display: none !important;
+}
+
+/* Prevent menu duplication through CSS pseudo-elements */
+.hamburger_menu::before,
+.hamburger_menu::after,
+.mobile_menu::before,
+.mobile_menu::after,
+.mobile-nav::before,
+.mobile-nav::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Enhanced nested dropdown styling for mobile menu */
+.mobile-menu-list .sub-menu .sub-menu {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-left: 3px solid #1e8a8a !important;
+  margin-left: 10px !important;
+}
+
+.mobile-menu-list .sub-menu .sub-menu li a {
+  padding-left: 50px !important;
+  font-size: 13px !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.mobile-menu-list .sub-menu .sub-menu li a:hover {
+  color: #1e8a8a !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Ensure proper spacing for nested dropdown arrows */
+.mobile-menu-list .sub-menu .has-dropdown > a .fas {
+  float: right !important;
+  margin-left: 5px !important;
+  transition: transform 0.3s ease !important;
+}
+
+.mobile-menu-list .sub-menu .has-dropdown.open > a .fas {
+  transform: rotate(180deg) !important;
+}
+
+/* Enhanced Hamburger Button Container - Mobile Only */
 .menu_bar {
   position: relative !important;
   z-index: 10000 !important;
@@ -119,7 +169,7 @@
   padding: 12px !important;
   background: linear-gradient(135deg, #1e8a8a 0%, #16a085 100%) !important;
   border-radius: 12px !important;
-  display: flex !important;
+  display: none !important; /* Hidden by default */
   flex-direction: column !important;
   justify-content: center !important;
   align-items: center !important;
@@ -128,6 +178,13 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   border: none !important;
   outline: none !important;
+}
+
+/* Show hamburger menu only on mobile screens */
+@media (max-width: 767.98px) {
+  .menu_bar {
+    display: flex !important;
+  }
 }
 
 .menu_bar:hover {
@@ -202,7 +259,7 @@
   width: 25px !important;
 }
 
-/* Override all other menu bar styles */
+/* Override all other menu bar styles - Mobile Only */
 .header-area .menu_bar,
 .header-right-item .menu_bar,
 .mobile_menu_bar,
@@ -213,6 +270,17 @@
   background: linear-gradient(135deg, #1e8a8a 0%, #16a085 100%) !important;
   border-radius: 12px !important;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  display: none !important; /* Hidden by default */
+}
+
+/* Show all hamburger menu variations only on mobile */
+@media (max-width: 767.98px) {
+  .header-area .menu_bar,
+  .header-right-item .menu_bar,
+  .mobile_menu_bar,
+  .menu_offcanvas {
+    display: flex !important;
+  }
 }
 
 /* Override all span styles */
@@ -397,5 +465,90 @@
   .mobile-menu-list .sub-menu .sub-menu .sub-menu li a {
     padding-left: 60px;
     font-size: 11px;
+  }
+}
+
+/* ===== MANAGEMENT PROFILE STYLES ===== */
+
+.management-profile {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-left: 4px solid #1e8a8a;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(30, 138, 138, 0.1);
+  transition: all 0.3s ease;
+}
+
+.management-profile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(30, 138, 138, 0.15);
+}
+
+.management-profile .profile-name {
+  color: #1e8a8a;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.management-profile .profile-designation {
+  color: #666;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Management message styling */
+.management-message {
+  margin-top: 20px;
+}
+
+.management-message .desc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.management-message .desc:last-child {
+  margin-bottom: 0;
+}
+
+/* Enhanced image styling for management photos */
+.about-img-area .about-img img {
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  height: 400px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.about-img-area .about-img img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive image height adjustments */
+@media (max-width: 992px) {
+  .about-img-area .about-img img {
+    height: 350px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-img-area .about-img img {
+    height: 300px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-img-area .about-img img {
+    height: 250px !important;
   }
 }

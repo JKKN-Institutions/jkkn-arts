@@ -256,12 +256,11 @@ export default function RootLayout({
               font-display: block;
             }
             
-            /* Specific styling for back-to-top icon */
-            .tji-arrow-up-long:before {
-              content: "\e915" !important;
-              font-family: "bexon-icons" !important;
+            /* Font Awesome back-to-top icon styling */
+            .fas.fa-arrow-up-long {
+              font-family: "Font Awesome 6 Free" !important;
+              font-weight: 900 !important;
               font-style: normal !important;
-              font-weight: normal !important;
               font-variant: normal !important;
               text-transform: none !important;
               line-height: 1 !important;

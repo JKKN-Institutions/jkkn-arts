@@ -981,9 +981,9 @@ Progressbar js
                 if (scrollValue < 96) {
                     $("#tj-back-to-top-percentage").text(`${scrollValue}%`);
                   } else {
-                      // Use bexon-icons for back-to-top arrow
+                      // Use Font Awesome for back-to-top arrow
                       $("#tj-back-to-top-percentage").html(
-                          '<i class="tji-arrow-up-long"></i>'
+                          '<i class="fas fa-arrow-up-long"></i>'
                       );
                   }
             };
