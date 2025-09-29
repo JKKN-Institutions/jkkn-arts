@@ -1,8 +1,10 @@
-﻿import Image from 'next/image';
+import Image from 'next/image';
 import PageLayout from '../../components/PageLayout';
 
 
 
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 export default function DepartmentOfLibrary() {
   return (
     <>
@@ -179,7 +181,7 @@ export default function DepartmentOfLibrary() {
                   <div className="col-12 col-lg-5 d-block d-md-none d-lg-block">
                     <div className="about-img-area h10-about-banner wow bounceInLeft" data-wow-delay=".3s">
                       <div className="about-img overflow-hidden" style={{ height: '400px' }}>
-                        <Image src="/assets/images/img/department-of-computer-science.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} data-speed=".8"   style={{ height: '100%', objectFit: 'cover' }} />
+                        <Image src="/assets/images/img/department-of-computer-science.png" alt="" width={400} height={300} style={{ width: "100%", height: '100%', objectFit: 'cover' }} data-speed=".8" />
                       </div>
                     </div>
                   </div>
@@ -210,9 +212,9 @@ export default function DepartmentOfLibrary() {
                                 </ul>
                               </div>
                             </div>
-                            <p className="desc wow fadeInUp" data-wow-delay=".4s">Established in 1974, College Library serves as an invaluable knowledge hub for students and faculty members, fostering academic growth and intellectual exploration. Spanning an area of 3,328 square feet with a seating capacity for 130 readers, the library is thoughtfully designed to provide a comfortable and conducive environment for learning. It boasts a remarkable collection of over 26,700 books across diverse disciplines, 23 esteemed national and international journals, 31 magazines, 4 newspapers, 636 back volumes, and a wealth of e resources. Recent publications and journals in the fields of arts, science, and social sciences further enrich the libraryÃ¢â‚¬â„¢s comprehensive offerings, along with access to online resources through the N-LIST program under UGC INFONET, available free of cost.</p>
+                            <p className="desc wow fadeInUp" data-wow-delay=".4s">Established in 1974, College Library serves as an invaluable knowledge hub for students and faculty members, fostering academic growth and intellectual exploration. Spanning an area of 3,328 square feet with a seating capacity for 130 readers, the library is thoughtfully designed to provide a comfortable and conducive environment for learning. It boasts a remarkable collection of over 26,700 books across diverse disciplines, 23 esteemed national and international journals, 31 magazines, 4 newspapers, 636 back volumes, and a wealth of e resources. Recent publications and journals in the fields of arts, science, and social sciences further enrich the libraryâ€™s comprehensive offerings, along with access to online resources through the N-LIST program under UGC INFONET, available free of cost.</p>
 
-                            <p className="desc wow fadeInUp" data-wow-delay=".5s"><strong>Modernized Facilities for a Seamless Experience:</strong> Equipped with the advanced automation software Ã¢â‚¬Å“Campes I Lib,Ã¢â‚¬Â the library is fully computerized and integrated with barcode technology for efficient book transactions. Staff and students are issued personalized ID cards with barcodes for streamlined access and borrowing procedures. The WEB OPAC service enables users to search the library catalog with ease, while 10 computer systems in the digital library provide internet and printing facilities. Ensuring a secure and user-friendly environment, the library is monitored by CCTV cameras. By blending traditional resources with state-of-the-art technology, our Arts College Library is committed to empowering academic excellence and inspiring creative pursuits.</p>
+                            <p className="desc wow fadeInUp" data-wow-delay=".5s"><strong>Modernized Facilities for a Seamless Experience:</strong> Equipped with the advanced automation software â€œCampes I Lib,â€ the library is fully computerized and integrated with barcode technology for efficient book transactions. Staff and students are issued personalized ID cards with barcodes for streamlined access and borrowing procedures. The WEB OPAC service enables users to search the library catalog with ease, while 10 computer systems in the digital library provide internet and printing facilities. Ensuring a secure and user-friendly environment, the library is monitored by CCTV cameras. By blending traditional resources with state-of-the-art technology, our Arts College Library is committed to empowering academic excellence and inspiring creative pursuits.</p>
 
                             
                           </div>
@@ -469,7 +471,7 @@ export default function DepartmentOfLibrary() {
                     <div className="team-item wow fadeInRightBig" data-wow-delay=".2s">
                       <div className="team-img">
                         <div className="team-img-inner">
-                          <Image src="/assets/images/team/library-aided/sasikala.png" alt="Dr. S. Sasikala" width={400} height={300} style={{ width: "100%", height: "auto" }}   style={{width: '100%', height: 'auto', objectFit: 'contain'}} />
+                          <Image src="/assets/images/team/library-aided/sasikala.png" alt="Dr. S. Sasikala" width={400} height={300} style={{ width: "100%", height: 'auto', objectFit: 'contain' }} />
                         </div>
                       </div>
                       <div className="team-content">

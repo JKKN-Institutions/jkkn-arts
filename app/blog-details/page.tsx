@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -259,14 +259,12 @@ function BlogDetailsContent() {
                       borderBottom: '1px solid #eee'
                     }}>
                       <div className="post-thumb" style={{ flexShrink: 0 }}>
-                        <Image src="/assets/images/events/blood-donet.png" alt="Blood Donation" width={400} height={300} style={{ width: "100%", height: "auto" }}  
-                           
-                          style={{ 
+                        <Image src="/assets/images/events/blood-donet.png" alt="Blood Donation" width={400} height={300} style={{ 
                             width: '80px', 
                             height: '60px', 
                             objectFit: 'cover', 
                             borderRadius: '5px' 
-                          }} 
+                           }} 
                         />
                       </div>
                       <div className="post-content">
@@ -296,14 +294,12 @@ function BlogDetailsContent() {
                       marginBottom: '1rem'
                     }}>
                       <div className="post-thumb" style={{ flexShrink: 0 }}>
-                        <Image src="/assets/images/events/field-trip.png" alt="Field Trip" width={400} height={300} style={{ width: "100%", height: "auto" }}  
-                           
-                          style={{ 
+                        <Image src="/assets/images/events/field-trip.png" alt="Field Trip" width={400} height={300} style={{ 
                             width: '80px', 
                             height: '60px', 
                             objectFit: 'cover', 
                             borderRadius: '5px' 
-                          }} 
+                           }} 
                         />
                       </div>
                       <div className="post-content">

@@ -1,8 +1,10 @@
-﻿import Image from 'next/image';
+import Image from 'next/image';
 import PageLayout from '../../components/PageLayout';
 
 
 
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 export default function WiFiPage() {
     return (
         <>            {/* start: Header Area */}
@@ -32,11 +34,11 @@ export default function WiFiPage() {
                                                 
                                                 <div className="desc wow fadeInUp" data-wow-delay=".8s" style={{ color: '#6b7474' }}>
                                                     <ul style={{ listStyle: 'none', padding: 0 }}>
-                                                        <li style={{ marginBottom: '8px' }}>Ã¢â‚¬Â¢ Stay connected on the go</li>
-                                                        <li style={{ marginBottom: '8px' }}>Ã¢â‚¬Â¢ Save your data</li>
-                                                        <li style={{ marginBottom: '8px' }}>Ã¢â‚¬Â¢ Faster internet speeds</li>
-                                                        <li style={{ marginBottom: '8px' }}>Ã¢â‚¬Â¢ Convenient access</li>
-                                                        <li style={{ marginBottom: '8px' }}>Ã¢â‚¬Â¢ Secure connection</li>
+                                                        <li style={{ marginBottom: '8px' }}>â€¢ Stay connected on the go</li>
+                                                        <li style={{ marginBottom: '8px' }}>â€¢ Save your data</li>
+                                                        <li style={{ marginBottom: '8px' }}>â€¢ Faster internet speeds</li>
+                                                        <li style={{ marginBottom: '8px' }}>â€¢ Convenient access</li>
+                                                        <li style={{ marginBottom: '8px' }}>â€¢ Secure connection</li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -58,7 +60,7 @@ export default function WiFiPage() {
                                     <div className="col-xl-6 col-lg-6">
                                         <div className="about-img-area h6-about-img wow fadeInLeft" data-wow-delay=".2s">
                                             <div className="about-img wow fadeInRight" data-wow-delay=".8s">
-                                                <Image src="/assets/images/img/classroom.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }}   style={{ width: '100%', height: 'auto' }} />
+                                                <Image src="/assets/images/img/classroom.png" alt="" width={400} height={300} style={{ width: '100%', height: 'auto'  }} />
                                             </div>
 
                                         </div>

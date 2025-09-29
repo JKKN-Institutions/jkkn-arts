@@ -108,7 +108,7 @@ export default function LibraryPage() {
                   <div className="col-xl-6 col-lg-6 order-lg-1 order-2">
                     <div className="about-img-area style-2 wow fadeInLeft" data-wow-delay=".3s">
                       <div className="about-img overflow-hidden">
-                        <Image src="/assets/images/img/Campus-Life.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} data-speed=".8"   style={{ width: '100%', height: 'auto', maxHeight: '320px', objectFit: 'cover' }} />
+                        <Image src="/assets/images/img/Campus-Life.png" alt="" width={400} height={300} style={{ width: '100%', height: 'auto', maxHeight: '320px', objectFit: 'cover' }} data-speed=".8" />
                       </div>
 
                     </div>

@@ -1,9 +1,11 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import Image from 'next/image';
 import PageLayout from '../../components/PageLayout';
 
 
 
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 export default function ClassroomPage() {
   return (
     <>      {/* start: Header Area */}
@@ -50,7 +52,7 @@ export default function ClassroomPage() {
                   <div className="col-xl-6 col-lg-6">
                     <div className="about-img-area h6-about-img wow fadeInLeft" data-wow-delay=".2s">
                       <div className="about-img wow fadeInRight" data-wow-delay=".8s">
-                        <Image src="/assets/images/img/classroom.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }}   style={{ width: '100%', height: 'auto' }} />
+                        <Image src="/assets/images/img/classroom.png" alt="" width={400} height={300} style={{ width: '100%', height: 'auto'  }} />
                       </div>
 
                     </div>

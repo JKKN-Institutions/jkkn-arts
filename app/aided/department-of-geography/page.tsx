@@ -1,5 +1,7 @@
-﻿import Image from 'next/image';
+import Image from 'next/image';
 import PageLayout from '../../components/PageLayout';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 
 
@@ -179,7 +181,7 @@ export default function DepartmentOfGeography() {
                   <div className="col-12 col-lg-5 d-block d-md-none d-lg-block">
                     <div className="about-img-area h10-about-banner wow bounceInLeft" data-wow-delay=".3s">
                       <div className="about-img overflow-hidden" style={{ height: '400px' }}>
-                        <Image src="/assets/images/img/department-of-computer-science.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} data-speed=".8"   style={{ height: '100%', objectFit: 'cover' }} />
+                        <Image src="/assets/images/img/department-of-computer-science.png" alt="" width={400} height={300} style={{ width: "100%", height: '100%', objectFit: 'cover' }} data-speed=".8" />
                       </div>
                     </div>
                   </div>

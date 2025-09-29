@@ -1,8 +1,10 @@
-﻿import Image from 'next/image';
+import Image from 'next/image';
 import PageLayout from '../../components/PageLayout';
 
 
 
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 export default function HostelPage() {
     return (
         <>            {/* start: Header Area */}
@@ -28,11 +30,11 @@ export default function HostelPage() {
                                                 <p className="desc wow fadeInUp" data-wow-delay=".8s" style={{ color: '#6b7474' }}>At JKKN, we understand the importance of academics, and hence we provide an environment that is conducive to studying. Our hostel provides a peaceful and quiet atmosphere, enabling students to concentrate on their studies without any distractions. With our high-speed internet connectivity, students can easily access online resources and complete their academic assignments with ease.</p>
                                                 <div className="desc wow fadeInUp" data-wow-delay=".8s" style={{ color: '#6b7474' }}>
                                                     <ul style={{ listStyle: 'none', padding: 0 }}>
-                                                        <li style={{ marginBottom: '8px' }}>Ã¢â‚¬Â¢ JKKN Educational Institutions' Boys Hostel is a community where you can make lifelong friendships and memories.</li>
-                                                        <li style={{ marginBottom: '8px' }}>Ã¢â‚¬Â¢ The hostel's dedicated staff is always available to assist you with any issues you may face during your stay.</li>
-                                                        <li style={{ marginBottom: '8px' }}>Ã¢â‚¬Â¢ The Boys Hostel offers a comfortable and safe living experience for students.</li>
-                                                        <li style={{ marginBottom: '8px' }}>Ã¢â‚¬Â¢ State-of-the-art facilities and amenities are available to ensure a memorable stay.</li>
-                                                        <li style={{ marginBottom: '8px' }}>Ã¢â‚¬Â¢ Ideal for students looking for a supportive and conducive living environment during their academic journey.</li>
+                                                        <li style={{ marginBottom: '8px' }}>â€¢ JKKN Educational Institutions' Boys Hostel is a community where you can make lifelong friendships and memories.</li>
+                                                        <li style={{ marginBottom: '8px' }}>â€¢ The hostel's dedicated staff is always available to assist you with any issues you may face during your stay.</li>
+                                                        <li style={{ marginBottom: '8px' }}>â€¢ The Boys Hostel offers a comfortable and safe living experience for students.</li>
+                                                        <li style={{ marginBottom: '8px' }}>â€¢ State-of-the-art facilities and amenities are available to ensure a memorable stay.</li>
+                                                        <li style={{ marginBottom: '8px' }}>â€¢ Ideal for students looking for a supportive and conducive living environment during their academic journey.</li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -54,7 +56,7 @@ export default function HostelPage() {
                                     <div className="col-xl-6 col-lg-6">
                                         <div className="about-img-area h6-about-img wow fadeInLeft" data-wow-delay=".2s">
                                             <div className="about-img wow fadeInRight" data-wow-delay=".8s">
-                                                <Image src="/assets/images/img/classroom.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }}   style={{ width: '100%', height: 'auto' }} />
+                                                <Image src="/assets/images/img/classroom.png" alt="" width={400} height={300} style={{ width: '100%', height: 'auto'  }} />
                                             </div>
 
                                         </div>

@@ -1,8 +1,10 @@
-﻿import PageLayout from '../../components/PageLayout';
+import PageLayout from '../../components/PageLayout';
 import Image from 'next/image';
 
 
 
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 export default function DepartmentOfBusinessAdministration() {
     return (
         <>

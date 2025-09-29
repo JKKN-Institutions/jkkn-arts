@@ -1,10 +1,12 @@
-﻿'use client';
+'use client';
 import Image from 'next/image';
 import PageLayout from '../../components/PageLayout';
 
 
 
 
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 export default function RoleResponsibilitiesPage() {
     return (
         <>

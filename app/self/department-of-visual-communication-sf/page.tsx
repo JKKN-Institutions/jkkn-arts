@@ -1,8 +1,10 @@
-﻿import Image from 'next/image';
+import Image from 'next/image';
 import PageLayout from '../../components/PageLayout';
 
 
 
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 export default function DepartmentOfVisualCommunication() {
   return (
     <>
@@ -180,7 +182,7 @@ export default function DepartmentOfVisualCommunication() {
                   <div className="col-12 col-lg-5 d-block d-md-none d-lg-block">
                     <div className="about-img-area h10-about-banner wow bounceInLeft" data-wow-delay=".3s">
                       <div className="about-img overflow-hidden">
-                        <Image src="/assets/images/img/department-of-computer-science.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }} data-speed=".8"   style={{width: '100%', height: 'auto', maxHeight: '320px', objectFit: 'cover'}} />
+                        <Image src="/assets/images/img/department-of-computer-science.png" alt="" width={400} height={300} style={{width: '100%', height: 'auto', maxHeight: '320px', objectFit: 'cover'}} data-speed=".8" />
                       </div>
                     </div>
                   </div>
@@ -195,7 +197,7 @@ export default function DepartmentOfVisualCommunication() {
                         <div className="col-12 col-md-6 d-none d-md-block d-lg-none">
                           <div className="about-img-area h10-about-banner wow bounceInLeft" data-wow-delay=".3s">
                             <div className="about-img">
-                              <Image src="/assets/images/img/department-of-computer-science.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }}   style={{width: '100%', height: 'auto', maxHeight: '300px', objectFit: 'cover'}} />
+                              <Image src="/assets/images/img/department-of-computer-science.png" alt="" width={400} height={300} style={{ width: '100%', height: 'auto', maxHeight: '300px', objectFit: 'cover' }} />
                             </div>
                           </div>
                         </div>

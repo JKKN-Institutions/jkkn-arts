@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import Image from 'next/image';
 import PageLayout from '../../components/PageLayout';
 
@@ -76,7 +76,7 @@ export default function DepartmentOfMathematics() {
                         <div className="row align-items-center">
                           <div className="col-12 col-lg-4">
                             <div className="h8-about-video">
-                              <Image src="/assets/images/img/department-of-english.png" alt="" width={400} height={300} style={{ width: "100%", height: "auto" }}   style={{width: '100%', height: 'auto', maxHeight: '320px', objectFit: 'cover'}} />
+                              <Image src="/assets/images/img/department-of-english.png" alt="" width={400} height={300} style={{ width: '100%', height: 'auto', maxHeight: '320px', objectFit: 'cover' }} />
                             </div>
                           </div>
                           <div className="col-12 col-lg-8">
