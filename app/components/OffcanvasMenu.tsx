@@ -6,6 +6,11 @@ import { useEffect } from 'react';
 
 export default function OffcanvasMenu() {
   useEffect(() => {
+    // Store original overflow value to restore it later
+    // If overflow is not set, it defaults to empty string, but we want to restore to empty string (not 'auto')
+    const originalOverflow = document.body.style.overflow;
+    const hasOriginalOverflow = originalOverflow !== '';
+    
     // Remove any duplicate mobile menu instances
     const removeDuplicateMenus = () => {
       const allMobileMenus = document.querySelectorAll('.mobile-menu-list');
@@ -113,6 +118,22 @@ export default function OffcanvasMenu() {
       });
       observer.disconnect();
       clearInterval(cleanupInterval);
+      
+      // Ensure scroll is restored if component unmounts while menu might be open
+      const hamburgerArea = document.querySelector('.hamburger-area');
+      if (hamburgerArea?.classList.contains('opened')) {
+        if (hasOriginalOverflow) {
+          document.body.style.overflow = originalOverflow;
+        } else {
+          document.body.style.removeProperty('overflow');
+        }
+        hamburgerArea.classList.remove('opened');
+        // Also remove opened class from hamburger buttons
+        const menuBars = document.querySelectorAll('.menu_bar');
+        menuBars.forEach(menuBar => {
+          menuBar.classList.remove('opened');
+        });
+      }
     };
   }, []);
 
@@ -142,33 +163,26 @@ export default function OffcanvasMenu() {
                   <ul className="mobile-menu-list" id="primary-mobile-menu">
                     {/* 1. About */}
                     <li className="has-dropdown">
-                      <Link href="#">About <i className="fas fa-chevron-down ms-1"></i></Link>
+                      <Link href="#">About </Link>
                       <ul className="sub-menu">
-                        <li><Link href="/vision-mission"><i className="fas fa-eye me-2"></i>Our Vision and Mission</Link></li>
-                        <li><Link href="/about/trust"><i className="fas fa-handshake me-2"></i>Our Trust</Link></li>
-                        <li><Link href="/about/management"><i className="fas fa-users me-2"></i>Our Management</Link></li>
-                        <li><Link href="/about/college"><i className="fas fa-university me-2"></i>Our College</Link></li>
+                        <li><Link href="/vision-mission">Our Vision and Mission</Link></li>
+                        <li><Link href="/about/trust">Our Trust</Link></li>
+                        <li><Link href="/about/management">Our Management</Link></li>
+                        <li><Link href="/about/college">Our College</Link></li>
                       </ul>
                     </li>
 
-                    {/* 2. Programmes Offered */}
-                    {/* <li className="has-dropdown">
-                      <Link href="#">Programmes Offered <i className="fas fa-chevron-down ms-1"></i></Link>
-                      <ul className="sub-menu">
-                        <li><Link href="/aided">Aided Courses</Link></li>
-                        <li><Link href="/self">Self Finance Courses</Link></li>
-                      </ul>
-                    </li> */}
+              
 
                     {/* 2. Programmes Offered */}
-                    <li className="has-dropdown me-3">
+                    <li className="has-dropdown ">
                       <Link href="/programmes">Programmes Offered</Link>
                       <ul className="sub-menu">
                         <li className="has-dropdown">
-                          <Link href="/programmes/aided">Aided <i className="fas fa-chevron-right ms-1"></i></Link>
+                          <Link href="/programmes/aided">Aided </Link>
                           <ul className="sub-menu">
                             <li className="has-dropdown">
-                              <Link href="/programmes/aided/ug">UG Courses <i className="fas fa-chevron-right ms-1"></i></Link>
+                              <Link href="/programmes/aided/ug">UG Courses </Link>
                               <ul className="sub-menu">
                                 <li><Link href="/baenglish">BA English</Link></li>
                                 <li><Link href="/bahistory">BA History</Link></li>
@@ -179,7 +193,7 @@ export default function OffcanvasMenu() {
                               </ul>
                             </li>
                             <li className="has-dropdown">
-                              <Link href="/programmes/aided/pg">PG Courses <i className="fas fa-chevron-right ms-1"></i></Link>
+                              <Link href="/programmes/aided/pg">PG Courses </Link>
                               <ul className="sub-menu">
                                 <li><Link href="/mca">M.C.A</Link></li>
                                 <li><Link href="/mcom">M.Com</Link></li>
@@ -190,7 +204,7 @@ export default function OffcanvasMenu() {
                               </ul>
                             </li>
                             <li className="has-dropdown">
-                              <Link href="/programmes/aided/phd">Ph.D. <i className="fas fa-chevron-right ms-1"></i></Link>
+                              <Link href="/programmes/aided/phd">Ph.D. </Link>
                               <ul className="sub-menu">
                                 <li><Link href="/ph-d-tamil">Ph.D Tamil</Link></li>
                                 <li><Link href="/ph-d-chemistry">Ph.D Chemistry</Link></li>
@@ -200,10 +214,10 @@ export default function OffcanvasMenu() {
                           </ul>
                         </li>
                         <li className="has-dropdown">
-                          <Link href="/programmes/self-finance">Self Finance <i className="fas fa-chevron-right ms-1"></i></Link>
+                          <Link href="/programmes/self-finance">Self Finance </Link>
                           <ul className="sub-menu">
                             <li className="has-dropdown">
-                              <Link href="/programmes/self-finance/ug">UG Courses <i className="fas fa-chevron-right ms-1"></i></Link>
+                              <Link href="/programmes/self-finance/ug">UG Courses </Link>
                               <ul className="sub-menu">
                                 <li><Link href="/bsc-physics-self">B.Sc. Physics</Link></li>
                                 <li><Link href="/bcom-ca-self">B.Com. CA</Link></li>
@@ -219,7 +233,7 @@ export default function OffcanvasMenu() {
                               </ul>
                             </li>
                             <li className="has-dropdown">
-                              <Link href="/programmes/self-finance/pg">PG Courses <i className="fas fa-chevron-right ms-1"></i></Link>
+                              <Link href="/programmes/self-finance/pg">PG Courses </Link>
                               <ul className="sub-menu">
                                 <li><Link href="/msc-Computer-Science">M.Sc Computer Science</Link></li>
                                 <li><Link href="/msc-mathematics">M.Sc Mathematics</Link></li>
@@ -233,10 +247,10 @@ export default function OffcanvasMenu() {
 
                     {/* 3. Department - Full department menu list */}
                     <li className="has-dropdown">
-                      <Link href="#">Department <i className="fas fa-chevron-down ms-1"></i></Link>
+                      <Link href="#">Department </Link>
                       <ul className="sub-menu">
                         <li className="has-dropdown">
-                          <Link href="#">Aided Departments <i className="fas fa-chevron-down ms-1"></i></Link>
+                          <Link href="#">Aided Departments </Link>
                           <ul className="sub-menu">
                             <li><Link href="/aided/department-of-botany">Department of Botany</Link></li>
                             <li><Link href="/aided/department-of-chemistry">Department of Chemistry</Link></li>
@@ -255,7 +269,7 @@ export default function OffcanvasMenu() {
                           </ul>
                         </li>
                         <li className="has-dropdown">
-                          <Link href="#">Self Finance Departments <i className="fas fa-chevron-down ms-1"></i></Link>
+                          <Link href="#">Self Finance Departments </Link>
                           <ul className="sub-menu">
                             <li><Link href="/self/department-of-ai-ds-sf">Department of AI & Data Science</Link></li>
                             <li><Link href="/self/department-of-bba-sf">Department of BBA</Link></li>
@@ -277,27 +291,27 @@ export default function OffcanvasMenu() {
 
                     {/* 4. Facilities */}
                     <li className="has-dropdown">
-                      <Link href="#">Facilities <i className="fas fa-chevron-down ms-1"></i></Link>
+                      <Link href="#">Facilities</Link>
                       <ul className="sub-menu">
-                        <li><Link href="/facilities/lab"><i className="fas fa-flask me-2"></i>Labs</Link></li>
-                        <li><Link href="/facilities/library"><i className="fas fa-book me-2"></i>Library</Link></li>
-                        <li><Link href="/facilities/classroom"><i className="fas fa-chalkboard me-2"></i>Class Room</Link></li>
-                        <li><Link href="/facilities/seminar-hall"><i className="fas fa-presentation-screen me-2"></i>Seminar Hall</Link></li>
-                        <li><Link href="/facilities/hostel"><i className="fas fa-bed me-2"></i>Hostel</Link></li>
-                        <li><Link href="/facilities/sports-club"><i className="fas fa-running me-2"></i>Sports Club</Link></li>
-                        <li><Link href="/facilities/auditorium"><i className="fas fa-theater-masks me-2"></i>Auditorium</Link></li>
-                        <li><Link href="/facilities/ambulance-services"><i className="fas fa-ambulance me-2"></i>Ambulance Services</Link></li>
-                        <li><Link href="/facilities/food-court"><i className="fas fa-utensils me-2"></i>Food Court</Link></li>
-                        <li><Link href="/facilities/transport"><i className="fas fa-bus me-2"></i>Transport</Link></li>
-                        <li><Link href="/facilities/emergency-care"><i className="fas fa-first-aid me-2"></i>Emergency Care</Link></li>
-                        <li><Link href="/facilities/wifi"><i className="fas fa-wifi me-2"></i>Wi-Fi</Link></li>
-                        <li><Link href="/facilities/bank-post-office"><i className="fas fa-university me-2"></i>Bank & Post Office</Link></li>
+                        <li><Link href="/facilities/lab">Labs</Link></li>
+                        <li><Link href="/facilities/library">Library</Link></li>
+                        <li><Link href="/facilities/classroom">Class Room</Link></li>
+                        <li><Link href="/facilities/seminar-hall">Seminar Hall</Link></li>
+                        <li><Link href="/facilities/hostel">Hostel</Link></li>
+                        <li><Link href="/facilities/sports-club">Sports Club</Link></li>
+                        <li><Link href="/facilities/auditorium">Auditorium</Link></li>
+                        <li><Link href="/facilities/ambulance-services">Ambulance Services</Link></li>
+                        <li><Link href="/facilities/food-court">Food Court</Link></li>
+                        <li><Link href="/facilities/transport">Transport</Link></li>
+                        <li><Link href="/facilities/emergency-care">Emergency Care</Link></li>
+                        <li><Link href="/facilities/wifi">Wi-Fi</Link></li>
+                        <li><Link href="/facilities/bank-post-office">Bank & Post Office</Link></li>
                       </ul>
                     </li>
 
                     {/* 5. Others */}
                     <li className="has-dropdown">
-                      <Link href="#">Others <i className="fas fa-chevron-down ms-1"></i></Link>
+                      <Link href="#">Others </Link>
                       <ul className="sub-menu">
                         <li><Link href="/iqac">IQAC</Link></li>
                         <li><Link href="/others/committees">Committees</Link></li>

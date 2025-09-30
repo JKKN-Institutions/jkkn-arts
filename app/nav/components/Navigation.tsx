@@ -226,45 +226,11 @@ export default function Navigation() {
                     <span className="btn-icon"><i className="tji-arrow-right-long"></i></span>
                   </Link>
                 </div>
-                {/* Hamburger menu button with visible bars */}
-                <div className="menu_bar mobile_menu_bar" style={{
-                  display: 'inline-flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  gap: '6px',
-                  width: '50px',
-                  height: '50px',
-                  padding: '12px',
-                  backgroundColor: '#1e8a8a',
-                  borderRadius: '7px',
-                  cursor: 'pointer',
-                  position: 'relative'
-                }}>
-                  <span style={{
-                    display: 'block',
-                    width: '25px',
-                    height: '3px',
-                    backgroundColor: '#ffffff',
-                    borderRadius: '2px',
-                    transition: 'all 0.3s ease'
-                  }}></span>
-                  <span style={{
-                    display: 'block',
-                    width: '18px',
-                    height: '3px',
-                    backgroundColor: '#ffffff',
-                    borderRadius: '2px',
-                    transition: 'all 0.3s ease'
-                  }}></span>
-                  <span style={{
-                    display: 'block',
-                    width: '25px',
-                    height: '3px',
-                    backgroundColor: '#ffffff',
-                    borderRadius: '2px',
-                    transition: 'all 0.3s ease'
-                  }}></span>
+                {/* Mobile hamburger menu button - connects to global OffcanvasMenu */}
+                <div className="menu_bar d-lg-none">
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
               </div>
             </div>

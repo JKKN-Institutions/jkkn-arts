@@ -6,6 +6,18 @@ import { useEffect } from 'react';
 
 export default function Header() {
   useEffect(() => {
+    // Store original overflow value to restore it later
+    // If overflow is not set, it defaults to empty string, but we want to restore to empty string (not 'auto')
+    const originalOverflow = document.body.style.overflow;
+    const hasOriginalOverflow = originalOverflow !== '';
+    
+    // Ensure body has proper initial state for scrolling
+    // Force a proper scroll state on initialization to fix first-time issues
+    if (!hasOriginalOverflow) {
+      // Remove any existing overflow style to ensure natural scrolling
+      document.body.style.removeProperty('overflow');
+    }
+    
     // Handle hamburger menu functionality
     const menuBars = document.querySelectorAll('.menu_bar');
     const hamburgerArea = document.querySelector('.hamburger-area');
@@ -23,7 +35,12 @@ export default function Header() {
 
     const closeMenu = () => {
       hamburgerArea?.classList.remove('opened');
-      document.body.style.overflow = '';
+      // Restore original overflow properly - if it was originally empty, remove the property entirely
+      if (hasOriginalOverflow) {
+        document.body.style.overflow = originalOverflow;
+      } else {
+        document.body.style.removeProperty('overflow');
+      }
       // Remove opened class from hamburger button
       menuBars.forEach(menuBar => {
         menuBar.classList.remove('opened');
@@ -41,7 +58,27 @@ export default function Header() {
       btn.addEventListener('click', closeMenu);
     });
 
+    // Add escape key listener to close menu
+    const handleEscapeKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && hamburgerArea?.classList.contains('opened')) {
+        closeMenu();
+      }
+    };
+    
+    document.addEventListener('keydown', handleEscapeKey);
+
+    // Add window resize listener to close menu when switching to desktop view
+    const handleResize = () => {
+      if (window.innerWidth >= 992 && hamburgerArea?.classList.contains('opened')) {
+        closeMenu();
+      }
+    };
+    
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup function to ensure scroll is restored on component unmount
     return () => {
+      // Remove event listeners
       menuBars.forEach(menuBar => {
         menuBar.removeEventListener('click', openMenu);
       });
@@ -49,6 +86,21 @@ export default function Header() {
       closeBtns.forEach(btn => {
         btn.removeEventListener('click', closeMenu);
       });
+      document.removeEventListener('keydown', handleEscapeKey);
+      window.removeEventListener('resize', handleResize);
+      
+      // Ensure scroll is restored if component unmounts while menu is open
+      if (hamburgerArea?.classList.contains('opened')) {
+        if (hasOriginalOverflow) {
+          document.body.style.overflow = originalOverflow;
+        } else {
+          document.body.style.removeProperty('overflow');
+        }
+        hamburgerArea.classList.remove('opened');
+        menuBars.forEach(menuBar => {
+          menuBar.classList.remove('opened');
+        });
+      }
     };
   }, []);
 
